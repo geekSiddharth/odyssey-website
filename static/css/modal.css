@@ -214,29 +214,39 @@ Gird
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
     .grid li {
         width: 23%; !important;
         margin: 1%;
     }
 
+    .about-photo{
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: auto;
+        transform: translate(-25%,0);
+    }
+    .about-photo img{
+        height: 100vh;
+        width: auto;
+    }
 }
-@media (max-width: 1200px) and (min-width: 660px) {
+@media (max-width: 1100px) and (min-width: 660px) {
     .grid li {
         width: 40%; !important;
         margin: 1%;
     }
-    .about-photo{
-        visibility:hidden;
+    .about-photo img{
+        visibility: hidden;
     }
-
 }
 @media (max-width: 660px) {
     .grid li {
         width: 100%; !important;
         margin: 1%;
     }
-     .about-photo{
+     .about-photo img{
         visibility:hidden;
     }
 
