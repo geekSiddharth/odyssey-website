@@ -226,12 +226,18 @@ Gird
         width: 40%; !important;
         margin: 1%;
     }
+    .about-photo{
+        visibility:hidden;
+    }
 
 }
 @media (max-width: 660px) {
     .grid li {
         width: 100%; !important;
         margin: 1%;
+    }
+     .about-photo{
+        visibility:hidden;
     }
 
 }
