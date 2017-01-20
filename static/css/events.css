@@ -407,6 +407,7 @@ Button Hover Effect
 }
 
 .cs-style-3 figure img {
+	max-width: 100%;
     -webkit-transition: -webkit-transform 0.4s;
     -moz-transition: -moz-transform 0.4s;
     transition: transform 0.4s;
