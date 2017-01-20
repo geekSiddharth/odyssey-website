@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	$(".loader").fadeOut(2000);
+	setTimeout(function() {
+	$(".loader").fadeOut(2000); 
+	}, 4000);
 });
 
 //var scene = document.getElementById('scene');
