@@ -2,17 +2,13 @@
     font-family: 'CODE Bold';
     src: url("../font/CODE Bold.otf") format("opentype");
 }
-@font-face {
-    font-family: 'CODE Light';
-    src: url("../font/CODE Light.otf") format("opentype");
-}
-
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face {
     font-family: 'Geometria';
     src: url("../font/Geometria.otf") format("opentype");
 }
 body{
-    font-family: "CODE Bold";
+    font-family: "CODE Bold", "Helvetica Neue", sans-serif;
 }
 body{
     background-color:#ffcf4b;!important;
@@ -456,4 +452,21 @@ Button Hover Effect
     position: absolute;
     bottom: 20px;
     right: 20px;
+}
+
+/*
+*FORM
+*/
+
+#mail1{
+    height: 7vh;
+    color: #222;
+	border: 3px solid #222;
+    text-align: center;
+    font-family: "CODE Bold", "Helvetica Neue", sans-serif;
+    transition: 0.1s all ease-out;
+}
+#mail1:focus{
+    box-shadow: none;
+    border: 4px solid #222;
 }
