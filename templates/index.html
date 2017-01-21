@@ -1,474 +1,448 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="author" content="@gureks, @geekSiddharth">
-
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@IIITDOdyssey">
-    <!--Open Graph-->
-    <meta property=”og:title” content=”Title-60-90”/>
-    <meta property=”og:url” content=”http://odyssey.iiitd.edu.in/”/>
-    <meta property=”og:type” content=”website”/>
-    <meta property=”og:description” content=”description-200-300”/>
-    <meta property=”og:image” content=”image link”/>
-    <meta property="og:image:width" content="width of 1st image"/>
-    <meta property="og:image:height" content="height of 1st image"/>
-    <meta property="og:image" content="image link2"/>
-    <meta property="og:image:width" content="width of 2st image"/>
-    <meta property="og:image:height" content="height of 2st image"/>
-    <meta property="fb:app_id" content="361553010885437"/>
-
-
-    <meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
-    <title>Odyssey'17 | IIIT Delhi</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" type="text/css"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-
-<body id="bg">
-<div class="loader"></div>
-<div class="container">
-    <div class="top left">
-        <img src="{{ url_for('static',filename='img/logo.png') }}" class="logo">
-    </div>
-
-    <ul id="scene" class="scene">
-        <li class="layer" data-depth="0.60"><img src="{{ url_for('static',filename='img/homepage/blue-bag.png') }}"
-                                                 id="blue-bag"></li>
-        <li class="layer" data-depth="0.75"><img src="{{ url_for('static',filename='img/homepage/passport.png') }}"
-                                                 id="passport"></li>
-        <li class="layer" data-depth="0.90"><img src="{{ url_for('static',filename='img/homepage/compass.png') }}"
-                                                 id="compass"></li>
-        <li class="layer" data-depth="0.50"><img src="{{ url_for('static',filename='img/homepage/red-bag.png') }}"
-                                                 id="red-bag"></li>
-        <li class="layer" data-depth="0.80"><img src="{{ url_for('static',filename='img/homepage/phone.png') }}"
-                                                 id="phone"></li>
-        <li class="layer" data-depth="1.00"><img src="{{ url_for('static',filename='img/homepage/card.png') }}"
-                                                 id="card"></li>
-        <li class="layer" data-depth="0.90"><img src="{{ url_for('static',filename='img/homepage/camera.png') }}"
-                                                 id="camera"></li>
-
-        <li class="layer" data-depth="0.70">
-            <a href="#aboutModal" id="about-modal"><img src="{{ url_for('static',filename='img/homepage/about.png') }}"
-                                                        id="about"></a>
-        </li>
-        <li class="layer" data-depth="0.50">
-            <a href="#sponsorModal" id="sponsor-modal"><img
-                    src="{{ url_for('static',filename='img/homepage/sponsors.png') }}" id="sponsors"></a>
-        </li>
-        <li class="layer" data-depth="0.90">
-            <a href="{{ url_for('events') }}"><img src="{{ url_for('static',filename='img/homepage/events.png') }}"
-                                                   id="events"></a>
-        </li>
-        <li class="layer" data-depth="0.60">
-            <a href="#contactsModal" id="contacts-modal"><img
-                    src="{{ url_for('static',filename='img/homepage/contact.png') }}" id="contact"></a>
-        </li>
-    </ul>
-
-    <ul class="social-icon bottom right">
-        <li><a href="https://www.facebook.com/odyssey.iiitd" target="_blank">
-			<span class="fa-stack fa-lg">
-			<i class="fa fa-circle fa-stack-2x" id="fb"></i>
-			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-			</span>
-        </a></li>
-        <li><a href="https://twitter.com/IIITDOdyssey" target="_blank">
-			<span class="fa-stack fa-lg">
-			<i class="fa fa-circle fa-stack-2x" id="twitter"></i>
-			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-			</span>
-        </a></li>
-        <li><a href="https://www.instagram.com/iiitdodyssey/" target="_blank">
-			<span class="fa-stack fa-lg">
-			<i class="fa fa-circle fa-stack-2x" id="insta"></i>
-			<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-			</span>
-        </a></li>
-        <li><a href="https://plus.google.com/104513383791254663029" target="_blank">
-			<span class="fa-stack fa-lg">
-			<i class="fa fa-circle fa-stack-2x" id="gplus"></i>
-			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-			</span></a></li>
-        <li><a href="https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ" target="_blank">
-			<span class="fa-stack fa-lg">
-			<i class="fa fa-circle fa-stack-2x" id="youtube"></i>
-			<i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-			</span>
-        </a></li>
-        <li><a href="mailto:odyssey@iiitd.ac.in" target="_blank">
-    		<span class="fa-stack fa-lg">
-			<i class="fa fa-circle fa-stack-2x" id="mail"></i>
-			<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-			</span>
-        </a></li>
-    </ul>
-    <!--	<div class="bottom right">
-		<img src="{{ url_for('static',filename='img/social-icons.png') }}" class="icon">
-	</div>-->
-</div>
-<div id="aboutModal">
-    <!--THIS IS IMPORTANT!to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-    <div class="close-aboutModal close">
-        <img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
-    </div>
-    <div class="modal-content" style="width: 100%">
-        <div class="about-photo">
-            <img src="{{ url_for('static',filename='img/about-modal.png') }}">
-        </div>
-        <div class="cen" style="width: 100%">
-            <h1 class="titleM" style="width: 100%; text-align: center">ABOUT US</h1>
-            <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 hidden-xs hidden-sm visible-md visible-lg ">
-
-                    </div>
-                    <div class="col-md-8 mainText">
-                        <p>
-                            The word Odyssey comes from the Greek Odysseia, name of the Homeric epic poem of ancient
-                            Greece relating to the 10 year adventurous journey of Odysseus. True to it’s meaning, the
-                            theme for Odyssey’17 is ‘Around the world in two days’ - a one of it’s kind journey across
-                            the seven seas, seven continents and seven heavens in two days - with just one destination.
-                        </p>
-                        <p>
-                            Talent remains latent unless the individual possessing it takes off on a journey to give
-                            wings to their dreams. Our vision is to have Odyssey’17 serve as a platform for those
-                            aspiring to turn their visions into tangible reality.
-                        </p>
-                        <p>
-                            After our success with the various editions of Esya and Odyssey - which have had footfalls
-                            of 10,000+, we are even more motivated to replicate this success once again, setting the bar
-                            even higher this time around.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="sponsorModal">
-    <div class="close-sponsorModal close">
-        <img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
-    </div>
-    <div class="modal-content" style="width: 100%">
-        <div class="cen" style="width: 100%">
-            <h1 class="titleM" style="width: 100%; text-align: center">OUR SPONSORS</h1>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 tagline">
-                        Contribute to be a part of THE NEXT BIG cultural festival in all of India.
-                    </div>
-                </div>
-                <div class="row">
-                    <form method="post" action="http://formspree.io/odyssey@iiitd.ac.in" class="center-block">
-                        <input type="hidden" name="_next" value="http://odyssey.iiitd.edu.in/"/>
-                        <div class="col-md-4 col-md-offset-3 middle-parent" style="margin-bottom: 0; padding-bottom: 0">
-                            <input type="email" name="email" placeholder="Your Email" id="mail1" class="middle">
-                        </div>
-                        <div class="col-md-2 middle-parent" style="margin-top: 0; padding-top: 0;">
-                            <input type="submit" value="Sponsor Us" id="submit-button" style="color: #222"
-                                   class="btn btn-1 btn-1f text-center middle">
-                        </div>
-                    </form>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 tagline" style="font-size: 160%; margin-top: 4%">
-                        PAST SPONSORS
-                    </div>
-                </div>
-                <img src="{{ url_for('static',filename='img/previous-sponsors.png') }}" width="100%">
-            </div>
-        </div>
-    </div>
-</div>
-<div id="contactsModal">
-    <div class="close-contactsModal close">
-        <img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
-    </div>
-
-    <div class="modal-content" style="width: 100%; padding-bottom: 10%; overflow-x: hidden; z-index: 200;">
-        <h1 class="titleM" style="width: 100%; text-align: center">CONTACT US</h1>
-        <div class="row">
-            <div class="col-md-12 tagline">
-                We'd love to hear from you.
-            </div>
-        </div>
-        <div class="row">
-            <form method="post" action="http://formspree.io/odyssey@iiitd.ac.in" class="center-block">
-                <input type="hidden" name="_next" value="http://odyssey.iiitd.edu.in/"/>
-                <div class="col-md-12 middle-parent" style="margin-bottom: 0; padding-bottom: 0;" >
-                    <input type="email" placeholder="Your Email" name="email" id="mail1" class="middle"
-                           style=" background-color:transparent">
-                </div>
-                <div class="col-md-12 middle-parent" style="margin-bottom: 0; padding-bottom: 0;" >
-                    <input type="text" name="message" placeholder="Your Query" id="mail1" class="middle"
-                           style="background-color:transparent">
-                </div>
-                <div class="col-md-12 middle-parent" style="margin-top: 0; padding-top: 0;">
-                    <input type="submit" value="Send Your Query" id="submit-button"
-                           class="btn btn-1 btn-1f text-center middle">
-                </div>
-            </form>
-        </div>
-        <!--        <div class="row">#}
-        {#            <div class="col-md-12 middle-parent" style="margin-top: 2%; margin-bottom: 2%">#}
-        {#                <a href="mailto:odyssey@iiitd.ac.in" class="btn btn-1 btn-1f center-block middle" role="button">Ask a#}
-        {#                    query</a>#}
-        {#            </div>#}
-        {#        </div>#} -->
-        <ul class="grid cs-style-4">
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/mor.jpg') }}" alt="img04"></div>
-                    <figcaption>
-                        <h3>Prikankshit Singh Mor</h3>
-                        <span>Convener</span>
-                        <a href="">7827803958</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/taru.jpg') }}" alt="img04"></div>
-                    <figcaption>
-                        <h3>Taruvar Aggarwal</h3>
-                        <span>Mentor</span>
-                        <a href="">8826500500</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <br>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/anjali.jpg') }}" alt="img06"></div>
-                    <figcaption>
-                        <h3>Anjali Ujjainia</h3>
-                        <span>Event Planning and Execution</span>
-                        <a href="">8527465471</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/gupta.jpg') }}" alt="img02"></div>
-                    <figcaption>
-                        <h3>Kartik Gupta</h3>
-                        <span>Event Planning and Execution</span>
-                        <a href="">8826577099</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/shagun.jpg') }}" alt="img03"></div>
-                    <figcaption>
-                        <h3>Shagun Kapur</h3>
-                        <span>Event Research and Ambience</span>
-                        <a href="">9968662020</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <br>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/siddhant.jpg') }}" alt="img05"></div>
-                    <figcaption>
-                        <h3>Siddhant Verma</h3>
-                        <span>Publicity </span>
-                        <a href="">9711013103</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/ekansh.jpg') }}" alt="img05"></div>
-                    <figcaption>
-                        <h3>Ekansh Sareen</h3>
-                        <span>Publicity</span>
-                        <a href="">9711856422</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/sinha.jpg') }}" alt="img05"></div>
-                    <figcaption>
-                        <h3>Shubham Sinha</h3>
-                        <span>PR, Hospitality and Nirvana night</span>
-                        <a href="">9953600441</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <br>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/sharma.jpg') }}" alt="img01"></div>
-                    <figcaption>
-                        <h3>Mridul Sharma</h3>
-                        <span>Sponsorship</span>
-                        <a href="">9958666389</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/mathur.jpg') }}" alt="img05"></div>
-                    <figcaption>
-                        <h3>Kartik Mathur</h3>
-                        <span>Operations (Infrastructure and Security)</span>
-                        <a href="">9818757395</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/gurek.jpg') }}" alt="img05"></div>
-                    <figcaption>
-                        <h3>Gurek Singh</h3>
-                        <span>Creatives Lead</span>
-                        <a href="">9910004979</a>
-                    </figcaption>
-                </figure>
-            </li>
-            <br>
-            <li>
-                <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/puneet.jpg') }}" alt="img05"></div>
-                    <figcaption>
-                        <h3>Puneet Jain</h3>
-                        <span>Treasurer</span>
-                        <a href="">9717037957</a>
-                    </figcaption>
-                </figure>
-            </li>
-        </ul>
-    </div>
-</div>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
-<script src="{{ url_for('static',filename='js/modernizr.custom.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
-{#<script src="{{ url_for('static',filename='js/parallax.js') }}"></script>#}
-<script src="{{ url_for('static',filename='js/main.js') }}"></script>
-<script src="{{ url_for('static',filename='js/animatedModal.min.js') }}"></script>
-<script>
-    $("#contacts-modal").animatedModal({
-        modalTarget: 'contactsModal',
-        animatedIn: 'fadeIn',
-        animatedOut: 'fadeOut',
-        color: '#ffcf4b',
-        overflow: 'scroll',
-    });
-    $("#about-modal").animatedModal({
-        modalTarget: 'aboutModal',
-        animatedIn: 'fadeIn',
-        animatedOut: 'fadeOut',
-        color: '#eee',
-        overflow: 'scroll'
-    });
-    $("#sponsor-modal").animatedModal({
-        modalTarget: 'sponsorModal',
-        animatedIn: 'fadeIn',
-        animatedOut: 'fadeOut',
-        color: '#fff',
-        overflow: 'scroll'
-    });
-</script>
-
-<script src="https://tympanus.net/Tutorials/CaptionHoverEffects/js/toucheffects.js"></script>
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-90355797-1', 'auto');
-    ga('send', 'pageview');
-
-</script>
-<script type="application/ld+json">
-		{
-		"@context": "http://www.schema.org",
-		"@type": "WebSite",
-		"name": "Odyssey",
-		"alternateName": "Odyssey IIIT D",
-		"url": "http://odyssey.iiitd.edu.in/",
-		 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi"
-		}
-
-
-
-
-
-
-
-</script>
-<script type="application/ld+json">
-		{
-		"@context": "http://www.schema.org",
-				"@type": "Festival",
-				"name": "Odyssey",
-				"@id": "http://odyssey.iiitd.edu.in/",
-				"url": "http://odyssey.iiitd.edu.in/",
-				"sameAs": [
-			"https://www.facebook.com/odyssey.iiitd/",
-			"https://plus.google.com/104900525075222914073",
-			"https://twitter.com/IIITDOdyssey",
-			"https://www.instagram.com/iiitdodyssey/",
-			"https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ"
-		],
-		  "startDate": "2017-03-24T08:00",
-  "endDate": "2017-03-25T23:59",
-				"description": "The word Odyssey comes from the Greek Odysseia, name of the Homeric epic poem of ancient Greece relating to the 10 year adventurous journey of Odysseus. True to it’s meaning, the theme for Odyssey’17 is ‘Around the world in two days’ - a one of it’s kind journey across the seven seas, seven continents and seven heavens in two days - with just one destination.\n\nTalent remains latent unless the individual possessing it takes off on a journey to give wings to their dreams. Our vision is to have Odyssey’17 serve as a platform for those aspiring to turn their visions into tangible reality.",
-				"location": {
-			"@type": "Place",
-					"name": "IIIT D",
-					"alternateName": "IIIT Delhi",
-					"sameAs": "https://www.iiitd.ac.in/",
-					"address": {
-				"@type": "PostalAddress",
-						"streetAddress": " Indraprastha Institute of Information Technology, Okhla Industrial Estate, Phase III, (Near Govindpuri Metro Station) New Delhi, India",
-						"addressLocality": "New Delhi",
-						"addressRegion": "Delhi",
-						"postalCode": "110020",
-						"addressCountry": "India"
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="author" content="@gureks, @geekSiddharth">
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="Odyssey'17 | Annual Cultural Fest of IIIT-Delhi">
+		<meta name="twitter:site" content="@IIITDOdyssey">
+		<!--Open Graph-->
+		<meta property="og:title" content="Odyssey'17 | Annual Cultural Fest of IIIT-Delhi"/>
+		<meta property="og:url" content="http://odyssey.iiitd.edu.in/"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:description" content="Odyssey is IIITD’s cultural festival that provides a platform for talent and competition in various fields. With a footfall of 3000+ students from Delhi-NCR region, we witnessed Euphoria perform on our campus. This year, with the theme of “Around the world in two days”, Odyssey will  will host several unique events in a wide array of categories, including Dance, Music, Theatre, and Digital Arts."/>
+		<meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-1.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+		<meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-2.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+		<meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-3.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+		<meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-4.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+		<meta property="fb:app_id" content="361553010885437"/>
+		<meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
+		<title>Odyssey'17 | IIIT Delhi</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body id="bg">
+		<div class="loader"></div>
+		<div class="container">
+			<div class="top left">
+				<img src="{{ url_for('static',filename='img/logo.png') }}" class="logo">
+			</div>
+			<ul id="scene" class="scene">
+				<li class="layer" data-depth="0.60"><img src="{{ url_for('static',filename='img/homepage/blue-bag.png') }}" id="blue-bag"></li>
+				<li class="layer" data-depth="0.75"><img src="{{ url_for('static',filename='img/homepage/passport.png') }}" id="passport"></li>
+				<li class="layer" data-depth="0.90"><img src="{{ url_for('static',filename='img/homepage/compass.png') }}" id="compass"></li>
+				<li class="layer" data-depth="0.50"><img src="{{ url_for('static',filename='img/homepage/red-bag.png') }}" id="red-bag"></li>
+				<li class="layer" data-depth="0.80"><img src="{{ url_for('static',filename='img/homepage/phone.png') }}" id="phone"></li>
+				<li class="layer" data-depth="1.00"><img src="{{ url_for('static',filename='img/homepage/card.png') }}" id="card"></li>
+				<li class="layer" data-depth="0.90"><img src="{{ url_for('static',filename='img/homepage/camera.png') }}" id="camera"></li>
+				<li class="layer" data-depth="0.70">
+					<a href="#aboutModal" id="about-modal"><img src="{{ url_for('static',filename='img/homepage/about.png') }}" id="about"></a>
+				</li>
+				<li class="layer" data-depth="0.50">
+					<a href="#sponsorModal" id="sponsor-modal"><img
+						src="{{ url_for('static',filename='img/homepage/sponsors.png') }}" id="sponsors"></a>
+				</li>
+				<li class="layer" data-depth="0.90">
+					<a href="{{ url_for('events') }}"><img src="{{ url_for('static',filename='img/homepage/events.png') }}"
+						id="events"></a>
+				</li>
+				<li class="layer" data-depth="0.60">
+					<a href="#contactsModal" id="contacts-modal"><img
+						src="{{ url_for('static',filename='img/homepage/contact.png') }}" id="contact"></a>
+				</li>
+			</ul>
+			<ul class="social-icon bottom right">
+				<li><a href="https://www.facebook.com/odyssey.iiitd" target="_blank">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x" id="fb"></i>
+					<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+					</span>
+					</a>
+				</li>
+				<li><a href="https://twitter.com/IIITDOdyssey" target="_blank">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x" id="twitter"></i>
+					<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+					</span>
+					</a>
+				</li>
+				<li><a href="https://www.instagram.com/iiitdodyssey/" target="_blank">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x" id="insta"></i>
+					<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+					</span>
+					</a>
+				</li>
+				<li><a href="https://plus.google.com/104513383791254663029" target="_blank">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x" id="gplus"></i>
+					<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+					</span></a>
+				</li>
+				<li><a href="https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ" target="_blank">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x" id="youtube"></i>
+					<i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+					</span>
+					</a>
+				</li>
+				<li><a href="mailto:odyssey@iiitd.ac.in" target="_blank">
+					<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x" id="mail"></i>
+					<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+					</span>
+					</a>
+				</li>
+			</ul>
+			<!--	<div class="bottom right">
+				<img src="{{ url_for('static',filename='img/social-icons.png') }}" class="icon">
+				</div>-->
+		</div>
+		<div id="aboutModal">
+			<!--THIS IS IMPORTANT!to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+			<div class="close-aboutModal close">
+				<img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
+			</div>
+			<div class="modal-content" style="width: 100%">
+				<div class="about-photo">
+					<img src="{{ url_for('static',filename='img/about-modal.png') }}">
+				</div>
+				<div class="cen" style="width: 100%">
+					<h1 class="titleM" style="width: 100%; text-align: center">ABOUT US</h1>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 hidden-xs hidden-sm visible-md visible-lg ">
+							</div>
+							<div class="col-md-8 mainText">
+								<p>
+									The word Odyssey comes from the Greek Odysseia, name of the Homeric epic poem of ancient
+									Greece relating to the 10 year adventurous journey of Odysseus. True to it’s meaning, the
+									theme for Odyssey’17 is ‘Around the world in two days’ - a one of it’s kind journey across
+									the seven seas, seven continents and seven heavens in two days - with just one destination.
+								</p>
+								<p>
+									Talent remains latent unless the individual possessing it takes off on a journey to give
+									wings to their dreams. Our vision is to have Odyssey’17 serve as a platform for those
+									aspiring to turn their visions into tangible reality.
+								</p>
+								<p>
+									After our success with the various editions of Esya and Odyssey - which have had footfalls
+									of 10,000+, we are even more motivated to replicate this success once again, setting the bar
+									even higher this time around.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sponsorModal">
+			<div class="close-sponsorModal close">
+				<img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
+			</div>
+			<div class="modal-content" style="width: 100%">
+				<div class="cen" style="width: 100%">
+					<h1 class="titleM" style="width: 100%; text-align: center">OUR SPONSORS</h1>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 tagline">
+								Contribute to be a part of THE NEXT BIG cultural festival in all of India.
+							</div>
+						</div>
+						<div class="row">
+							<form method="post" action="http://formspree.io/odyssey@iiitd.ac.in" class="center-block">
+								<input type="hidden" name="_next" value="http://odyssey.iiitd.edu.in/"/>
+								<div class="col-md-4 col-md-offset-3 middle-parent" style="margin-bottom: 0; padding-bottom: 0">
+									<input type="email" name="email" placeholder="Your Email" id="mail1" class="middle">
+								</div>
+								<div class="col-md-2 middle-parent" style="margin-top: 0; padding-top: 0;">
+									<input type="submit" value="Sponsor Us" id="submit-button" style="color: #222"
+										class="btn btn-1 btn-1f text-center middle">
+								</div>
+							</form>
+						</div>
+						<div class="row">
+							<div class="col-md-12 tagline" style="font-size: 160%; margin-top: 4%">
+								PAST SPONSORS
+							</div>
+						</div>
+						<img src="{{ url_for('static',filename='img/previous-sponsors.png') }}" width="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contactsModal">
+			<div class="close-contactsModal close">
+				<img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
+			</div>
+			<div class="modal-content" style="width: 100%; padding-bottom: 10%; overflow-x: hidden; z-index: 200;">
+				<h1 class="titleM" style="width: 100%; text-align: center">CONTACT US</h1>
+				<div class="row">
+					<div class="col-md-12 tagline">
+						We'd love to hear from you.
+					</div>
+				</div>
+				<div class="row">
+					<form method="post" action="http://formspree.io/odyssey@iiitd.ac.in" class="center-block">
+						<input type="hidden" name="_next" value="http://odyssey.iiitd.edu.in/"/>
+						<div class="col-md-12 middle-parent" style="margin-bottom: 0; padding-bottom: 0;" >
+							<input type="email" placeholder="Your Email" name="email" id="mail1" class="middle"
+								style=" background-color:transparent">
+						</div>
+						<div class="col-md-12 middle-parent" style="margin-bottom: 0; padding-bottom: 0;" >
+							<input type="text" name="message" placeholder="Your Query" id="mail1" class="middle"
+								style="background-color:transparent">
+						</div>
+						<div class="col-md-12 middle-parent" style="margin-top: 0; padding-top: 0;">
+							<input type="submit" value="Send Your Query" id="submit-button"
+								class="btn btn-1 btn-1f text-center middle">
+						</div>
+					</form>
+				</div>
+				<!--        <div class="row">#}
+					{#            <div class="col-md-12 middle-parent" style="margin-top: 2%; margin-bottom: 2%">#}
+					{#                <a href="mailto:odyssey@iiitd.ac.in" class="btn btn-1 btn-1f center-block middle" role="button">Ask a#}
+					{#                    query</a>#}
+					{#            </div>#}
+					{#        </div>#} -->
+				<ul class="grid cs-style-4">
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/mor.jpg') }}" alt="img04"></div>
+							<figcaption>
+								<h3>Prikankshit Singh Mor</h3>
+								<span>Convener</span>
+								<a href="">7827803958</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/taru.jpg') }}" alt="img04"></div>
+							<figcaption>
+								<h3>Taruvar Aggarwal</h3>
+								<span>Mentor</span>
+								<a href="">8826500500</a>
+							</figcaption>
+						</figure>
+					</li>
+					<br>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/anjali.jpg') }}" alt="img06"></div>
+							<figcaption>
+								<h3>Anjali Ujjainia</h3>
+								<span>Event Planning and Execution</span>
+								<a href="">8527465471</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/gupta.jpg') }}" alt="img02"></div>
+							<figcaption>
+								<h3>Kartik Gupta</h3>
+								<span>Event Planning and Execution</span>
+								<a href="">8826577099</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/shagun.jpg') }}" alt="img03"></div>
+							<figcaption>
+								<h3>Shagun Kapur</h3>
+								<span>Event Research and Ambience</span>
+								<a href="">9968662020</a>
+							</figcaption>
+						</figure>
+					</li>
+					<br>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/siddhant.jpg') }}" alt="img05"></div>
+							<figcaption>
+								<h3>Siddhant Verma</h3>
+								<span>Publicity </span>
+								<a href="">9711013103</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/ekansh.jpg') }}" alt="img05"></div>
+							<figcaption>
+								<h3>Ekansh Sareen</h3>
+								<span>Publicity</span>
+								<a href="">9711856422</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/sinha.jpg') }}" alt="img05"></div>
+							<figcaption>
+								<h3>Shubham Sinha</h3>
+								<span>PR, Hospitality and Nirvana night</span>
+								<a href="">9953600441</a>
+							</figcaption>
+						</figure>
+					</li>
+					<br>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/sharma.jpg') }}" alt="img01"></div>
+							<figcaption>
+								<h3>Mridul Sharma</h3>
+								<span>Sponsorship</span>
+								<a href="">9958666389</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/mathur.jpg') }}" alt="img05"></div>
+							<figcaption>
+								<h3>Kartik Mathur</h3>
+								<span>Operations (Infrastructure and Security)</span>
+								<a href="">9818757395</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/gurek.jpg') }}" alt="img05"></div>
+							<figcaption>
+								<h3>Gurek Singh</h3>
+								<span>Creatives Lead</span>
+								<a href="">9910004979</a>
+							</figcaption>
+						</figure>
+					</li>
+					<br>
+					<li>
+						<figure>
+							<div><img src="{{ url_for('static',filename='img/contacts/puneet.jpg') }}" alt="img05"></div>
+							<figcaption>
+								<h3>Puneet Jain</h3>
+								<span>Treasurer</span>
+								<a href="">9717037957</a>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+		<script src="{{ url_for('static',filename='js/modernizr.custom.js') }}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+		{#<script src="{{ url_for('static',filename='js/parallax.js') }}"></script>#}
+		<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/animatedModal.min.js') }}"></script>
+		<script>
+			$("#contacts-modal").animatedModal({
+			    modalTarget: 'contactsModal',
+			    animatedIn: 'fadeIn',
+			    animatedOut: 'fadeOut',
+			    color: '#ffcf4b',
+			    overflow: 'scroll',
+			});
+			$("#about-modal").animatedModal({
+			    modalTarget: 'aboutModal',
+			    animatedIn: 'fadeIn',
+			    animatedOut: 'fadeOut',
+			    color: '#eee',
+			    overflow: 'scroll'
+			});
+			$("#sponsor-modal").animatedModal({
+			    modalTarget: 'sponsorModal',
+			    animatedIn: 'fadeIn',
+			    animatedOut: 'fadeOut',
+			    color: '#fff',
+			    overflow: 'scroll'
+			});
+		</script>
+		<script src="https://tympanus.net/Tutorials/CaptionHoverEffects/js/toucheffects.js"></script>
+		<script>
+			(function (i, s, o, g, r, a, m) {
+			    i['GoogleAnalyticsObject'] = r;
+			    i[r] = i[r] || function () {
+			                (i[r].q = i[r].q || []).push(arguments)
+			            }, i[r].l = 1 * new Date();
+			    a = s.createElement(o),
+			            m = s.getElementsByTagName(o)[0];
+			    a.async = 1;
+			    a.src = g;
+			    m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+			
+			ga('create', 'UA-90355797-1', 'auto');
+			ga('send', 'pageview');	
+		</script>
+		<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+			"@type": "WebSite",
+			"name": "Odyssey",
+			"alternateName": "Odyssey IIIT D",
+			"url": "http://odyssey.iiitd.edu.in/",
+			 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi"
 			}
-		},
-		"typicalAgeRange": "15-30",
-				"offers": {
-			"@type": "Offer",
-					"description": "Event Ticket",
+		</script>
+		<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+					"@type": "Festival",
+					"name": "Odyssey",
+					"@id": "http://odyssey.iiitd.edu.in/",
 					"url": "http://odyssey.iiitd.edu.in/",
-					"price": "0"
-		}
-		}
-
-
-
-
-
-
-
-</script>
-</body>
+					"sameAs": [
+				"https://www.facebook.com/odyssey.iiitd/",
+				"https://plus.google.com/104900525075222914073",
+				"https://twitter.com/IIITDOdyssey",
+				"https://www.instagram.com/iiitdodyssey/",
+				"https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ"
+			],
+			  "startDate": "2017-03-24T08:00",
+			"endDate": "2017-03-25T23:59",
+					"description": "The word Odyssey comes from the Greek Odysseia, name of the Homeric epic poem of ancient Greece relating to the 10 year adventurous journey of Odysseus. True to it’s meaning, the theme for Odyssey’17 is ‘Around the world in two days’ - a one of it’s kind journey across the seven seas, seven continents and seven heavens in two days - with just one destination.\n\nTalent remains latent unless the individual possessing it takes off on a journey to give wings to their dreams. Our vision is to have Odyssey’17 serve as a platform for those aspiring to turn their visions into tangible reality.",
+					"location": {
+				"@type": "Place",
+						"name": "IIIT D",
+						"alternateName": "IIIT Delhi",
+						"sameAs": "https://www.iiitd.ac.in/",
+						"address": {
+					"@type": "PostalAddress",
+							"streetAddress": " Indraprastha Institute of Information Technology, Okhla Industrial Estate, Phase III, (Near Govindpuri Metro Station) New Delhi, India",
+							"addressLocality": "New Delhi",
+							"addressRegion": "Delhi",
+							"postalCode": "110020",
+							"addressCountry": "India"
+				}
+			},
+			"typicalAgeRange": "15-30",
+					"offers": {
+				"@type": "Offer",
+						"description": "Event Ticket",
+						"url": "http://odyssey.iiitd.edu.in/",
+						"price": "0"
+			}
+			}	
+		</script>
+	</body>
 </html>

@@ -1,418 +1,390 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="@gureks, @geekSiddharth">
-    <meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
-    <title>Events - Odyssey'17 | IIIT Delhi</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/events.css') }}">
-</head>
-<body style="width: 100%">
-
-<div class="back">
-    <a href="{{ url_for('index') }}">
-        <img src="{{ url_for('static',filename='img/left-arrow.png') }}" height="40px" width="auto">
-    </a>
-</div>
-<div class="home">
-    <a href="{{ url_for('index') }}">
-        <img src="{{ url_for('static',filename='img/logo2.png') }}" height="40px" width="40px">
-    </a>
-</div>
-
-<header class="middle-parent header" style="width: 100%">
-    <div class="middle" style="text-align: center">
-        <a class="header-link link link--manko" href="#" style="text-align: center">Events <br> <span>Around the world in two days</span> <span>Odyssey'17</span></a>
-    </div>
-</header>
-<div class="container-fluid buttons" style="width: 100%">
-    <div class="button-group filter-button-group">
-        <div class="row center-block ">
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter="*">all</button>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="@gureks, @geekSiddharth">
+        <meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
+        <title>Events - Odyssey'17 | IIIT Delhi</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/events.css') }}">
+    </head>
+    <body style="width: 100%">
+        <div class="back">
+            <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static',filename='img/left-arrow.png') }}" height="40px" width="auto">
+            </a>
+        </div>
+        <div class="home">
+            <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static',filename='img/logo2.png') }}" height="40px" width="40px">
+            </a>
+        </div>
+        <header class="middle-parent header" style="width: 100%">
+            <div class="middle" style="text-align: center">
+                <a class="header-link link link--manko" href="#" style="text-align: center">Events <br> <span>Around the world in two days</span> <span>Odyssey'17</span></a>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".flagship">flagship</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".music">music</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".literature">literature</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".lifestyle">lifestyle</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".arts">arts</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".online">online</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".dance">dance</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".design">design</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".fun">fun</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".quizzes">quizzes</button>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-                <button class="btn-1 btn-1f btn " data-filter=".theatre">theatre</button>
+        </header>
+        <div class="container-fluid buttons" style="width: 100%">
+            <div class="button-group filter-button-group">
+                <div class="row center-block ">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter="*">all</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".flagship">flagship</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".music">music</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".literature">literature</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".lifestyle">lifestyle</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".arts">arts</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".online">online</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".dance">dance</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".design">design</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".fun">fun</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".quizzes">quizzes</button>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <button class="btn-1 btn-1f btn " data-filter=".theatre">theatre</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container-fluid isotope-grid" style="width: 100%">
-    <div class="center-block">
-        <div class="grid-item-parent grid cs-style-3 ">
-            <div class="grid-item music flagship">
-                <figure>
-                    <img src="{{ url_for('static',filename='img/events/battle-of-bands.jpg') }}" alt="img01">
-                    <figcaption>
-                        <h3>Battle of Bands</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item literature online">
-                <figure>
-                    <img src="../static/img/events/musings.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Musings</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item literature">
-                <figure>
-                    <img src="../static/img/events/verbattle.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Verbattle</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item literature fun">
-                <figure>
-                    <img src="../static/img/events/punchline.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Punchline</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item literature">
-                <figure>
-                    <img src="../static/img/events/grammar-nazi.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Grammar Nazi</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item lifestyle">
-                <figure>
-                    <img src="../static/img/events/mr-miss-odyssey.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Mr. & Miss Odyssey</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item lifestyle">
-                <figure>
-                    <img src="../static/img/events/reverbe.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Reverbe-The Fashion Show</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item design online">
-                <figure>
-                    <img src="../static/img/events/short-video.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Short Video Making</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item music">
-                <figure>
-                    <img src="../static/img/events/a-cappella.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Acapella</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item design">
-                <figure>
-                    <img src="../static/img/events/design-360.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Design 360</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item design">
-                <figure>
-                    <img src="../static/img/events/captcha.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Captcha</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item arts">
-                <figure>
-                    <img src="../static/img/events/comic-strip-making.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Comic-Strip Making</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item arts">
-                <figure>
-                    <img src="../static/img/events/art-attack.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Art Attack</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item music">
-                <figure>
-                    <img src="../static/img/events/encore.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Encore</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item theatre">
-                <figure>
-                    <img src="../static/img/events/gupchup.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Gupchup</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item theatre">
-                <figure>
-                    <img src="../static/img/events/hasratein.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Hasratein</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item dance">
-                <figure>
-                    <img src="../static/img/events/can-you-duet.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Can you Duet?</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item dance">
-                <figure>
-                    <img src="../static/img/events/verve.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Verve-Solo</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item dance">
-                <figure>
-                    <img src="../static/img/events/battle-troupe.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Battle Troupe</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item fun">
-                <figure>
-                    <img src="../static/img/events/sumo-wrestling.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Sumo Wrestling</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item fun">
-                <figure>
-                    <img src="../static/img/events/food-binge.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Food Binge</h3>
-
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item fun">
-                <figure>
-                    <img src="../static/img/events/blind-date.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Blind Date</h3>
-
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item fun">
-                <figure>
-                    <img src="../static/img/events/pwned.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Pwned v5.0</h3>
-
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item fun">
-                <figure>
-                    <img src="../static/img/events/enigma.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Enigma - Treasure Hunt</h3>
-
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item quizzes">
-                <figure>
-                    <img src="../static/img/events/pop-cult-quiz.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Pop-Cult</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item fun">
-                <figure>
-                    <img src="../static/img/events/chess.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Chess</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="grid-item quizzes">
-                <figure>
-                    <img src="../static/img/events/got-quiz.jpg" alt="img01">
-                    <figcaption>
-                        <h3>Game Of Throne</h3>
-                        <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
-
-                        <!--<a href="">Take a look</a>-->
-                    </figcaption>
-                </figure>
+        <div class="container-fluid isotope-grid" style="width: 100%">
+            <div class="center-block">
+                <div class="grid-item-parent grid cs-style-3 ">
+                    <div class="grid-item music flagship">
+                        <figure>
+                            <img src="{{ url_for('static',filename='img/events/battle-of-bands.jpg') }}" alt="img01">
+                            <figcaption>
+                                <h3>Battle of Bands</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item literature online">
+                        <figure>
+                            <img src="../static/img/events/musings.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Musings</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item literature">
+                        <figure>
+                            <img src="../static/img/events/verbattle.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Verbattle</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item literature fun">
+                        <figure>
+                            <img src="../static/img/events/punchline.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Punchline</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item literature">
+                        <figure>
+                            <img src="../static/img/events/grammar-nazi.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Grammar Nazi</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item lifestyle">
+                        <figure>
+                            <img src="../static/img/events/mr-miss-odyssey.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Mr. & Miss Odyssey</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item lifestyle">
+                        <figure>
+                            <img src="../static/img/events/reverbe.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Reverbe-The Fashion Show</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item design online">
+                        <figure>
+                            <img src="../static/img/events/short-video.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Short Video Making</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item music">
+                        <figure>
+                            <img src="../static/img/events/a-cappella.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Acapella</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item design">
+                        <figure>
+                            <img src="../static/img/events/design-360.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Design 360</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item design">
+                        <figure>
+                            <img src="../static/img/events/captcha.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Captcha</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item arts">
+                        <figure>
+                            <img src="../static/img/events/comic-strip-making.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Comic-Strip Making</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item arts">
+                        <figure>
+                            <img src="../static/img/events/art-attack.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Art Attack</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item music">
+                        <figure>
+                            <img src="../static/img/events/encore.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Encore</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item theatre">
+                        <figure>
+                            <img src="../static/img/events/gupchup.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Gupchup</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item theatre">
+                        <figure>
+                            <img src="../static/img/events/hasratein.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Hasratein</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item dance">
+                        <figure>
+                            <img src="../static/img/events/can-you-duet.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Can you Duet?</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item dance">
+                        <figure>
+                            <img src="../static/img/events/verve.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Verve-Solo</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item dance">
+                        <figure>
+                            <img src="../static/img/events/battle-troupe.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Battle Troupe</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item fun">
+                        <figure>
+                            <img src="../static/img/events/sumo-wrestling.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Sumo Wrestling</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item fun">
+                        <figure>
+                            <img src="../static/img/events/food-binge.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Food Binge</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item fun">
+                        <figure>
+                            <img src="../static/img/events/blind-date.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Blind Date</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item fun">
+                        <figure>
+                            <img src="../static/img/events/pwned.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Pwned v5.0</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item fun">
+                        <figure>
+                            <img src="../static/img/events/enigma.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Enigma - Treasure Hunt</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item quizzes">
+                        <figure>
+                            <img src="../static/img/events/pop-cult-quiz.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Pop-Cult</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item fun">
+                        <figure>
+                            <img src="../static/img/events/chess.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Chess</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="grid-item quizzes">
+                        <figure>
+                            <img src="../static/img/events/got-quiz.jpg" alt="img01">
+                            <figcaption>
+                                <h3>Game Of Throne</h3>
+                                <a href="https://goo.gl/forms/TnvdluxSpQm54LLw2">Register</a>
+                                <!--<a href="">Take a look</a>-->
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</body>
-<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-<script>
-    var $grid = $('.grid-item-parent').isotope({
-        // options
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        stagger: 30
-    });
-    $grid.isotope('shuffle');
-    $grid.isotope({filter: '.theatre'});
-    $grid.isotope({filter: '.flagship'});
-    $grid.isotope({filter: '.quizzes'});
-    $grid.isotope({filter: '.fun'});
-    $grid.isotope({filter: '.music'});
-    $grid.isotope({filter: '.literature'});
-    $grid.isotope({filter: '.games'});
-    $grid.isotope({filter: '.lifestyle'});
-    $grid.isotope({filter: '.design'});
-    $grid.isotope({filter: '.arts'});
-    $grid.isotope({filter: '.online'});
-    $grid.isotope({filter: '.dance'});
-    $grid.isotope({filter: '*'});
-
-    $('.filter-button-group').on('click', 'button', function () {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({filter: filterValue});
-    });
-
-    $(window).resize(function () {
-        $grid.isotope('reloadItems')
-    });
-    $('body').bind('touchstart', function () {
-    });
-</script>
-<script src="https://tympanus.net/Tutorials/CaptionHoverEffects/js/toucheffects.js"></script>
- <script>
+    </body>
+    <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script>
+        var $grid = $('.grid-item-parent').isotope({
+            // options
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            stagger: 30
+        });
+        $grid.isotope('shuffle');
+        $grid.isotope({filter: '.theatre'});
+        $grid.isotope({filter: '.flagship'});
+        $grid.isotope({filter: '.quizzes'});
+        $grid.isotope({filter: '.fun'});
+        $grid.isotope({filter: '.music'});
+        $grid.isotope({filter: '.literature'});
+        $grid.isotope({filter: '.games'});
+        $grid.isotope({filter: '.lifestyle'});
+        $grid.isotope({filter: '.design'});
+        $grid.isotope({filter: '.arts'});
+        $grid.isotope({filter: '.online'});
+        $grid.isotope({filter: '.dance'});
+        $grid.isotope({filter: '*'});
+        
+        $('.filter-button-group').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({filter: filterValue});
+        });
+        
+        $(window).resize(function () {
+            $grid.isotope('reloadItems')
+        });
+        $('body').bind('touchstart', function () {
+        });
+    </script>
+    <script src="https://tympanus.net/Tutorials/CaptionHoverEffects/js/toucheffects.js"></script>
+    <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
@@ -424,10 +396,10 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
+        
         ga('create', 'UA-90355797-1', 'auto');
         ga('send', 'pageview');
-
+        
     </script>
     <script type="application/ld+json">
         {
@@ -454,7 +426,7 @@
             "https://www.youtube.com/user/odysseyiiitd"
         ],
           "startDate": "2017-03-24T08:00",
-  "endDate": "2017-03-25T23:59",
+        "endDate": "2017-03-25T23:59",
                 "description": "The word Odyssey comes from the Greek Odysseia, name of the Homeric epic poem of ancient Greece relating to the 10 year adventurous journey of Odysseus. True to it’s meaning, the theme for Odyssey’17 is ‘Around the world in two days’ - a one of it’s kind journey across the seven seas, seven continents and seven heavens in two days - with just one destination.\n\nTalent remains latent unless the individual possessing it takes off on a journey to give wings to their dreams. Our vision is to have Odyssey’17 serve as a platform for those aspiring to turn their visions into tangible reality.",
                 "location": {
             "@type": "Place",
