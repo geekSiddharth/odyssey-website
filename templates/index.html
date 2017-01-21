@@ -28,8 +28,9 @@
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
     <meta property="fb:app_id" content="361553010885437"/>
+
     <meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
-    <title>Odyssey'17 | IIIT Delhi</title>
+    <title>Odyssey | IIIT Delhi</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
@@ -44,34 +45,38 @@
     </div>
     <ul id="scene" class="scene">
         <li class="layer" data-depth="0.60"><img src="{{ url_for('static',filename='img/homepage/blue-bag.png') }}"
-                                                 id="blue-bag"></li>
+                                                 id="blue-bag" alt="Travel - Odyssey IIIT Delhi"></li>
         <li class="layer" data-depth="0.75"><img src="{{ url_for('static',filename='img/homepage/passport.png') }}"
-                                                 id="passport"></li>
+                                                 id="passport" alt="Travel - Odyssey IIIT Delhi"></li>
         <li class="layer" data-depth="0.90"><img src="{{ url_for('static',filename='img/homepage/compass.png') }}"
-                                                 id="compass"></li>
+                                                 id="compass"
+                                                 alt="around the world and navigation - Odyssey IIIT Delhi"></li>
         <li class="layer" data-depth="0.50"><img src="{{ url_for('static',filename='img/homepage/red-bag.png') }}"
-                                                 id="red-bag"></li>
+                                                 id="red-bag" alt="around the world with red bag - Odyssey IIIT Delhi">
+        </li>
         <li class="layer" data-depth="0.80"><img src="{{ url_for('static',filename='img/homepage/phone.png') }}"
-                                                 id="phone"></li>
+                                                 id="phone" alt="around the world with phone - Odyssey"></li>
         <li class="layer" data-depth="1.00"><img src="{{ url_for('static',filename='img/homepage/card.png') }}"
                                                  id="card"></li>
         <li class="layer" data-depth="0.90"><img src="{{ url_for('static',filename='img/homepage/camera.png') }}"
-                                                 id="camera"></li>
+                                                 id="camera" alt="Photography- Odyssey "></li>
         <li class="layer" data-depth="0.70">
             <a href="#aboutModal" id="about-modal"><img src="{{ url_for('static',filename='img/homepage/about.png') }}"
-                                                        id="about"></a>
+                                                        id="about" alt="About Us - Odyssey"></a>
         </li>
         <li class="layer" data-depth="0.50">
             <a href="#sponsorModal" id="sponsor-modal"><img
-                    src="{{ url_for('static',filename='img/homepage/sponsors.png') }}" id="sponsors"></a>
+                    src="{{ url_for('static',filename='img/homepage/sponsors.png') }}" id="sponsors"
+                    alt="Sponsor Us - Odyssey"></a>
         </li>
         <li class="layer" data-depth="0.90">
             <a href="{{ url_for('events') }}"><img src="{{ url_for('static',filename='img/homepage/events.png') }}"
-                                                   id="events"></a>
+                                                   id="events" alt="Events at Odyssey "></a>
         </li>
         <li class="layer" data-depth="0.60">
             <a href="#contactsModal" id="contacts-modal"><img
-                    src="{{ url_for('static',filename='img/homepage/contact.png') }}" id="contact"></a>
+                    src="{{ url_for('static',filename='img/homepage/contact.png') }}" id="contact"
+                    alt="Contact Us - Odyssey"></a>
         </li>
     </ul>
     <ul class="social-icon bottom right">
@@ -123,12 +128,12 @@
 </div>
 <div id="aboutModal">
     <!--THIS IS IMPORTANT!to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-    <div class="close-aboutModal close">
+    <div class="close-aboutModal close" style="z-index: 10000000000000000">
         <img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
     </div>
     <div class="modal-content" style="width: 100%">
         <div class="about-photo">
-            <img src="{{ url_for('static',filename='img/about-modal.jpg') }}">
+            <img src="{{ url_for('static',filename='img/about-modal.jpg') }}" alt="Odyssey Logo | with buildings">
         </div>
         <div class="cen" style="width: 100%">
             <h1 class="titleM" style="width: 100%; text-align: center">ABOUT US</h1>
@@ -189,7 +194,8 @@
                         PAST SPONSORS
                     </div>
                 </div>
-                <img src="{{ url_for('static',filename='img/previous-sponsors.jpg') }}" width="100%">
+                <img src="{{ url_for('static',filename='img/previous-sponsors.jpg') }}" width="100%"
+                     alt="Sponsors of Odyssey">
             </div>
         </div>
     </div>
@@ -231,7 +237,8 @@
         <ul class="grid cs-style-4">
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/mor.jpg') }}" alt="img04"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/mor.jpg') }}"
+                              alt="Mor Organising Team Odyssey"></div>
                     <figcaption>
                         <h3>Prikankshit Singh Mor</h3>
                         <span>Convener</span>
@@ -249,7 +256,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/taru.jpg') }}" alt="img04"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/taru.jpg') }}"
+                              alt="Taruvar Organising Team Odyssey"></div>
                     <figcaption>
                         <h3>Taruvar Aggarwal</h3>
                         <span>Mentor</span>
@@ -265,7 +273,8 @@
             <br>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/anjali.jpg') }}" alt="img06"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/anjali.jpg') }}"
+                              alt="Anjali in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Anjali Ujjainia</h3>
                         <span>Event Planning and Execution</span>
@@ -280,7 +289,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/gupta.jpg') }}" alt="img02"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/gupta.jpg') }}"
+                              alt="kartick Gupta in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Kartik Gupta</h3>
                         <span>Event Planning and Execution</span>
@@ -298,7 +308,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/shagun.jpg') }}" alt="img03"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/shagun.jpg') }}"
+                              alt="Shagun Kapur in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Shagun Kapur</h3>
                         <span>Event Research and Ambience</span>
@@ -314,7 +325,8 @@
             <br>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/siddhant.jpg') }}" alt="img05"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/siddhant.jpg') }}"
+                              alt="Siddhant Vermain Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Siddhant Verma</h3>
                         <span>Publicity </span>
@@ -332,7 +344,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/ekansh.jpg') }}" alt="img05"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/ekansh.jpg') }}"
+                              alt="Ekansh in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Ekansh Sareen</h3>
                         <span>Publicity</span>
@@ -351,7 +364,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/sinha.jpg') }}" alt="img05"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/sinha.jpg') }}"
+                              alt="Shubhan Sinha in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Shubham Sinha</h3>
                         <span>PR, Hospitality and Nirvana night</span>
@@ -370,7 +384,8 @@
             <br>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/sharma.jpg') }}" alt="img01"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/sharma.jpg') }}"
+                              alt="Mridul Sharma in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Mridul Sharma</h3>
                         <span>Sponsorship</span>
@@ -388,7 +403,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/mathur.jpg') }}" alt="img05"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/mathur.jpg') }}"
+                              alt="Kartik Mathur in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Kartik Mathur</h3>
                         <span>Operations (Infrastructure and Security)</span>
@@ -406,7 +422,8 @@
             </li>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/gurek.jpg') }}" alt="img05"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/gurek.jpg') }}"
+                              alt="Gurek in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Gurek Singh</h3>
                         <span>Creatives Lead</span>
@@ -422,7 +439,8 @@
             <br>
             <li>
                 <figure>
-                    <div><img src="{{ url_for('static',filename='img/contacts/puneet.jpg') }}" alt="img05"></div>
+                    <div><img src="{{ url_for('static',filename='img/contacts/puneet.jpg') }}"
+                              alt="Puneet in Organising Team of Odyssey"></div>
                     <figcaption>
                         <h3>Puneet Jain</h3>
                         <span>Treasurer</span>
@@ -514,7 +532,7 @@
 			],
 			  "startDate": "2017-03-24T08:00",
 			"endDate": "2017-03-25T23:59",
-					"description": "The word Odyssey comes from the Greek Odysseia, name of the Homeric epic poem of ancient Greece relating to the 10 year adventurous journey of Odysseus. True to it’s meaning, the theme for Odyssey’17 is ‘Around the world in two days’ - a one of it’s kind journey across the seven seas, seven continents and seven heavens in two days - with just one destination.\n\nTalent remains latent unless the individual possessing it takes off on a journey to give wings to their dreams. Our vision is to have Odyssey’17 serve as a platform for those aspiring to turn their visions into tangible reality.",
+					"description": "Odyssey is IIITD’s cultural festival that provides a platform for talent and competition in various fields. This year, with the theme of “Around the world in two days”, Odyssey will  will host several unique events in a wide array of categories, including Dance, Music, Theatre, and Digital Arts.",
 					"location": {
 				"@type": "Place",
 						"name": "IIIT D",
@@ -533,7 +551,7 @@
 					"offers": {
 				"@type": "Offer",
 						"description": "Event Ticket",
-						"url": "http://odyssey.iiitd.edu.in/",
+						"url": "https://goo.gl/forms/TnvdluxSpQm54LLw2",
 						"price": "0"
 			}
 			}	
