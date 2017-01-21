@@ -334,10 +334,9 @@ Style Individual
     transition: transform 0.4s, opacity 0.1s;
 }
 
-.cs-style-4 figcaption a {
+.cs-style-4 figcaption > ul {
     position: absolute;
     bottom: 20px;
-    right: 20px;
 }
 
 /*
