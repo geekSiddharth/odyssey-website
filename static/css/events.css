@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face {
     font-family: 'CODE Bold';
     src: url("../font/CODE Bold.otf") format("opentype");
 }
-@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face {
     font-family: 'Geometria';
     src: url("../font/Geometria.otf") format("opentype");
 }
 body{
-    font-family: "CODE Bold", "Helvetica Neue", sans-serif;
+    font-family: "CODE Bold", Sans-Serif;
 }
 body{
     background-color:#ffcf4b;!important;
@@ -34,7 +34,6 @@ a, a:hover, a:focus {
     right: 20px;
     z-index: 2000000000;
     padding: 5px;
-    background-color: rgba(0,0,0,0.1);
 }
 .back{
     position: fixed;
@@ -51,22 +50,22 @@ a, a:hover, a:focus {
 }
 ::-webkit-scrollbar-track
 {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;;
 }
 
 ::-webkit-scrollbar
 {
-    width: 12px;
-    border-radius: 10px;
+    width: 7px;
+    border-radius: 5px;
     background-color: white;
 }
 
 ::-webkit-scrollbar-thumb
 {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #f9b32f;
-    border: 10px solid #f9b32f;
+    border: 5px solid #f9b32f;
 }
 
 .middle-parent{
@@ -82,7 +81,7 @@ a, a:hover, a:focus {
 }
 .buttons{
     display: block;
-    padding: 5% 10%;
+    padding: 0% 1% 5% 1%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -291,7 +290,7 @@ Button Hover Effect
 }
 
 .header{
-    height: 80vh;
+    height: 50vh;
     text-align: center;
     background-color: #ffcf4b  ; !important;
 }
@@ -306,95 +305,18 @@ Button Hover Effect
 }
 /* Manko */
 .link--manko {
-    color: #505050;;
-    font-weight: 900;
-    padding: 0.65em 0 0.8em;
+    color: #505050;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 .65em 0 0.65em;
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
 }
 
 .link--manko:hover {
-    color: #505050;
+    color: #404040;
 }
 
-.link--manko::before,
-.link--manko::after {
-    content: '';
-    position: absolute;
-    border-width: 4px 0;
-    border-style: solid;
-    border-color: white;
-    pointer-events: none;
-    -webkit-transform: scale3d(0,1,1);
-    transform: scale3d(0,1,1);
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: transform 0.4s;
-    -webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
-    transition-timing-function: cubic-bezier(0.2,1,0.3,1);
-}
-
-.link--manko::before {
-    width: 50%;
-    left: 25%;
-    height: 80%;
-    top: 10%;
-}
-
-.link--manko::after {
-    width: 30%;
-    left: 35%;
-    height: 100%;
-    top: 0;
-}
-
-.link--manko:hover::before,
-.link--manko:hover::after {
-    -webkit-transform: scale3d(1,1,1);
-    transform: scale3d(1,1,1);
-}
-
-.link--manko span {
-    color: #808080;
-    font-weight: 400;
-    position: absolute;
-    font-size: 0.2em;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.link--manko span:first-of-type {
-    bottom: 100%;
-    margin-bottom: 15px;
-    -webkit-transform: scale3d(0.8,0.8,1) translate3d(0,10px,0);
-    transform: scale3d(0.8,0.8,1) translate3d(0,10px,0);
-}
-
-.link--manko span:last-of-type {
-    top: 100%;
-    margin-top: 10px;
-    -webkit-transform: scale3d(0.8,0.8,1) translate3d(0,-10px,0);
-    transform: scale3d(0.8,0.8,1) translate3d(0,-10px,0);
-}
-
-.link--manko:hover span {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-.link--manko:hover span:first-of-type {
-    -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s;
-}
-
-.link--manko:hover span:last-of-type {
-    -webkit-transition-delay: 0.20s;
-    transition-delay: 0.20s;
-}
 
 
 /* Caption Style 3 */

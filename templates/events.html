@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="PUBLIC">
+        <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 25 Jan 2017 11:59:01 GMT">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="@gureks, @geekSiddharth">
@@ -13,19 +15,19 @@
         <link rel="stylesheet" href="{{ url_for('static',filename='css/events.css') }}">
     </head>
     <body style="width: 100%">
-        <div class="back">
-            <a href="{{ url_for('index') }}">
-            <img src="{{ url_for('static',filename='img/left-arrow.png') }}" height="40px" width="auto">
-            </a>
-        </div>
+    {#        <div class="back">#}
+    {#            <a href="{{ url_for('index') }}">#}
+    {#            <img src="{{ url_for('static',filename='img/left-arrow.png') }}" height="40px" width="auto">#}
+    {#            </a>#}
+    {#        </div>#}
         <div class="home">
             <a href="{{ url_for('index') }}">
-            <img src="{{ url_for('static',filename='img/logo2.png') }}" height="40px" width="40px">
+                <img src="{{ url_for('static',filename='img/close.png') }}" height="40px" width="40px">
             </a>
         </div>
         <header class="middle-parent header" style="width: 100%">
             <div class="middle" style="text-align: center">
-                <a class="header-link link link--manko" href="#" style="text-align: center">Events <br> <span>Around the world in two days</span> <span>Odyssey'17</span></a>
+                <a class="header-link  link--manko" href="" style="text-align: center">Events</a>
             </div>
         </header>
         <div class="container-fluid buttons" style="width: 100%">
@@ -381,10 +383,11 @@
         $(window).resize(function () {
             $grid.isotope('reloadItems')
         });
-        $('body').bind('touchstart', function () {
-        });
+        window.addEventListener("keyup", function (e) {
+            if (e.keyCode == 27) history.back();
+        }, false);
     </script>
-    <script src="https://tympanus.net/Tutorials/CaptionHoverEffects/js/toucheffects.js"></script>
+    <script src="{{ url_for('static', filename='js/toucheffects.js') }}"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;

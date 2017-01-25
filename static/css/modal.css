@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face {
     font-family: 'CODE Bold';
     src: url("../font/CODE Bold.otf") format("opentype");
@@ -129,22 +130,22 @@
 
 ::-webkit-scrollbar-track
 {
-    border-radius: 10px;
-    background-color: white;
+    border-radius: 5px;
+    background-color: white;;
 }
 
 ::-webkit-scrollbar
 {
-    width: 12px;
-    border-radius: 10px;
+    width: 7px;
+    border-radius: 5px;
     background-color: white;
 }
 
 ::-webkit-scrollbar-thumb
 {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #f9b32f;
-    border: 10px solid #f9b32f;
+    border: 5px solid #f9b32f;
 }
 
 
