@@ -1,2 +1,4 @@
-Event Name,Description,Team Size,Rules,Contact
-test,"Test Description",2,"Long Rules","555"
+Event ID,Event Name,Description,Team Size,Rules,Contact
+test,Test Test!,"Test Description, '"" 
+Yes",2,Long Rules,"555
+<b> And Some HTML too!</b>"
