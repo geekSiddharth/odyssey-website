@@ -30,7 +30,7 @@ def index():
 	return render_template('index.html')
 
 @app.route('/events')
-def events_main():
+def events():
 	return render_template('events.html')
 
 # @app.route('/register')
