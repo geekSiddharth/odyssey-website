@@ -21,6 +21,7 @@ with open('event_data.csv', newline='') as file:
 	next(rows) # skips the first entry which has headings
 	for row in rows:
 		event_data[row[0]] = {"name": row[1], "description": row[2], "team-size": int(row[3]), "rules": row[4], "contact": row[5]}
+	file.close()
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
