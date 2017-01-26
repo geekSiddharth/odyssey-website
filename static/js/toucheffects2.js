@@ -68,7 +68,7 @@
         }
 
         [].slice.call(document.querySelectorAll('.grid > li > figure')).forEach(function (el, i) {
-            el.querySelector('figcaption > a').addEventListener('touchstart', function (e) {
+            el.querySelector('figcaption > ul').addEventListener('touchstart', function (e) {
                 e.stopPropagation();
             }, false);
             el.addEventListener('touchstart', function (e) {
