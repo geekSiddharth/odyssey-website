@@ -1,4 +1,5 @@
 Event ID,Event Name,Description,Team Size,Rules,Contact
 test,Test Test!,"Test Description, '"" 
 Yes",2,Long Rules,"555
-<b> And Some HTML too!</b>"
+<b> And Some HTML too!</b>",0,http://google.com
+test2,Test 2!,This one has and entry fee,1, Rules,Contact,1,http://odyssey.iiitd.edu.in
