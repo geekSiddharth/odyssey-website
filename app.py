@@ -1,7 +1,6 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, abort
 import os
 import csv
-import json
 
 """
 Structure of the csv file, event_data array:
@@ -44,8 +43,11 @@ def events_main():
 
 @app.route('/events/<event_name>')
 def event_particular(event_name):
-	data = json.dumps(event_data[event_name])
-	return Response(data, mimetype='application/json')
+	if event_name in event_data:
+		data = event_data[event_name]
+		return render_template('event-modal.html', event = data)
+	else:
+		abort(404)
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0',port=8000,debug=True)
