@@ -19,9 +19,12 @@
                     <h1>
                         {{ event.name }}
                     </h1>
+                    <p class="tagline">
+                        <b>Team Size:</b> {{ event.teamSize }}
+                    </p>
                     <br>
                     <p class="tagline">
-                        {{ event.description }}
+                        {{ event.contact | safe }}
                     </p>
                 </div>
                 <!--<div class="poster">-->
@@ -41,18 +44,18 @@
         <div class="col-md-8 right-bar">
             <div class="card">
                 <div class="card-heading">
-                    Rules
+                    Description
                 </div>
                 <div class="card-text">
-                        {{ event.rules }}
+                        {{ event.description | safe }}
                 </div>
             </div>
             <div class="card">
                 <div class="card-heading">
-                    Description
+                    Rules
                 </div>
                 <div class="card-text">
-                        {{ event.description }}
+                        {{ event.rules | safe }}
                 </div>
             </div>
         </div>
