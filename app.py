@@ -36,10 +36,6 @@ def events_main():
 # @app.route('/register')
 # def register():
 # 	return render_template('register.html')
-#
-# @app.route('/event-modal')
-# def event_modal():
-# 	return render_template('event-modal.html')
 
 @app.route('/events/<event_name>')
 def event_particular(event_name):
