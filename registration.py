@@ -13,7 +13,7 @@ import json
 
 with open('sensitive_data.json', newline='') as file:
     global config
-    config = json.file.read()
+    config = json.loads(file.read())
 
 def connect():
     return connect_to_db(config["db-user"], config["db-password"], config["db-name"], config["db-host"], config["db-port"])
@@ -34,38 +34,96 @@ def connect_to_db(user, password, db, host='localhost', port=5432):
 
 con, meta = connect()
 
-# 1-to-1 relation with registration. This may have multiple duplicate entries
-participant = Table('participant', meta,
-    Column('id', INT, primary_key=True),
-    Column('email', VARCHAR(50)),
-    Column('phone_number', VARCHAR(50)), #phone numbers can have hyphens and spaces too, we'll do a check for this in code. Backend and frontend must be consistent.
-    Column('name', VARCHAR(50))
-)
+print(meta)
 
-event = Table('event', meta,
-    Column('id', VARCHAR(50), primary_key=True),
-    Column('name', VARCHAR(50)),
-    Column('team_size', SMALLINT)
-)
+def create_all_tables():
+    #meta.drop_all()
+    # 1-to-1 relation with registration. This may have multiple duplicate entries
+    participant = Table('participant', meta,
+        Column('id', INTEGER, primary_key=True),
+        Column('email', VARCHAR(50)),
+        Column('phone_number', VARCHAR(50)), #phone numbers can have hyphens and spaces too, we'll do a check for this in code. Backend and frontend must be consistent.
+        Column('name', VARCHAR(50))
+    )
 
-# one to many mapping
-registration_participant = Table('registration_participant', meta,
-    Column('registration_id', INT,  ForeignKey("registration.id")),
-    Column('participant_id', INT,  ForeignKey("participant.id"))
-)
+    event = Table('event', meta,
+        Column('id', VARCHAR(50), primary_key=True),
+        Column('name', VARCHAR(50)),
+        Column('team_size', SMALLINT)
+    )
 
-registration = Table('registration', meta,
-    Column('id', INT, primary_key=True),
-    Column('captain', INT, ForeignKey("participant.id")),
-    Column('team_name', VARCHAR(50))
-    Column('data', JSON)
-)
+    # one to many mapping
+    registration_participant = Table('registration_participant', meta,
+        Column('registration_id', INTEGER,  ForeignKey("registration.id")),
+        Column('participant_id', INTEGER,  ForeignKey("participant.id"), primary_key=True)
+    )
 
-meta.create_all()
+    registration = Table('registration', meta,
+        Column('id', INTEGER, primary_key=True),
+        Column('event_id', VARCHAR(50), ForeignKey("event.id")),
+        Column('captain', INTEGER, ForeignKey("participant.id")),
+        Column('team_name', VARCHAR(50)), #nullable, because team size can be 1
+        Column('data', JSON)
+    )
+    #meta.create_all()
+
+participant = Table('participant', meta, autoload=True)
+event = Table('event', meta, autoload=True)
+registration_participant = Table('registration_participant', meta, autoload=True)
+registration = Table('registration', meta, autoload=True)
+
+data = {
+    "captain": {
+        "name": "Participant A",
+        "email": "pa",
+        "phone_number": "pam"
+    },
+    "other_participants": [
+        {
+            "name": "Participant B",
+            "email": "pb",
+            "phone_number": "pbm"
+        },
+    ],
+    "team_name": None,
+    "event_id": "a-capella",
+    "data": {
+        "some": "json"
+    }
+}
+
+
+def insert_record(data):
+    transaction = con.begin().transaction
+    try:
+        q = participant.insert().values(data["captain"])
+        captain_pk = con.execute(q).inserted_primary_key[0]
+
+        q = registration.insert().values(event_id=data["event_id"], team_name=data["team_name"], data=data["data"], captain=captain_pk)
+        regsitration_pk = con.execute(q).inserted_primary_key[0]
+
+        q = participant.registration_participant.insert().values(registration_id=regsitration_pk, participant_id=captain_pk)
+        con.execute(q)
+
+        for p in data.other_participants:
+            q = participant.insert().values(p)
+            pk = con.execute(q).inserted_primary_key[0]
+            q = participant.registration_participant.insert().values(registration_id=regsitration_pk, participant_id=pk)
+            con.execute(q)
+
+        transaction.commit()
+    except e:
+        transaction.rollback()
+        raise Exception("Registration Not Successful") from e
 
 """
 Todo
  - schema
  - forms and insert queries
  - form generation
+"""
+
+"""
+Setup Commands
+
 """
