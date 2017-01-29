@@ -53,6 +53,28 @@ def insert_record(data):
         cur.execute("ROLLBACK TO insert_record")
         raise Exception("Registration Not Successful")
 
+event = {
+    "event_id": "a-cappella",
+    "team_size": 2, # we'll import this from CSV
+    "name": "A Cappella", # import this from CSV
+    "data": {
+        "field_name" : {
+            "type": "string",
+            "maxlen": 80, #default 500
+            "description": ""
+        },
+        "checkbox_field": {
+            "type": "checkbox",
+            "description": ""
+        },
+        "select_field": {
+            "type": "select",
+            "options": ["a", "b", "c"],
+            "description": ""
+        }
+    }
+}
+
 """
 Todo
  - schema
