@@ -21,10 +21,8 @@
                     </h1>
                     <p class="tagline">
                         <b>Team Size:</b> {{ event.teamSize }}
-                    {% if event.entryFee is greaterthan 0:%}
                         <br>
                         <b> Entry Fee:</b> {{ event.entryFee }}
-                    {% endif %}
                     </p>
                     <br>
                     <p class="tagline">
@@ -39,7 +37,7 @@
                         <a class="btn btn-1f btn-1" href="{{event.fbEventLink}}">Facebook</a>
                     </div>
                     <div class="col-md-6">
-                        <a class="btn btn-1f btn-1">Js</a>
+                        <a class="btn btn-1f btn-1" >Js</a>
                     </div>
                 </div>
             </div>

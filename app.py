@@ -17,11 +17,11 @@ Structure of the csv file, event_data array:
 event_data = {}
 
 # read the file and save the data in mem when application is deployed.
-with open('event_data.csv', newline='') as file:
+with open('event_data.csv', newline='', encoding='utf8') as file:
 	rows = csv.reader(file, dialect='excel')
 	next(rows) # skips the first entry which has headings
 	for row in rows:
-		event_data[row[0]] = {"name": row[1], "description": row[2], "teamSize": int(row[3]), "rules": row[4], "contact": row[5], "entryFee": int(row[6]), "fbEventLink": row[7]}
+		event_data[row[0]] = {"name": row[1], "description": row[2], "teamSize": row[3], "rules": row[4], "contact": row[5], "entryFee": row[6], "fbEventLink": row[7]}
 	file.close()
 
 app = Flask('__name__')
