@@ -4,6 +4,22 @@ body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: white;;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #f9b32f;
+    border: 5px solid #f9b32f;
+}
 .middle-parent {
     position: relative;
     min-height: 12vh;
@@ -22,7 +38,16 @@ body {
     width: 100%;
 }
 
-.close {
+.cover {
+    filter: grayscale(80%);
+    transition: 0.3s all linear;
+}
+
+.cover:hover {
+    filter: grayscale(10%);
+}
+
+.closeC {
     position: fixed;
     top: 2%;
     right: 2%;
@@ -36,7 +61,7 @@ body {
 
 .heading > h1 {
     font-size: 500%;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
 }
 
@@ -49,6 +74,7 @@ body {
     margin-top: 20%;
 
 }
+
 
 .side-bottom-bar {
     align-content: center;
@@ -135,8 +161,8 @@ Button Hover Effect
 
 /* Button 1 */
 .btn-1 {
-    border: 1px solid #505050;
-    color: #505050;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 /* Button 1f */

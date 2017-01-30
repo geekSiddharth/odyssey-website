@@ -9,41 +9,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="@gureks, @geekSiddharth, @peey">
     <meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
-    <title>{{event.name}} - Odyssey'17 | IIIT Delhi</title>
+    <title>{{ event.name }} - Odyssey'17 | IIIT Delhi</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="../static/css/one-event.css" rel="stylesheet">
 </head>
 <body>
-<div class="close">
-    <a href="/events"><img src="../static/img/close.png" height="60px" width="60px"></a>
-</div>
+<a href="/events" class="closeC"><img src="../static/img/close.png" height="40px" width="40px"></a>
 <div class="container-fluid" style="width: 100%; overflow-x: hidden">
     <div class="row">
         <div class="col-md-4 side-bar middle-parent">
             <div class="content middle">
                 <div class="heading">
+                    <img src="../static/img/events/encore.jpg" class="cover" width="100%" height="auto">
                     <h1>
                         {{ event.name }}
                     </h1>
                     <p class="tagline">
-                        <b>Team Size:</b> {{ event.teamSize }}
+                        Team Size: {{ event.teamSize }}
                         <br>
-                        <b> Entry Fee:</b> {{ event.entryFee }}
+                        Entry Fee: {{ event.entryFee }}
                     </p>
                     <br>
-                    <p class="tagline">
-                        {{ event.contact | safe }}
-                    </p>
                 </div>
                 <!--<div class="poster">-->
                 <!--<img src="img/events/sumo-wrestling.jpg" width="100%" class="poster-img">-->
                 <!--</div>-->
                 <div class="side-bottom-bar row">
                     <div class="col-md-6">
-                        <a class="btn btn-1f btn-1" href="{{event.fbEventLink}}">Facebook</a>
+                        <a class="btn btn-1f btn-1" href="{{ event.fbEventLink }}">Facebook</a>
                     </div>
                     <div class="col-md-6">
-                        <a class="btn btn-1f btn-1" >Js</a>
+                        <a class="btn btn-1f btn-1">Js</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +51,7 @@
                     Description
                 </div>
                 <div class="card-text">
-                        {{ event.description | safe }}
+                    {{ event.description | safe }}
                 </div>
             </div>
             <div class="card">
@@ -63,7 +59,16 @@
                     Rules
                 </div>
                 <div class="card-text">
-                        {{ event.rules | safe }}
+                    {{ event.rules | safe }}
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-heading">
+                    Contacts
+                </div>
+                <div class="card-text">
+                    {{ event.contact | safe }}
                 </div>
             </div>
         </div>
