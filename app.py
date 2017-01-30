@@ -21,7 +21,7 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 	rows = csv.reader(file, dialect='excel')
 	next(rows) # skips the first entry which has headings
 	for row in rows:
-		event_data[row[0]] = {"name": row[1], "description": row[2], "teamSize": row[3], "rules": row[4], "contact": row[5], "entryFee": row[6], "fbEventLink": row[7]}
+		event_data[row[0]] = {"event-id":row[0],"name": row[1], "description": row[2], "teamSize": row[3], "rules": row[4], "contact": row[5], "entryFee": row[6], "fbEventLink": row[7]}
 	file.close()
 
 app = Flask('__name__')
@@ -31,7 +31,7 @@ app.config['SECRET_KEY']=os.urandom(20)
 def index():
 	return render_template('index.html')
 
-@app.route('/events')
+@app.route('/events/')
 def events():
 	return render_template('events.html')
 
