@@ -11,60 +11,55 @@
 </head>
 <body class="nl-blurred">
 <div class="container demo-1">
-    <!-- Top Navigation -->
-    {#    <header>#}
-    {#        <h1>Odyssey <span> Event Name</span></h1>#}
-    {#    </header>#}
+    <header>
+        <h1>Odyssey Registration | <span>{{event.name}}</span></h1>
+    </header>
     <div class="main clearfix">
-        <form id="nl-form" class="nl-form">
-            I, <input type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
-            <br> of <input type="text" value="" placeholder="Institution/College"
+        <form id="nl-form" class="nl-form" method="POST" action="">
+            I, <input name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+            <br> of <input name="captain_institute" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/> <br>
-            wants to register for
-            <select>
-                <option value="1" selected>this event</option>
-                <option value="2">Musings</option>
-                <option value="3">Reverbe</option>
-                <option value="4">Encore</option>
-                <option value="2">Battle Of bands</option>
-            </select> <br>
+            want to register for {{event.name}}
             My contact info are as follows <br>
-            <input type="email" value="" placeholder="E-Mail"
+            <input name="captain_email" type="email" value="" placeholder="E-Mail"
                    data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/> <br>
-            <input type="number" value="" placeholder="Your Phone Number"
+            <input name="captain_number" type="number" value="" placeholder="Your Phone Number"
                    data-subline="For example: <em> 9454319281 </em>"/> <br>
-            <!--Event :-->
-            <!--<select>-->
-            <!--<option value="1" selected>any food</option>-->
-            <!--<option value="2">Indian</option>-->
-            <!--<option value="3">French</option>-->
-            <!--<option value="4">Japanese</option>-->
-            <!--<option value="2">Italian</option>-->
-            <!--</select>-->
-            <!--<br />-->
-            <!--<select>-->
-            <!--<option value="1" selected>standard</option>-->
-            <!--<option value="2">fancy</option>-->
-            <!--<option value="3">hip</option>-->
-            <!--<option value="4">traditional</option>-->
-            <!--<option value="2">romantic</option>-->
-            <!--</select>-->
-            <!--restaurant-->
-            <!--<br />at -->
-            <!--<select>-->
-            <!--<option value="1" selected>anytime</option>-->
-            <!--<option value="1">7 p.m.</option>-->
-            <!--<option value="2">8 p.m.</option>-->
-            <!--<option value="3">9 p.m.</option>-->
-            <!--</select>-->
-            <!--in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>-->
+            My team has <input name="team_size" type="number" value="" placeholder="Your Team Size"
+                   data-subline="For example: <em> 2 </em>"/>
+            {% for i in range(event.teamSize - 1) %}
+            And my team member <input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+            <br> of <input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
+                           data-subline="For example: <em> IIIT D </em>"/> <br>
+            has contact info are as follows <br>
+            <input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
+                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/> <br>
+            <input name="participant_number_{{i}}" type="number" value="" placeholder="Your Phone Number"
+                   data-subline="For example: <em> 9454319281 </em>"/> <br>
+            {% endfor %}
+            And a few other details, such as <br>
+            {% for k in event.data %}
+                {% if event.data[k].type == "string"%}
+                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder + 'hahaha hungama'}}" data-subline="{{event.data[k].hint}}" /> <br>
+                {% endif %}
+                {% if event.data[k].type == "select"%}
+                    {{k}} : 
+                    <select name="data_{{k}}">
+                        {% for option in event.data[k].options %}
+                        <option value="{{option}}">{{option}}</option>
+                        {% endfor %}
+                    </select> 
+                {% endif %}
+            {% endfor %}
             <div class="nl-submit-wrap">
-                <button class="nl-submit" type="submit">Register for x Event</button>
+                <button class="nl-submit" type="submit">Register for {{event.name}}</button>
             </div>
             <div class="nl-overlay"></div>
+            <div class="g-recaptcha" data-sitekey="6LdMyhMUAAAAAL83pkn6sd67trJl5PhhtzNgzO_D"></div>
         </form>
     </div>
 </div><!-- /container -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="../static/js/nlform.js"></script>
 <script>
     var nlform = new NLForm(document.getElementById('nl-form'));

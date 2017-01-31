@@ -7,9 +7,10 @@ create_tables = """
 
     CREATE TABLE participant (
         id SERIAL PRIMARY KEY NOT NULL,
+        name character varying(50) NOT NULL,
+        institute VARCHAR(50) NOT NULL,
         email character varying(50) NOT NULL,
-        phone_number character varying(50),
-        name character varying(50) NOT NULL
+        phone_number character varying(50)
     );
 
     CREATE TABLE registration (
@@ -17,6 +18,7 @@ create_tables = """
         event_id character varying(50) NOT NULL references event(id),
         captain integer references participant(id),
         team_name character varying(50),
+        team_size SMALLINT NOT NULL,
         data JSON
     );
 
