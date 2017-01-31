@@ -1,6 +1,13 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request
 import os
 import csv
+import requests
+import registration
+import json
+
+with open('sensitive_data.json', newline='') as file:
+    global config
+    config = json.loads(file.read())
 
 """
 Structure of the csv file, event_data array:
@@ -35,9 +42,13 @@ def index():
 def events():
 	return render_template('events.html')
 
-# @app.route('/register')
-# def register():
-# 	return render_template('register.html')
+@app.route('/register/<event_name>', methods=['GET', 'POST'])
+def register(event_name):
+	if request.method == 'POST':
+		recaptcha_result = requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr})
+		if recaptcha_result.json()["success"]:
+			return json.dumps(request.form)
+	return render_template('register.html', event=registration.event_data)
 
 @app.route('/events/<event_name>')
 def event_particular(event_name):
