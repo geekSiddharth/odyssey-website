@@ -4,32 +4,7 @@ import csv
 import requests
 import registration
 import json
-
-with open('sensitive_data.json', newline='') as file:
-    global config
-    config = json.loads(file.read())
-
-"""
-Structure of the csv file, event_data array:
-	Event ID: similar to event name, but without any spaces and spl characters except hyphen (-), and all lowercase
-	Event Name : 50 characters max
-	Description: 300 characters max
-	Team size: int
-	Rules and regulations: 700 char max
-	Contact us: (text) Event organizers' name, phone number, mail ID
-	Entry Fee
-	FB Event Link
-"""
-
-event_data = {}
-
-# read the file and save the data in mem when application is deployed.
-with open('event_data.csv', newline='', encoding='utf8') as file:
-	rows = csv.reader(file, dialect='excel')
-	next(rows) # skips the first entry which has headings
-	for row in rows:
-		event_data[row[0]] = {"event-id":row[0],"name": row[1], "description": row[2], "teamSize": row[3], "rules": row[4], "contact": row[5], "entryFee": row[6], "fbEventLink": row[7]}
-	file.close()
+from data import config, event_data, event_form
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
@@ -42,18 +17,24 @@ def index():
 def events():
 	return render_template('events.html')
 
-@app.route('/register/<event_name>', methods=['GET', 'POST'])
-def register(event_name):
-	if request.method == 'POST':
-		recaptcha_result = requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr})
-		if recaptcha_result.json()["success"]:
-			return json.dumps(request.form)
-	return render_template('register.html', event=registration.event_data)
+@app.route('/register/<event_id>', methods=['GET', 'POST'])
+def register(event_id):
+	if event_id in event_data:
+		if request.method == 'POST':
+			recaptcha_result = requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr})
+			if recaptcha_result.json()["success"] or config["developement"]:
+				processed_data = registration.process_post_request(request.form, event_id)
+				registration.insert_record(processed_data, event_id)
+			else:
+				render_template('register_response.html', error="Wrong Catpcha")
+		return render_template('register.html', event=event_form[event_id])
+	else:
+		abort(404)
 
-@app.route('/events/<event_name>')
-def event_particular(event_name):
-	if event_name in event_data:
-		data = event_data[event_name]
+@app.route('/events/<event_id>')
+def event_particular(event_id):
+	if event_id in event_data:
+		data = event_data[event_id]
 		return render_template('event-modal.html', event = data)
 	else:
 		abort(404)

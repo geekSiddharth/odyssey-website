@@ -12,50 +12,61 @@
 <body class="nl-blurred">
 <div class="container demo-1">
     <header>
-        <h1>Odyssey Registration | <span>{{event.name}}</span></h1>
+        <h1>Odyssey Registration<span>{{event.name}}</span></h1>
     </header>
     <div class="main clearfix">
         <form id="nl-form" class="nl-form" method="POST" action="">
-            I, <input name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
-            <br> of <input name="captain_institute" type="text" value="" placeholder="Institution/College"
+            {% if event.data.keys()|length > 0 %}
+            <h3> {{"Participant" if event.teamSizeMax == 1 else "Team"}} Section </h3>
+            {% endif %}
+            I, <input name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>, from <input name="captain_institute" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/> <br>
-            want to register for {{event.name}}
-            My contact info are as follows <br>
+            want to register for {{event.name}}. <br><br>
+            My e-mail address is 
             <input name="captain_email" type="email" value="" placeholder="E-Mail"
-                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/> <br>
-            <input name="captain_number" type="number" value="" placeholder="Your Phone Number"
-                   data-subline="For example: <em> 9454319281 </em>"/> <br>
-            My team has <input name="team_size" type="number" value="" placeholder="Your Team Size"
-                   data-subline="For example: <em> 2 </em>"/>
-            {% for i in range(event.teamSize - 1) %}
+                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and my phone number is
+            <input name="captain_phone" type="number" value="" placeholder="Your Phone Number"
+                   data-subline="For example: <em> 9454319281 </em>"/> <br><br>
+
+            {% if event.teamSizeMax > 1 %}
+            My team name is <input name="team_name" type="number" value="" placeholder="Your Team Name"
+                   data-subline="For example: <em> CoolTeamName </em>"/> and it has <input name="team_size" type="number" value="" placeholder="Your Team Size"
+                   data-subline="For example: <em> 2 </em>"/> members <br/><br>
+            {% endif %}
+
+            {% for i in range(event.teamSizeMax - 1) %}
             And my team member <input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
-            <br> of <input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
+            <br> from <input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/> <br>
-            has contact info are as follows <br>
+            has the e-mail address
             <input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
-                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/> <br>
-            <input name="participant_number_{{i}}" type="number" value="" placeholder="Your Phone Number"
-                   data-subline="For example: <em> 9454319281 </em>"/> <br>
+                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and their phone number is 
+            <input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
+                   data-subline="For example: <em> 9454319281 </em>"/> <br><br>
             {% endfor %}
-            And a few other details, such as <br>
+            {% if event.data.keys()|length > 0 %}
+            <h3> Event Details Section </h3>
+            {% endif %}
             {% for k in event.data %}
                 {% if event.data[k].type == "string"%}
-                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder + 'hahaha hungama'}}" data-subline="{{event.data[k].hint}}" /> <br>
+                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder if event.data[k].placeholder != "" }}" data-subline="{{event.data[k].hint}}" />
                 {% endif %}
                 {% if event.data[k].type == "select"%}
                     {{k}} : 
                     <select name="data_{{k}}">
-                        {% for option in event.data[k].options %}
-                        <option value="{{option}}">{{option}}</option>
+                        {% for i, option in enumerate(event.data[k].options) %}
+                        <option value="{{i}}">{{option}}</option>
                         {% endfor %}
-                    </select> 
+                    </select>
                 {% endif %}
+                <br/><br>
             {% endfor %}
+            And a little humanity test:
+            <div class="g-recaptcha" data-sitekey="6LdMyhMUAAAAAL83pkn6sd67trJl5PhhtzNgzO_D"></div>
             <div class="nl-submit-wrap">
                 <button class="nl-submit" type="submit">Register for {{event.name}}</button>
             </div>
             <div class="nl-overlay"></div>
-            <div class="g-recaptcha" data-sitekey="6LdMyhMUAAAAAL83pkn6sd67trJl5PhhtzNgzO_D"></div>
         </form>
     </div>
 </div><!-- /container -->

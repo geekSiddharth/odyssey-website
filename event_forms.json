@@ -1,0 +1,177 @@
+{
+    "a-cappella": {},
+    "art-attack": {},
+    "battle-of-bands": {
+        "Genre" : {
+            "type": "string",
+            "maxlen": 80,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "battle-troupe": {},
+    "blind-date": {},
+    "can-you-duet": {},
+    "captcha": {
+        "Age" : {
+            "type": "string",
+            "maxlen": 80,
+            "hint": "",
+            "placeholder": ""
+        },
+        "Facebook ID" : {
+            "type": "string",
+            "maxlen": 100,
+            "hint": "e.g. https://www.facebook.com/kartik.abc",
+            "placeholder": ""
+        }
+    },
+    "chess": {
+        "FIDE Rating (leave blank if none)": {
+            "type": "string",
+            "maxlen": 80,
+            "hint": "",
+            "placeholder": ""
+        },
+        "Date of Birth": {
+            "type": "string",
+            "maxlen": 80,
+            "hint": "e.g. 01/01/1999",
+            "placeholder": ""
+        },
+        "I understand that I will have to pay ₹500 upon arrival": {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "design-360": {
+        "Solo Registraton (we will team you up upon arrival)": {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "encore": {
+        "Year": {
+            "type": "string",
+            "maxlen": 80,
+            "hint": "e.g. 2nd Year",
+            "placeholder": ""
+        },
+        "What Will Acompanny You?": {
+            "type": "select",
+            "options": ["Karaoke Track", "Instrument"],
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "engima": {},
+    "food-binge": {
+        "Allergic to any ingredient/substance": {
+            "type": "string",
+            "maxlen": 80,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "got-quiz": {},
+    "grammar-nazi": {},
+    "gupchup": {},
+    "hasratein": {},
+    "mr-and-ms-odyssey": {
+        "About yourself (100 words)": {
+            "type": "string",
+            "maxlen": 1000,
+            "hint": "",
+            "placeholder": ""
+        },
+        "What talent would you like to showcase for the competition?": {
+            "type": "string",
+            "maxlen": 1000,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "musings": {
+        "Participating in twist a Tale (Story Writing)?" : {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "Participating in Dead Poets Society (Poetry)?" : {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "Participating in Haiku Writing?" : {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "Participating in Arz Kiya Hai (Sher o Shayari)?" : {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "Participating in End To My Beginning (Story Completion)?" : {
+            "type": "select",
+            "options": ["YES", "NO"],
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "pop-cult-quiz": {},
+    "punchline": {
+        "Link To Short Video Clip": {
+            "type": "string",
+            "maxlen": 120,
+            "hint": "",
+            "placeholder": ""
+        },
+        "Short description of the Video Clip": {
+            "type": "string",
+            "maxlen": 500,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "reverbe": {
+        "Any link you want to share with us (could be your Facebook page, web page, any of your previous fashion shows, anything!)": {
+            "type": "string",
+            "maxlen": 1000,
+            "hint": "",
+            "placeholder": ""
+        },
+        "Additional Comments": {
+            "type": "string",
+            "maxlen": 1000,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "short-video-making": {
+        "Video link": {
+            "type": "string",
+            "maxlen": 120,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "sumo-wrestling": {},
+    "verbattle": {},
+    "verve-solo": {
+        "Queries (If any)": {
+            "type": "string",
+            "maxlen": 500,
+            "hint": "",
+            "placeholder": ""
+        }
+    }
+}

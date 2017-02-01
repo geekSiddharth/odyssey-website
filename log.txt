@@ -1,0 +1,7 @@
+No Forms List:
+    "a-cappella": {},
+    "battle-troupe": {},
+    "blind-date": {},
+    "can-you-duet": {},
+    "pwned": {}, (removed)
+    "sumo-wrestling": {},
