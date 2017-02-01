@@ -65,15 +65,3 @@ def insert_record(data, event_id):
     except:
         cur.execute("ROLLBACK TO insert_record")
         raise
-
-"""
-Todo
- - x schema
- - x forms and insert queries
- - x form generation
-"""
-
-"""
-Setup Commands
-
-"""
