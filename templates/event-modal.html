@@ -20,7 +20,7 @@
         <div class="col-md-4 side-bar middle-parent">
             <div class="content middle">
                 <div class="heading">
-                    <img src="../static/img/events/encore.jpg" class="cover" width="100%" height="auto">
+                    <img src="../static/img/events/{{ event['event-id'] }}.jpg" class="cover" width="100%" height="auto">
                     <h1>
                         {{ event.name }}
                     </h1>
@@ -31,9 +31,6 @@
                     </p>
                     <br>
                 </div>
-                <!--<div class="poster">-->
-                <!--<img src="img/events/sumo-wrestling.jpg" width="100%" class="poster-img">-->
-                <!--</div>-->
                 <div class="side-bottom-bar row">
                     <div class="col-md-6">
                         <a class="btn btn-1f btn-1" href="{{ event.fbEventLink }}">Facebook</a>
