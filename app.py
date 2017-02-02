@@ -15,14 +15,13 @@ def index():
 
 @app.route('/events/')
 def events():
-	return render_template('events.html')
+	return render_template('events.html', events=event_data)
 
 @app.route('/register/<event_id>', methods=['GET', 'POST'])
 def register(event_id):
 	if event_id in event_data:
 		if request.method == 'POST':
-			recaptcha_result = requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr})
-			if recaptcha_result.json()["success"] or config["developement"]:
+			if config["development"] or requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr}).json()["success"]:
 				processed_data = registration.process_post_request(request.form, event_id)
 				registration.insert_record(processed_data, event_id)
 			else:
@@ -40,4 +39,4 @@ def event_particular(event_id):
 		abort(404)
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0',port=8000,debug=True)
+	app.run(host='0.0.0.0',port=int(config["site-port"]),debug=True)

@@ -54,8 +54,8 @@
                 {% if event.data[k].type == "select"%}
                     {{k}} : 
                     <select name="data_{{k}}">
-                        {% for i, option in enumerate(event.data[k].options) %}
-                        <option value="{{i}}">{{option}}</option>
+                        {% for i in range(event.data[k].options|length) %}
+                        <option value="{{i}}">{{event.data[k].options[i]}}</option>
                         {% endfor %}
                     </select>
                 {% endif %}

@@ -24,13 +24,24 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 	rows = csv.reader(file, dialect='excel')
 	next(rows) # skips the first entry which has headings
 	for row in rows:
-		event_data[row[0]] = {"event-id":row[0],"name": row[1], "description": markdown(gfm(row[2])), "teamSize": row[3], "rules": markdown(gfm(row[4])), "contact": row[5], "entryFee": row[6], "fbEventLink": row[7]}
+		event_data[row[0]] = {
+			"event-id":row[0],
+			"name": row[1], 
+			"description": markdown(gfm(row[2])), 
+			"teamSize": row[3], 
+			"rules": markdown(gfm(row[4])), 
+			"contact": markdown(gfm(row[5])), 
+			"entryFee": row[6], 
+			"fbEventLink": row[7],
+			"categories": row[8]
+		}
+
 		try:
 			event_data[row[0]]["teamSizeMin"] = int(row[3].split("-")[0]) 
 			event_data[row[0]]["teamSizeMax"] = int(row[3].split("-")[-1]) # max and min will be the same if there's no dash
+			event_data[row[0]]["onlyBatmanAndRobin"] = event_data[row[0]]["teamSizeMax"] > 4
 		except:
-			event_data[row[0]]["teamSizeMin"] = 1 
-			event_data[row[0]]["teamSizeMax"] = 1 # max and min will be the same if there's no dash
+			event_data[row[0]]["onlyBatmanAndRobin"] = True
 	file.close()
 
 

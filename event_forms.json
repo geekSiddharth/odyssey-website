@@ -1,5 +1,5 @@
 {
-    "a-cappella": {},
+    "a-capella": {},
     "art-attack": {},
     "battle-of-bands": {
         "Genre" : {
@@ -68,7 +68,7 @@
             "placeholder": ""
         }
     },
-    "engima": {},
+    "enigma": {},
     "food-binge": {
         "Allergic to any ingredient/substance": {
             "type": "string",
@@ -127,7 +127,7 @@
             "placeholder": ""
         }
     },
-    "pop-cult-quiz": {},
+    "pop-culture-quiz": {},
     "punchline": {
         "Link To Short Video Clip": {
             "type": "string",

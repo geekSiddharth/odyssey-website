@@ -20,10 +20,10 @@ def process_post_request(form, event_id):
     }
     # team
 
+    data["other_participants"] = []
     if(event_data[event_id]["teamSizeMax"] > 1):
         data["team_name"] = form["team_name"]
         data["team_size"] = form["team_size"]
-        data["other_participants"] = []
 
         for i in range(event_data[event_id]["teamSizeMax"] - 1):
             data["other_participants"].append({
@@ -40,7 +40,7 @@ def process_post_request(form, event_id):
     data["data"] = {}
     d = event_form[event_id]["data"]
     for k in d:
-        value = form["data_" + k] if d[k].type == "string" else d[k].options[form["data_" + k]]
+        value = form["data_" + k] if d[k]["type"] == "string" else d[k]["options"][int(form["data_" + k])]
         data["data"][k] = value
 
     return data

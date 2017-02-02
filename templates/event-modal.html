@@ -26,8 +26,10 @@
                     </h1>
                     <p class="tagline">
                         Team Size: {{ event.teamSize }}
+                        {% if event.entryFee != "" and event.entryFee != "0"%}
                         <br>
                         Entry Fee: {{ event.entryFee }}
+                        {% endif %}
                     </p>
                     <br>
                 </div>
@@ -36,7 +38,7 @@
                         <a class="btn btn-1f btn-1" href="{{ event.fbEventLink }}">Facebook</a>
                     </div>
                     <div class="col-md-6">
-                        <a class="btn btn-1f btn-1">Js</a>
+                        <a class="btn btn-1f btn-1" href="/register/{{ event['event-id'] }}">Register</a>
                     </div>
                 </div>
             </div>
