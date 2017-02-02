@@ -1,8 +1,4 @@
 create_tables = """
-    CREATE TABLE event (
-        id character varying(50) NOT NULL PRIMARY KEY
-    );
-
     CREATE TABLE participant (
         id SERIAL PRIMARY KEY NOT NULL,
         name character varying(100) NOT NULL,
@@ -13,7 +9,7 @@ create_tables = """
 
     CREATE TABLE registration (
         id SERIAL PRIMARY KEY NOT NULL,
-        event_id character varying(50) NOT NULL references event(id),
+        event_id character varying(50) NOT NULL,
         captain integer references participant(id) NOT NULL,
         team_name character varying(50),
         team_size SMALLINT,

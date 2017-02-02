@@ -3,9 +3,9 @@ Odyssey'17 Website
 
 ### Deployment Checklist
 
- - [] install postgresql, pip install -r requirements.txt
- - [] create db, user
- - [] create sensitive_data.json
+[] install postgresql, pip install -r requirements.txt
+[] create db, user
+[] create sensitive_data.json
 
  ### Issues
 

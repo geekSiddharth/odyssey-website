@@ -21,11 +21,17 @@ def process_post_request(form, event_id):
     # team
 
     data["other_participants"] = []
+
     if(event_data[event_id]["teamSizeMax"] > 1):
         data["team_name"] = form["team_name"]
         data["team_size"] = form["team_size"]
 
-        for i in range(event_data[event_id]["teamSizeMax"] - 1):
+        if event_data[event_id]["onlyBatmanAndRobin"]:
+            teamSize = 1
+        else:
+            teamSize = event_data[event_id]["teamSizeMax"] - 1
+
+        for i in range(teamSize):
             data["other_participants"].append({
                 "name": form["participant_name_" + str(i)],
                 "email": form["participant_email_" + str(i)],

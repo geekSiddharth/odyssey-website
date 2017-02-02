@@ -8,11 +8,25 @@
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="../static/css/component.css"/>
     <script src="../static/js/modernizr.custom.js"></script>
+    <style>
+    .closeC {
+        position: fixed;
+        top: 2%;
+        right: 2%;
+        z-index: 100;
+    }
+
+    .g-recaptcha {
+        display:inline-block;
+        margin:auto;
+    }
+    </style>
 </head>
 <body class="nl-blurred">
+<a href="/events" class="closeC"><img src="../static/img/close.png" height="40px" width="40px"></a>
 <div class="container demo-1">
     <header>
-        <h1>Odyssey Registration<span>{{event.name}}</span></h1>
+        <h1>{{event.name}} Registration</h1>
     </header>
     <div class="main clearfix">
         <form id="nl-form" class="nl-form" method="POST" action="">
@@ -20,8 +34,8 @@
             <h3> {{"Participant" if event.teamSizeMax == 1 else "Team"}} Section </h3>
             {% endif %}
             I, <input name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>, from <input name="captain_institute" type="text" value="" placeholder="Institution/College"
-                           data-subline="For example: <em> IIIT D </em>"/> <br>
-            want to register for {{event.name}}. <br><br>
+                           data-subline="For example: <em> IIIT D </em>"/>
+            want to register for {{event.name}}.
             My e-mail address is 
             <input name="captain_email" type="email" value="" placeholder="E-Mail"
                    data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and my phone number is
@@ -31,19 +45,33 @@
             {% if event.teamSizeMax > 1 %}
             My team name is <input name="team_name" type="number" value="" placeholder="Your Team Name"
                    data-subline="For example: <em> CoolTeamName </em>"/> and it has <input name="team_size" type="number" value="" placeholder="Your Team Size"
-                   data-subline="For example: <em> 2 </em>"/> members <br/><br>
+                   data-subline="For example: <em> 2 </em>"/> members <br/> <br>
             {% endif %}
-
-            {% for i in range(event.teamSizeMax - 1) %}
-            And my team member <input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
-            <br> from <input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
-                           data-subline="For example: <em> IIIT D </em>"/> <br>
-            has the e-mail address
-            <input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
-                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and their phone number is 
-            <input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
-                   data-subline="For example: <em> 9454319281 </em>"/> <br><br>
-            {% endfor %}
+            {% if not(event.onlyBatmanAndRobin) %}
+                {% for i in range(event.teamSizeMax - 1) %}
+                <div class="participant">
+                And my team member <input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+                <br> from <input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
+                               data-subline="For example: <em> IIIT D </em>"/>
+                has the e-mail address
+                <input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
+                       data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and their phone number is 
+                <input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
+                       data-subline="For example: <em> 9454319281 </em>"/> <br><br>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="participant">
+                And my team member <input name="participant_name_0" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+                from <input name="participant_institute_0" type="text" value="" placeholder="Institution/College"
+                               data-subline="For example: <em> IIIT D </em>"/> is the alternate contact person for the team.
+                They have the e-mail address
+                <input name="participant_email_0" type="email" value="" placeholder="E-Mail"
+                       data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and their phone number is 
+                <input name="participant_phone_0" type="number" value="" placeholder="Your Phone Number"
+                       data-subline="For example: <em> 9454319281 </em>"/> <br><br>
+                </div>
+            {% endif %}
             {% if event.data.keys()|length > 0 %}
             <h3> Event Details Section </h3>
             {% endif %}
@@ -61,7 +89,7 @@
                 {% endif %}
                 <br/><br>
             {% endfor %}
-            And a little humanity test:
+            And a little humanity test: <br>
             <div class="g-recaptcha" data-sitekey="6LdMyhMUAAAAAL83pkn6sd67trJl5PhhtzNgzO_D"></div>
             <div class="nl-submit-wrap">
                 <button class="nl-submit" type="submit">Register for {{event.name}}</button>

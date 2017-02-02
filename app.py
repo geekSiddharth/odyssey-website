@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort, request
+from flask import Flask, render_template, abort, request, redirect
 import os
 import csv
 import requests
@@ -24,8 +24,9 @@ def register(event_id):
 			if config["development"] or requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr}).json()["success"]:
 				processed_data = registration.process_post_request(request.form, event_id)
 				registration.insert_record(processed_data, event_id)
+				return render_template('registration-successful.html', name=request.form["captain_name"])
 			else:
-				render_template('register_response.html', error="Wrong Catpcha")
+				abort(500)
 		return render_template('register.html', event=event_form[event_id])
 	else:
 		abort(404)
@@ -37,10 +38,6 @@ def event_particular(event_id):
 		return render_template('event-modal.html', event = data)
 	else:
 		abort(404)
-
-@app.route('/registration-successful')
-def registration_successful():
-	return render_template('registration-successful.html', name="Siddhu")
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0',port=int(config["site-port"]),debug=True)
