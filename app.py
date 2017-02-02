@@ -38,5 +38,9 @@ def event_particular(event_id):
 	else:
 		abort(404)
 
+@app.route('/registration-successful')
+def registration_successful():
+	return render_template('registration-successful.html', name="Siddhu")
+
 if __name__ == '__main__':
 	app.run(host='0.0.0.0',port=int(config["site-port"]),debug=True)
