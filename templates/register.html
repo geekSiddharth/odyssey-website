@@ -77,7 +77,7 @@
             {% endif %}
             {% for k in event.data %}
                 {% if event.data[k].type == "string"%}
-                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder if event.data[k].placeholder != "" }}" data-subline="{{event.data[k].hint}}" />
+                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder if event.data[k].placeholder != "" else '---'}}" data-subline="{{event.data[k].hint}}" />
                 {% endif %}
                 {% if event.data[k].type == "select"%}
                     {{k}} : 
