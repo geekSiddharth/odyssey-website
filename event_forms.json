@@ -96,33 +96,33 @@
         }
     },
     "musings": {
-        "Participating in twist a Tale (Story Writing)?" : {
+        "Twist a Tale (Story Writing)" : {
             "type": "select",
-            "options": ["YES", "NO"],
+            "options": ["Not Participating", "Participating"],
             "hint": "",
             "placeholder": ""
         },
-        "Participating in Dead Poets Society (Poetry)?" : {
+        "Dead Poets Society (Poetry)" : {
             "type": "select",
-            "options": ["YES", "NO"],
+            "options": ["Not Participating", "Participating"],
             "hint": "",
             "placeholder": ""
         },
-        "Participating in Haiku Writing?" : {
+        "Haiku Writing" : {
             "type": "select",
-            "options": ["YES", "NO"],
+            "options": ["Not Participating", "Participating"],
             "hint": "",
             "placeholder": ""
         },
-        "Participating in Arz Kiya Hai (Sher o Shayari)?" : {
+        "Arz Kiya Hai (Sher o Shayari)" : {
             "type": "select",
-            "options": ["YES", "NO"],
+            "options": ["Not Participating", "Participating"],
             "hint": "",
             "placeholder": ""
         },
-        "Participating in End To My Beginning (Story Completion)?" : {
+        "End To My Beginning (Story Completion)" : {
             "type": "select",
-            "options": ["YES", "NO"],
+            "options": ["Not Participating", "Participating"],
             "hint": "",
             "placeholder": ""
         }
