@@ -5,7 +5,15 @@
 			"name": "Odyssey",
 			"alternateName": "Odyssey IIIT D",
 			"url": "http://odyssey.iiitd.edu.in/",
-			 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi"
+			 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi",
+			 "sameAs": [
+				"https://www.facebook.com/odyssey.iiitd/",
+				"https://plus.google.com/104900525075222914073",
+				"https://twitter.com/IIITDOdyssey",
+				"https://www.instagram.com/iiitdodyssey/",
+				"https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ"
+			],
+			"description": "Odyssey is IIITD’s cultural festival that provides a platform for talent and competition in various fields. This year, with the theme of “Around the world in two days”, Odyssey will  will host several unique events in a wide array of categories, including Dance, Music, Theatre, and Digital Arts."			
 			}
 </script>
 <script type="application/ld+json">
@@ -40,7 +48,7 @@
 				"@type": "Offer",
 						"description": "Event Ticket",
                         "priceCurrency": "INR",
-                        "availability": "http://schema.org/InStock",
+                        "availability": "http://schema.org/LimitedAvailability",
 						"url": "resgistration url",
 						"price": "0"
 			}
