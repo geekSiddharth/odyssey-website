@@ -132,7 +132,7 @@
             $grid.isotope('reloadItems')
         });
         window.addEventListener("keyup", function (e) {
-            if (e.keyCode == 27) history.back();
+            if (e.keyCode == 27) window.location = "http://odyssey.iiitd.edu.in/";
         }, false);
     </script>
     <script src="{{ url_for('static', filename='js/toucheffects.js') }}"></script>

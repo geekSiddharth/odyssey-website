@@ -103,7 +103,7 @@
 <script>
     var nlform = new NLForm(document.getElementById('nl-form'));
     window.addEventListener("keyup", function (e) {
-        if (e.keyCode == 27) history.back();
+        if (e.keyCode == 27) window.location = "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}";;
     }, false);
 </script>
 <script>
