@@ -7,14 +7,21 @@ def connect():
 
 conn = connect()
 
+def isInt(n):
+    try:
+        int(n)
+        return True;
+    except:
+        return False
+
 def process_post_request(form, event_id):
     # captain
     data = {
         "captain": {
             "name": form["captain_name"],
             "email": form["captain_email"],
-            "phone_number": form["captain_phone"],
-            "institute": "lel"
+            "phone_number": form["captain_phone"] ,
+            "institute": form["captain_institute"]
         },
         "event_id": event_id
     }
@@ -24,7 +31,7 @@ def process_post_request(form, event_id):
 
     if(event_data[event_id]["teamSizeMax"] > 1):
         data["team_name"] = form["team_name"]
-        data["team_size"] = form["team_size"]
+        data["team_size"] = form["team_size"] if isInt(form["team_size"]) else None
 
         if event_data[event_id]["onlyBatmanAndRobin"]:
             teamSize = 1
