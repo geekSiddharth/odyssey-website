@@ -20,14 +20,15 @@
         <div class="col-md-4 side-bar " style="padding:0;">
             <div class="content ">
                 <div class="heading">
-                    <img src="../static/img/events/{{ event['event-id'] }}.jpg" class="cover" width="100%" height="auto">
+                    <img src="../static/img/events/{{ event['event-id'] }}.jpg" class="cover" width="100%"
+                         height="auto">
                     <h1>
                         {{ event.name }}
                     </h1>
                     <p class="tagline">
                         Team Size: {{ event.teamSize }}
-                        {% if event.entryFee != "" and event.entryFee != "0"%}
-                        <br>
+                        {% if event.entryFee != "" and event.entryFee != "0" %}
+                            <br>
                             Entry Fee: {{ event.entryFee }}
                         {% endif %}
                     </p>
@@ -79,5 +80,85 @@
 <script>window.addEventListener("keyup", function (e) {
     if (e.keyCode == 27) history.back();
 }, false);</script>
+<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+			"@type": "WebSite",
+			"name": "Odyssey",
+			"alternateName": "Odyssey IIIT D",
+			"url": "http://odyssey.iiitd.edu.in/",
+			 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi",
+			 "sameAs": [
+				"https://www.facebook.com/odyssey.iiitd/",
+				"https://plus.google.com/104900525075222914073",
+				"https://twitter.com/IIITDOdyssey",
+				"https://www.instagram.com/iiitdodyssey/",
+				"https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ"
+			],
+			"description": "Odyssey is IIITD’s cultural festival that provides a platform for talent and competition in various fields. This year, with the theme of “Around the world in two days”, Odyssey will  will host several unique events in a wide array of categories, including Dance, Music, Theatre, and Digital Arts."
+			}
 
+</script>
+<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+					"@type": "Event",
+					"name": " {{ event.name }}",
+					"@id": "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}",
+					"url": "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}",
+                    "image":"http://odyssey.iiitd.edu.in/static/img/events/{{ event['event-id'] }}.jpg",
+					"sameAs": [
+				"{{ event.fbEventLink }}"
+			],
+            "superEvent" : {
+            "@type":"Festival",
+            "name":"Odyssey",
+            "@id":"http://odyssey.iiitd.edu.in/",
+            "url":"http://odyssey.iiitd.edu.in/",
+            "location": {
+				"@type": "Place",
+						"name": "IIIT D",
+						"alternateName": "IIIT Delhi",
+						"sameAs": "https://www.iiitd.ac.in/",
+						"address": {
+					"@type": "PostalAddress",
+							"streetAddress": " Indraprastha Institute of Information Technology, Okhla Industrial Estate, Phase III, (Near Govindpuri Metro Station) New Delhi, India",
+							"addressLocality": "New Delhi",
+							"addressRegion": "Delhi",
+							"postalCode": "110020",
+							"addressCountry": "India"
+				}
+			},
+             "startDate": "2017-03-24T08:00",
+			"endDate": "2017-03-25T23:59"
+            },
+			  "startDate": "2017-03-24T08:00",
+			"endDate": "2017-03-25T23:59",
+					"description": " {{ event.description | safe }}",
+					"location": {
+				"@type": "Place",
+						"name": "IIIT D",
+						"alternateName": "IIIT Delhi",
+						"sameAs": "https://www.iiitd.ac.in/",
+						"address": {
+					"@type": "PostalAddress",
+							"streetAddress": " Indraprastha Institute of Information Technology, Okhla Industrial Estate, Phase III, (Near Govindpuri Metro Station) New Delhi, India",
+							"addressLocality": "New Delhi",
+							"addressRegion": "Delhi",
+							"postalCode": "110020",
+							"addressCountry": "India"
+				}
+			},
+			"typicalAgeRange": "15-30",
+					"offers": {
+				"@type": "Offer",
+						"description": "Event Ticket",
+                        "priceCurrency": "INR",
+                        "availability": "http://schema.org/LimitedAvailability",
+						"url": "http://odyssey.iiitd.edu.in/register/{{ event['event-id'] }}",
+						"price": " {{ event.entryFee }}"
+			}
+			}
+
+</script>
 </html>
