@@ -1,0 +1,47 @@
+<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+			"@type": "WebSite",
+			"name": "Odyssey",
+			"alternateName": "Odyssey IIIT D",
+			"url": "http://odyssey.iiitd.edu.in/",
+			 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi"
+			}
+</script>
+<script type="application/ld+json">
+			[{
+			"@context": "http://www.schema.org",
+					"@type": "<To to be thought of>",
+					"name": "<Event Name>",
+					"@id": "http://odyssey.iiitd.edu.in/events/<event-uid>",
+					"url": "http://odyssey.iiitd.edu.in/events/<event-uid>",
+					"sameAs": [
+				"https://www.facebook.com/links to event",
+			],
+			  "startDate": "2017-03-24T08:00",
+			"endDate": "2017-03-25T23:59",
+					"description": "event description",
+					"location": {
+				"@type": "Place",
+						"name": "IIIT D",
+						"alternateName": "IIIT Delhi",
+						"sameAs": "https://www.iiitd.ac.in/",
+						"address": {
+					"@type": "PostalAddress",
+							"streetAddress": " Indraprastha Institute of Information Technology, Okhla Industrial Estate, Phase III, (Near Govindpuri Metro Station) New Delhi, India",
+							"addressLocality": "New Delhi",
+							"addressRegion": "Delhi",
+							"postalCode": "110020",
+							"addressCountry": "India"
+				}
+			},
+			"typicalAgeRange": "15-30",
+					"offers": {
+				"@type": "Offer",
+						"description": "Event Ticket",
+                        "priceCurrency": "INR",
+                        "availability": "http://schema.org/InStock",
+						"url": "resgistration url",
+						"price": "0"
+			}
+			}	]
