@@ -20,6 +20,81 @@
         display:inline-block;
         margin:auto;
     }
+
+    .main-content {
+        margin:auto;
+    }
+
+    @media (max-width: 600px) {
+        .container > header h1 {
+            font-size: 3em;
+        }
+
+        .nl-form {
+            font-size: 1.8em;
+        }
+
+        .main,
+        .container > header {
+            padding: 1em;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .container > header h1 {
+            font-size: 2.5em;
+        }
+
+        .nl-form {
+            font-size: 1.7em;
+        }
+
+        .main {
+            max-width: 90%;
+        }
+
+    }
+
+    @media (max-width: 360px) {
+        .nl-form {
+            font-size: 1.4em;
+        }
+
+        .nl-form .main-content {
+            padding: 0.5em;
+            max-width: 90%;
+        }
+
+        .main,
+        .container > header {
+            padding: 0em;
+        }
+
+        .main {
+            max-width: 100%;
+        }
+
+        .g-recaptcha {
+            transform: scale(0.8);
+        }
+    }
+
+    @media (max-width: 300px) {
+        .nl-form {
+            font-size: 1.3em;
+        }
+
+        .g-recaptcha {
+            transform: scale(0.6);
+        }
+    }
+
+    @media (max-width: 279px) {
+        .g-recaptcha {
+            position:relative;
+            left: -7vw;
+        }
+    }
     </style>
 </head>
 <body class="nl-blurred">
@@ -30,6 +105,7 @@
     </header>
     <div class="main clearfix">
         <form id="nl-form" class="nl-form" method="POST" action="">
+            <div class="main-content">
             {% if event.data.keys()|length > 0 %}
             <h3> {{"Participant" if event.teamSizeMax == 1 else "Team"}} Section </h3>
             {% endif %}
@@ -42,7 +118,7 @@
             <input name="captain_phone" type="number" value="" placeholder="Your Phone Number"
                    data-subline="For example: <em> 9454319281 </em>"/> <br><br>
 
-            {% if event.teamSizeMax > 1 %}
+            {% if event.onlyBatmanAndRobin or event.teamSizeMax > 1 %}
             My team name is <input name="team_name" type="number" value="" placeholder="Your Team Name"
                    data-subline="For example: <em> CoolTeamName </em>"/> and it has <input name="team_size" type="number" value="" placeholder="Your Team Size"
                    data-subline="For example: <em> 2 </em>"/> members <br/> <br>
@@ -90,6 +166,7 @@
                 <br/><br>
             {% endfor %}
             And a little humanity test: <br>
+            </div>
             <div class="g-recaptcha" data-sitekey="6LdMyhMUAAAAAL83pkn6sd67trJl5PhhtzNgzO_D"></div>
             <div class="nl-submit-wrap">
                 <button class="nl-submit" type="submit">Register for {{event.name}}</button>
