@@ -42,6 +42,8 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 			event_data[row[0]]["onlyBatmanAndRobin"] = event_data[row[0]]["teamSizeMax"] > 4
 		except:
 			event_data[row[0]]["onlyBatmanAndRobin"] = True
+			print("Warning, team size for %s is %s", row[0], row[3])
+
 	file.close()
 
 
