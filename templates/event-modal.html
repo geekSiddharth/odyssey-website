@@ -38,7 +38,7 @@
                     </h1>
                     <p class="tagline">
                         Team Size: {{ event.teamSize }}
-                        {% if event.entryFee != "" and event.entryFee != "0" %}
+                        {% if event.entryFee != "" and event.entryFee != "0" and event.entryFee != " " %}
                             <br>
                             Entry Fee: {{ event.entryFee }}
                         {% endif %}
