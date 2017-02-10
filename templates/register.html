@@ -183,7 +183,7 @@
         if (e.keyCode == 27) window.location = "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}";;
     }, false);
 
-    $(document).read(function () {
+    $(document).ready(function () {
         //one liner to make form fields work in a single click, thanks to peey
         $(".nl-field-toggle").on('click', (x) => $(x.target).next().find(".nl-ti-input input").focus());
     })
