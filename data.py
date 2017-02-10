@@ -31,20 +31,25 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 			"name": row[1], 
 			"description": markdown(gfm(row[2])), 
 			"teamSize": row[3], 
-			"rules": markdown(gfm(row[4])), 
-			"contact": markdown(gfm(row[5])), 
-			"entryFee": row[6], 
-			"fbEventLink": row[7],
-			"categories": row[8]
+			"teamSizeMax": row[4],
+			"rules": markdown(gfm(row[5])), 
+			"contact": markdown(gfm(row[6])), 
+			"entryFee": row[7], 
+			"fbEventLink": row[8],
+			"categories": row[9]
 		}
 
 		try:
-			event_data[row[0]]["teamSizeMin"] = int(row[3].split("-")[0]) 
-			event_data[row[0]]["teamSizeMax"] = int(row[3].split("-")[-1]) # max and min will be the same if there's no dash
+			try:
+				event_data[row[0]]["teamSizeMax"] = int(event_data[row[0]]["teamSizeMax"])
+			except:
+				event_data[row[0]]["teamSizeMin"] = int(row[3].split("-")[0]) 
+				event_data[row[0]]["teamSizeMax"] = int(row[3].split("-")[-1]) # max and min will be the same if there's no dash
+
 			event_data[row[0]]["onlyBatmanAndRobin"] = event_data[row[0]]["teamSizeMax"] > 4
 		except:
 			event_data[row[0]]["onlyBatmanAndRobin"] = True
-			print("Warning, team size for %s is %s" % (row[0], row[3]))
+			print("Warning, team size for %s is %s and alt team size is %s" % (row[0], row[3], row[4]))
 
 	file.close()
 
