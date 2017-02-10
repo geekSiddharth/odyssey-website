@@ -13,6 +13,7 @@ create_tables = """
         captain integer references participant(id) NOT NULL,
         team_name character varying(50),
         team_size SMALLINT,
+        registration_time timestamp default current_timestamp,
         data JSON
     );
 
@@ -20,6 +21,14 @@ create_tables = """
         registration_id integer NOT NULL  references registration(id),
         participant_id integer NOT NULL PRIMARY KEY references participant(id)
     );
+
+    CREATE VIEW view_registrations AS
+        SELECT registration_time, event_id, team_name, team_size, name, institute, email, phone_number, data FROM participant p
+        LEFT JOIN registration_participant rp
+        ON rp.participant_id = p.id
+        LEFT JOIN registration r
+        ON rp.registration_id = r.id
+        WHERE r.id = 18;
 """
 
 # this is just a comment
