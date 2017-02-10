@@ -101,7 +101,7 @@
 <a href="/events" class="closeC"><img src="../static/img/close.png" height="40px" width="40px"></a>
 <div class="container demo-1">
     <header>
-        <h1>{{event.name}} Registration</h1>
+        <h1>{{event.name | safe}} Registration</h1>
     </header>
     <div class="main clearfix">
         <form id="nl-form" class="nl-form" method="POST" action="">
@@ -111,7 +111,7 @@
             {% endif %}
             I, <input required name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>, from <input required name="captain_institute" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/>
-            want to register for {{event.name}}.
+            want to register for {{event.name | safe}}.
             My e-mail address is 
             <input required name="captain_email" type="email" value="" placeholder="E-Mail"
                    data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and my phone number is

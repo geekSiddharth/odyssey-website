@@ -1,4 +1,5 @@
 {
+    "mini-militia": {},
     "vocal-jam": {},
     "art-attack": {},
     "battle-of-bands": {
@@ -164,6 +165,20 @@
         "Short description of the Video Clip": {
             "type": "string",
             "maxlen": 500,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
+    "pwned": {
+        "Select Game": {
+            "type": "select",
+            "options": ["FIFA 17", "Counter-Strike: 1.6", "DOTA 2"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "[For FIFA 17] Which controller do you prefer? (For Fixtures)": {
+            "type": "select",
+            "options": ["PS4", "XBOX 360"],
             "hint": "",
             "placeholder": ""
         }

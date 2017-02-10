@@ -27,8 +27,7 @@ create_tables = """
         LEFT JOIN registration_participant rp
         ON rp.participant_id = p.id
         LEFT JOIN registration r
-        ON rp.registration_id = r.id
-        WHERE r.id = 18;
+        ON rp.registration_id = r.id;
 """
 
 # this is just a comment

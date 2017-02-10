@@ -34,13 +34,13 @@
                     <img src="../static/img/events/{{ event['event-id'] }}.jpg" class="cover" width="100%"
                          height="auto">
                     <h1>
-                        {{ event.name }}
+                        {{ event.name | safe}}
                     </h1>
                     <p class="tagline">
                         Team Size: {{ event.teamSize }}
                         {% if event.entryFee != "" and event.entryFee != "0" %}
                             <br>
-                            Entry Fee: {{ event.entryFee }}
+                            Entry Fee: {{ event.entryFee | safe}}
                         {% endif %}
                     </p>
                     <br>
