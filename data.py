@@ -1,6 +1,8 @@
 import json
 import csv
 from gfm import gfm, markdown
+from collections import OrderedDict
+
 with open('sensitive_data.json', newline='') as file:
     global config
     config = json.loads(file.read())
@@ -42,7 +44,7 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 			event_data[row[0]]["onlyBatmanAndRobin"] = event_data[row[0]]["teamSizeMax"] > 4
 		except:
 			event_data[row[0]]["onlyBatmanAndRobin"] = True
-			print("Warning, team size for %s is %s", row[0], row[3])
+			print("Warning, team size for %s is %s" % (row[0], row[3]))
 
 	file.close()
 
@@ -50,7 +52,7 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 with open('event_forms.json', newline='') as file:
     global event_form
     event_form = {}
-    event_form_raw = json.loads(file.read())
+    event_form_raw = json.loads(file.read(),  object_pairs_hook=OrderedDict)
     for k in event_form_raw:
         event = dict(event_data[k])
         event["data"] = event_form_raw[k]

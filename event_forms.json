@@ -11,7 +11,20 @@
     },
     "battle-troupe": {},
     "blind-date": {},
-    "can-you-duet": {},
+    "can-you-duet": {
+        "Dance Style" : {
+            "type": "string",
+            "maxlen": 200,
+            "hint": "",
+            "placeholder": ""
+        },
+        "Questions / Suggestions" : {
+            "type": "string",
+            "maxlen": 500,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
     "captcha": {
         "Age" : {
             "type": "string",
@@ -61,6 +74,12 @@
             "hint": "e.g. 2nd Year",
             "placeholder": ""
         },
+        "Genre": {
+            "type": "select",
+            "options": ["Bollywood", "Western"],
+            "hint": "",
+            "placeholder": ""
+        },
         "What Will Acompanny You?": {
             "type": "select",
             "options": ["Karaoke Track", "Instrument"],
@@ -72,7 +91,7 @@
     "food-binge": {
         "Allergic to any ingredient/substance": {
             "type": "string",
-            "maxlen": 80,
+            "maxlen": 200,
             "hint": "",
             "placeholder": ""
         }
@@ -82,15 +101,15 @@
     "gupchup": {},
     "hasratein": {},
     "mr-and-ms-odyssey": {
-        "About yourself (100 words)": {
+        "What talent would you like to showcase for the competition?": {
             "type": "string",
             "maxlen": 1000,
             "hint": "",
             "placeholder": ""
         },
-        "What talent would you like to showcase for the competition?": {
-            "type": "string",
-            "maxlen": 1000,
+        "I have read the \"Registration Requirements\" section in Rules and Regulations and understand I have to take additional steps to complete my registration" : {
+            "type": "select",
+            "options": ["No", "Yes"],
             "hint": "",
             "placeholder": ""
         }
