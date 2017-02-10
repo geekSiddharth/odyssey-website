@@ -112,7 +112,6 @@
             Name 	:	<input required name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>
             <br />College/School/Institution	:	<input required name="captain_institute" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/>
-            <br />Event Name 	:	{{event.name | safe}}.
             <br />Email Address 	:	<input required name="captain_email" type="email" value="" placeholder="E-Mail"
                    data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>
             <br />Contact Number 	:	<input required name="captain_phone" type="number" value="" placeholder="Your Phone Number"
@@ -127,17 +126,16 @@
             {% if not(event.onlyBatmanAndRobin) %}
                 {% for i in range(event.teamSizeMax - 1) %}
                 <div class="participant">
-                Name of team member (Alternate Contact)	:	<input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+                Name of team member :	<input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
                 <br> College 	:	<input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
                                data-subline="For example: <em> IIIT D </em>"/>
                 <br />Email Address 	:	<input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
                        data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>
-                       Contact Number 	:	<input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
+                <br />Contact Number 	:	<input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
                        data-subline="For example: <em> 9454319281 </em>"/> <br><br>
                 </div>
                 {% endfor %}
             {% else %}
-               
                 <div class="participant">
                 Name of team member (Alternate Contact)  	:	<input name="participant_name_0" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
                 <br> College 	:	<input name="participant_institute_0" type="text" value="" placeholder="Institution/College"
@@ -186,6 +184,7 @@
     $(document).ready(function () {
         //one liner to make form fields work in a single click, thanks to peey
         $(".nl-field-toggle").on('click', (x) => $(x.target).next().find(".nl-ti-input input").focus());
+        $(".nl-ti-input input").focusout((x) => $(".nl-field-go").click());
     })
     
 </script>
