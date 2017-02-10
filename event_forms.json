@@ -9,7 +9,14 @@
             "placeholder": ""
         }
     },
-    "battle-troupe": {},
+    "battle-troupe": {
+        "Link of the video for preliminary round" : {
+            "type": "string",
+            "maxlen": 200,
+            "hint": "",
+            "placeholder": ""
+        }
+    },
     "blind-date": {},
     "can-you-duet": {
         "Dance Style" : {
