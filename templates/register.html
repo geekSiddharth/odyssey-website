@@ -109,13 +109,13 @@
             {% if event.data.keys()|length > 0 %}
             <h3> {{"Participant" if event.teamSizeMax == 1 else "Team"}} Section </h3>
             {% endif %}
-            I, <input name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>, from <input name="captain_institute" type="text" value="" placeholder="Institution/College"
+            I, <input required name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>, from <input required name="captain_institute" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/>
             want to register for {{event.name}}.
             My e-mail address is 
-            <input name="captain_email" type="email" value="" placeholder="E-Mail"
+            <input required name="captain_email" type="email" value="" placeholder="E-Mail"
                    data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and my phone number is
-            <input name="captain_phone" type="number" value="" placeholder="Your Phone Number"
+            <input required name="captain_phone" type="number" value="" placeholder="Your Phone Number"
                    data-subline="For example: <em> 9454319281 </em>"/> <br><br>
 
             {% if event.onlyBatmanAndRobin or event.teamSizeMax > 1 %}
@@ -153,7 +153,7 @@
             {% endif %}
             {% for k in event.data %}
                 {% if event.data[k].type == "string"%}
-                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder if event.data[k].placeholder != "" else '---'}}" data-subline="{{event.data[k].hint}}" />
+                    {{k}} : <input name="data_{{k}}" type="text" value="" maxlength="{{event.data[k].maxlen if maxlen in event.data[k] else 500}}" placeholder="{{event.data[k].placeholder if event.data[k].placeholder != "" else '-----'}}" data-subline="{{event.data[k].hint}}" />
                 {% endif %}
                 {% if event.data[k].type == "select"%}
                     {{k}} : 
