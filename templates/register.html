@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - {{event.name}} - Odyssey'17 | IIIT Delhi</title>
-    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="shortcut icon" href="../static/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../static/css/component.css"/>
     <script src="../static/js/modernizr.custom.js"></script>
     <style>
@@ -109,43 +109,43 @@
             {% if event.data.keys()|length > 0 %}
             <h3> {{"Participant" if event.teamSizeMax == 1 else "Team"}} Section </h3>
             {% endif %}
-            I, <input required name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>, from <input required name="captain_institute" type="text" value="" placeholder="Institution/College"
+            Name 	:	<input required name="captain_name" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>
+            <br />College/School/Institution	:	<input required name="captain_institute" type="text" value="" placeholder="Institution/College"
                            data-subline="For example: <em> IIIT D </em>"/>
-            want to register for {{event.name | safe}}.
-            My e-mail address is 
-            <input required name="captain_email" type="email" value="" placeholder="E-Mail"
-                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and my phone number is
-            <input required name="captain_phone" type="number" value="" placeholder="Your Phone Number"
-                   data-subline="For example: <em> 9454319281 </em>"/> <br><br>
+            <br />Event Name 	:	{{event.name | safe}}.
+            <br />Email Address 	:	<input required name="captain_email" type="email" value="" placeholder="E-Mail"
+                   data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>
+            <br />Contact Number 	:	<input required name="captain_phone" type="number" value="" placeholder="Your Phone Number"
+                   data-subline="For example: <em> 9910004979 </em>"/> <br><br>
 
             {% if event.onlyBatmanAndRobin or event.teamSizeMax > 1 %}
-            My team name is <input name="team_name" type="text" value="" placeholder="Your Team Name"
-                   data-subline="For example: <em> CoolTeamName </em>"/> and it has <input name="team_size" type="number" value="" placeholder="Your Team Size"
+            <br />Team Name 	:	<input name="team_name" type="text" value="" placeholder="Your Team Name"
+                   data-subline="For example: <em> CoolTeamName </em>"/>
+                   <br />Team size 	:	 <input name="team_size" type="number" value="" placeholder="Your Team Size"
                    data-subline="For example: <em> 2 </em>"/> members <br/> <br>
             {% endif %}
             {% if not(event.onlyBatmanAndRobin) %}
                 {% for i in range(event.teamSizeMax - 1) %}
                 <div class="participant">
-                And my team member <input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
-                <br> from <input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
+                Name of team member (Alternate Contact)	:	<input name="participant_name_{{i}}" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+                <br> College 	:	<input name="participant_institute_{{i}}" type="text" value="" placeholder="Institution/College"
                                data-subline="For example: <em> IIIT D </em>"/>
-                has the e-mail address
-                <input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
-                       data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and their phone number is 
-                <input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
+                <br />Email Address 	:	<input name="participant_email_{{i}}" type="email" value="" placeholder="E-Mail"
+                       data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>
+                       Contact Number 	:	<input name="participant_phone_{{i}}" type="number" value="" placeholder="Your Phone Number"
                        data-subline="For example: <em> 9454319281 </em>"/> <br><br>
                 </div>
                 {% endfor %}
             {% else %}
+               
                 <div class="participant">
-                And my team member <input name="participant_name_0" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
-                from <input name="participant_institute_0" type="text" value="" placeholder="Institution/College"
-                               data-subline="For example: <em> IIIT D </em>"/> is the alternate contact person for the team.
-                They have the e-mail address
-                <input name="participant_email_0" type="email" value="" placeholder="E-Mail"
-                       data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>, and their phone number is 
-                <input name="participant_phone_0" type="number" value="" placeholder="Your Phone Number"
-                       data-subline="For example: <em> 7827803958 </em>"/> <br><br>
+                Name of team member (Alternate Contact)  	:	<input name="participant_name_0" type="text" value="" placeholder="Your Name" data-subline="For example: <em> Really? </em>"/>,
+                <br> College 	:	<input name="participant_institute_0" type="text" value="" placeholder="Institution/College"
+                               data-subline="For example: <em> IIIT D </em>"/>
+                <br />Email Address 	:	<input name="participant_email_0" type="email" value="" placeholder="E-Mail"
+                       data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>
+                       Contact Number 	:	<input name="participant_phone_0" type="number" value="" placeholder="Your Phone Number"
+                       data-subline="For example: <em> 9454319281 </em>"/> <br><br>
                 </div>
             {% endif %}
             {% if event.data.keys()|length > 0 %}
@@ -165,7 +165,7 @@
                 {% endif %}
                 <br/><br>
             {% endfor %}
-            And a little humanity test: <br>
+            Captcha Test	:	<br>
             </div>
             <div class="g-recaptcha" data-sitekey="6LdMyhMUAAAAAL83pkn6sd67trJl5PhhtzNgzO_D"></div>
             <div class="nl-submit-wrap">
