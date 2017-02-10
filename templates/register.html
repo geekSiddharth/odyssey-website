@@ -119,7 +119,7 @@
                    data-subline="For example: <em> 9454319281 </em>"/> <br><br>
 
             {% if event.onlyBatmanAndRobin or event.teamSizeMax > 1 %}
-            My team name is <input name="team_name" type="number" value="" placeholder="Your Team Name"
+            My team name is <input name="team_name" type="text" value="" placeholder="Your Team Name"
                    data-subline="For example: <em> CoolTeamName </em>"/> and it has <input name="team_size" type="number" value="" placeholder="Your Team Size"
                    data-subline="For example: <em> 2 </em>"/> members <br/> <br>
             {% endif %}
@@ -176,12 +176,18 @@
     </div>
 </div><!-- /container -->
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="../static/js/nlform.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="../static/js/nlform.js"></script>
 <script>
     var nlform = new NLForm(document.getElementById('nl-form'));
     window.addEventListener("keyup", function (e) {
         if (e.keyCode == 27) window.location = "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}";;
     }, false);
+
+    $(document).read(function () {
+        //one liner to make form fields work in a single click, thanks to peey
+        $(".nl-field-toggle").on('click', (x) => $(x.target).next().find(".nl-ti-input input").focus());
+    })
+    
 </script>
 <script>
     (function (i, s, o, g, r, a, m) {
