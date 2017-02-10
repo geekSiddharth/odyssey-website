@@ -29,7 +29,7 @@ def process_post_request(form, event_id):
 
     data["other_participants"] = []
 
-    if(event_data[event_id]["teamSizeMax"] > 1):
+    if(event_data[event_id]["teamSizeMax"] > 1 or event_data[event_id]["onlyBatmanAndRobin"]):
         data["team_name"] = form["team_name"]
         data["team_size"] = form["team_size"] if isInt(form["team_size"]) else None
 
@@ -39,12 +39,15 @@ def process_post_request(form, event_id):
             teamSize = event_data[event_id]["teamSizeMax"] - 1
 
         for i in range(teamSize):
-            data["other_participants"].append({
-                "name": form["participant_name_" + str(i)],
-                "email": form["participant_email_" + str(i)],
-                "phone_number": form["participant_phone_" + str(i)],
-                "institute": form["participant_institute_" + str(i)]
-            })
+            if (form["participant_name_" + str(i)] == "" and form["participant_email_" + str(i)] == "" and form["participant_phone_" + str(i)] == "" and form["participant_institute_" + str(i)] == ""):
+                pass
+            else:
+                data["other_participants"].append({
+                    "name": form["participant_name_" + str(i)],
+                    "email": form["participant_email_" + str(i)],
+                    "phone_number": form["participant_phone_" + str(i)],
+                    "institute": form["participant_institute_" + str(i)]
+                })
     else:
         data["team_name"] = None
         data["team_size"] = None
