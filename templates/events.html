@@ -78,9 +78,7 @@
                     {% for id in events %}
                     <div class="grid-item {{events[id].categories}}">
                         <figure>
-                            <a href="/events/{{events[id]['event-id']}}">
-                               <img src="../static/img/events/{{ events[id]['event-id'] }}.jpg" alt="{{events[id]['name']}} at Odyssey">
-                            </a>
+                            <img src="../static/img/events/{{ events[id]['event-id'] }}.jpg" alt="{{events[id]['name']}} at Odyssey">
                             <figcaption>
                                 <h3>{{events[id]['name'] | safe}}</h3>
                                 <a href="/events/{{events[id]['event-id']}}">More Details</a>
