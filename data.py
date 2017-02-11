@@ -26,18 +26,34 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 	rows = csv.reader(file, dialect='excel')
 	next(rows) # skips the first entry which has headings
 	for row in rows:
-		event_data[row[0]] = {
-			"event-id":row[0],
-			"name": row[1], 
-			"description": markdown(gfm(row[2])), 
-			"teamSize": row[3], 
-			"teamSizeMax": row[4],
-			"rules": markdown(gfm(row[5])), 
-			"contact": markdown(gfm(row[6])), 
-			"entryFee": row[7], 
-			"fbEventLink": row[8],
-			"categories": row[9]
-		}
+		if (len(row) == 10):
+			event_data[row[0]] = {
+				"event-id":row[0],
+				"name": row[1], 
+				"description": markdown(gfm(row[2])), 
+				"teamSize": row[3], 
+				"teamSizeMax": row[4],
+				"rules": markdown(gfm(row[5])), 
+				"contact": markdown(gfm(row[6])), 
+				"entryFee": row[7], 
+				"fbEventLink": row[8],
+				"categories": row[9]
+			}
+		elif(len(row) == 9):
+			event_data[row[0]] = {
+				"event-id":row[0],
+				"name": row[1], 
+				"description": markdown(gfm(row[2])), 
+				"teamSize": row[3], 
+				"teamSizeMax": "",
+				"rules": markdown(gfm(row[4])), 
+				"contact": markdown(gfm(row[5])), 
+				"entryFee": row[6], 
+				"fbEventLink": row[7],
+				"categories": row[8]
+			}
+		else:
+			raise ValueError("Invalid CSV lol. Row Len: ", len(row));
 
 		try:
 			try:

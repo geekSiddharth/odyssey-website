@@ -3,11 +3,15 @@ Odyssey'17 Website
 
 ### Deployment Checklist
 
-[] install postgresql, pip install -r requirements.txt
-[] create db, user
-[] create sensitive_data.json
+- [] install postgresql, pip install -r requirements.txt
+- [] create db, user
+- [] create sensitive_data.json
 
 ### Issues
+
+New Issues (As of Feb 11)
+ 1. .
+ 2. .
 
 Some problems with data (won't affect deployment of non-problem events though):
  1. a-capella, battle-troupe, blind-date, can-you-duet, pwned, sumo-wrestling don't have a google form in their website folders so I am just generating form for member data for them (no additional fields)
