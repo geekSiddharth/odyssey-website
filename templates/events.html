@@ -76,6 +76,7 @@
             <div class="center-block">
                 <div class="grid-item-parent grid cs-style-3 ">
                     {% for id in events %}
+                    <a href="/events/{{events[id]['event-id']}}">
                     <div class="grid-item {{events[id].categories}}">
                         <figure>
                             <img src="../static/img/events/{{ events[id]['event-id'] }}.jpg"
@@ -86,6 +87,7 @@
                             </figcaption>
                         </figure>
                     </div>
+                        </a>
                     {% endfor %}
                 </div>
             </div>
