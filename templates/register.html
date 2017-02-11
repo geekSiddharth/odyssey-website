@@ -98,7 +98,7 @@
     </style>
 </head>
 <body class="nl-blurred">
-<a href="/events" class="closeC"><img src="../static/img/close.png" height="40px" width="40px"></a>
+<a href="/events/{{ event['event-id'] }}" class="closeC"><img src="../static/img/close.png" height="40px" width="40px"></a>
 <div class="container demo-1">
     <header>
         <h1>{{event.name | safe}} Registration</h1>
@@ -142,7 +142,7 @@
                                data-subline="For example: <em> IIIT D </em>"/>
                 <br />Email Address 	:	<input name="participant_email_0" type="email" value="" placeholder="E-Mail"
                        data-subline="For example: <em> odyssey@iiitd.edu.in </em>"/>
-                       Contact Number 	:	<input name="participant_phone_0" type="number" value="" placeholder="Your Phone Number"
+                <br />Contact Number 	:	<input name="participant_phone_0" type="number" value="" placeholder="Your Phone Number"
                        data-subline="For example: <em> 9454319281 </em>"/> <br><br>
                 </div>
             {% endif %}
@@ -186,7 +186,7 @@
 <script>
     var nlform = new NLForm(document.getElementById('nl-form'));
     window.addEventListener("keyup", function (e) {
-        if (e.keyCode == 27) window.location = "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}";;
+        if (e.keyCode == 27) window.location = "/events/{{ event['event-id'] }}";;
     }, false);
 
     $(document).ready(function () {
