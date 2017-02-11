@@ -1,4 +1,4 @@
-Event ID,Event Name,Description,Team Size,"Alt team size (form override)
+Event ID,Event Name,Description,Team Size,"override team size in form (int)
 ",Rules,Contact,Entry Fee(in Rs.),FB Event Link,Categories
 vocal-jam,Vocal Jam,"Sing with your heart and sing with your soul. 
 Take our breath away through the unison and steal our attention with your talents. 
@@ -8,7 +8,20 @@ Come with your team and show the world what The Voice can do with harmonies and 
 The IIIT Delhi Acapella Competition is on!
 
 Using the essence of Pitch Perfect, we at IIIT Delhi would like to give artists a platform to fabricate music with the sounds generated only by the human body, be it vocalising, harmonising, tapping their feet, snapping their fingers or beat-boxing. In A Cappella, the participants are members of an orchestra, in which they are the instrument, and they must use their voice and body in unison with those of others to stir the audience. There is music inside each one of us; the challenge is to let it out for the world to applaud.
-",5-20,,No instruments and only the human body can be used to produce sound. If the number of teams exceed 20 then we plan to have 2 rounds. Elimination and Finals. In the elimination the time limit for each performance will be 5 minutes and in the finals the time limit will be 6-8 minutes. Judges decision will be final and binding.,"Anannya Uberoi
+",5-20,,"No instruments are allowed - only the human body can be used to produce sound.
+
+Each team shall consist of 5-20 members.
+
+7 minutes shall be allocated to each team - exceeding the time allocated to the performance shall lead to deduction of points.
+
+Personal audio equipment is not allowed.
+
+No backing track can be played while performing.
+
+The link to a short video of a team A Cappella performance, not exceeding 5 minutes in length, has to be given in the registration form, with all team members - no more, no less - clearly visible and performing in it - this shall serve as the preliminary round.
+
+In case of cross-school or cross-college teams, write ‘Cross-School’ or ‘Cross-College’ respectively in the college/school/institute section in the registration form.
+","Anannya Uberoi
 anannya15014@iiitd.ac.in
 8527617051
 
@@ -187,7 +200,7 @@ shubham15098@iiitd.ac.in
 Ishmeet Kaur
 9990914141
 ishmeet15042@iiitd.ac.in ",,https://www.facebook.com/events/273920933024269/,fun
-can-you-duet,Can you Duet,"“We dance for laughter, we dance for tears, we dance for madness, we dance for fears, we dance for hopes, we dance for screams, we are the dancers, we create the dreams.”
+can-you-duet,Can You Duet,"“We dance for laughter, we dance for tears, we dance for madness, we dance for fears, we dance for hopes, we dance for screams, we are the dancers, we create the dreams.”
 ― Albert Einstein
 It is with your feet that you move but it is with your heart that you dance. Flaunt that chemistry you have with your dancing partner with dazzling in-sync dance moves. Come and groove to your favorite tune in your best dancing shoes and get ready to rock the stage because “It don’t mean a Thing if it ain’t got that Swing”. Don't wait, it's your passion calling. Fill the music and stage with your charisma and show what it really means for Two to be One. Register now! 
 ",2,,"Only college students are allowed.
@@ -267,7 +280,31 @@ sharmistha16193@iiitd.ac.in
 
 Jai Mahajan
 jai16154@iiitd.ac.in",400,https://www.facebook.com/events/246119009157144/,fun
-design-360,Design 360,Will be released soon.,,,Will be released soon.,"Varnit Jain
+design-360,Design 360,"IIITD invites you to the first edition of Design 360 - a 16 hour overnight designathon! 
+
+Design 360 is a designathon where the teams give solutions to critical problems through design, prototyping, and testing ideas. We invite all creative thinkers, designers and UI/UX enthusiasts to come together and build things that shape our future.
+
+<strong>Our Theme: Around the world in 2 days!</strong>
+
+Your aim will be to convince us how is your solution the best amongst all. In your journey you’ll be required to submit your idea, an interface/video and a presentation at the end. We have planned many little surprises for you. 
+
+You’ll get an opportunity to present your product to actual customers and receive valuable feedback along with prizes for all winners.
+
+3-5 member teams (cross-college/school are allowed) are to be formed. Solo registrations are, we’ll make teams on site if you can’t form one.
+The on site round is strictly invite based, you will receive an invite after the online round to participate in the onsite round, if selected.
+
+",3-5,5,"Will be released soon.All teams/participants must register before participating in the online round.
+
+All participants must bring their student ID for entry in the onsite round.
+
+All Participants should carry their own resources like laptop, charger, wires, camera, etc. No such device would be provided by us. 
+
+The final presentation should not exceed 10 minutes and should be submitted within the given deadline.
+
+Plagiarism of any kind will not be accepted and if found, would result in disqualification.
+
+All Teams will be provided with a wifi connection and creative supplies like markers and chart papers. 
+(PS: We will also provide delicious food and coffee)","Varnit Jain
 varnit15112@iiitd.ac.in
 9560840462
 
@@ -280,12 +317,12 @@ arnav16228@iiitd.ac.in
 813067900
 
 Aman Agarwal
-aman13009@iiitd.ac.in
+aman15012@iiitd.ac.in
 8860501413
 
 Saumya Balodi
 saumya15172@iiitd.ac.in
-9013240267",Will be released soon.,https://www.facebook.com/events/1340381819319682/,design flagship
+9013240267",,https://www.facebook.com/events/1340381819319682/,design flagship
 encore,Encore,"IIIT Delhi is now on a quest to find the Voice that touches the heart! We dont need singers, we need the people who intimidate us with their voice.
 
 Surrendering to your talent and looking forward to your presence, IIIT Delhi presents Encore, the solo singing competition of Odyssey 17'!
@@ -573,28 +610,25 @@ shreyans15178@iiitd.ac.in
 Kaustubh Singh
 kaustubh15143@iiitd.ac.in
 8826820996",,https://www.facebook.com/events/230946314022953/,quizzes
-punchline,Punchline,"Kya aap sakht launde hai? Kya aapke liye badal zyada important hai? Kya pomegranate khaate hue aapka saara din nikal jaata hai? Kya hasee toh phasee ke chakkar mei aapka sense of humour acha ho gya hai?
-Then you probably found the right place (or we spammed you *innocent smile*)
+punchline,Punchline,"Kya aap sakht launde hai?
+Kya aapke liye badal zyada important hai? 
+Kya pomegranate khaate hue aapka saara din nikal jaata hai?
+ Kya hasee toh phasee ke chakkar mein aapka sense of humour acha ho gaya hai?
 
+Then you probably found the right place (or, we spammed you. * innocent smile * )
 PUNchline is a stand up comedy event consisting of two rounds:
-an online qualifying round; followed by an on-stage skill test of how funny and innovative you can be. 
-So if you have the confidence to tickle the judges' funny bone and make the audience roll in their seats laughing, do give it a try. 
-
+An online qualifying round; followed by an on-stage skill test of how funny and innovative you can be.
+So, if you have the confidence to tickle the judges' funny bone and make the audience roll in their seats laughing, do give it a try.
 This is THE event for all standup-comedy enthusiasts out there!
-Come to PUNchline to show off your skills and earn fantastic prizes!
-",1-2,,"Originality 
-Confidence 
-Expressions 
-Audience response 
-Spontaneity 
+Come to PUNchline to show off your skills and earn fantastic prizes!",1-2,,"The marks will be based on the following parameters:<br />1. Originality - a comedian maketh his own jokes!<br />2. Confidence - own the stage!<br />3. Expressions - rock the stage with your expressions and leave your mark on the listeners!<br />4. Audience response - entertain the crowd, and the crowd loves you.<br />5. Spontaneity - for the greatest jokes are born of effortlessness.
 
-2nd Round - Content 
+First round will be an online qualifier :
 
-Content Details:
-Contestants should keep in mind others views and not offend them.
+For the prelims, you will have to send us one a short video of yours showing us your skill. Mail us.
 
-Jokes and sarcasms related to other participants may result in disqualification. 
-","Suryatej Reddy
+<strong>CONTENT DETAILS:<strong><br />Please keep in mind the views of others and take care not to offend/hurt sentiments intentionally/unintentionally.<br />Jokes/sarcasms/any kind of misbehaviour /vulgarity in general or towards other contestants will be STRICTLY NOT ENTERTAINED OR TAKEN LIGHTLY and will result in IMMEDIATE DISQUALIFICATION OF CONTESTANT.
+
+<strong>ELIGIBILITY:<strong><br />All students at university/college level can apply.","Suryatej Reddy
 suryatej16102@iiitd.ac.in
 9573552691
 
@@ -641,7 +675,7 @@ shashwat15092@iiitd.ac.in
 8586962567","FIFA: Rs. 200 per person
 CS 1.6: Rs. 1000 per team of 5
 DOTA 2: Rs. 1000 per team of 5",https://www.facebook.com/events/1265621466861041/,fun flagship
-reverbe,Reverbe - The Fashion Show,"Here's to change the people’s outlook towards fashion, and spread a message- ""Pretty is not the rent you pay to live in this world!""
+reverbe, Reverbe - The Fashion Show,"Here's to change the people’s outlook towards fashion, and spread a message- ""Pretty is not the rent you pay to live in this world!""
 
 A shout-out to all the designers, models and all you beautiful people out there! Pull up your socks ‘cause Odyssey 2017 brings to you the most exciting and glamorous event of the year, Reverbe. The New York Times had aptly quoted, “The sun never sets on the runway”. The most happening Fashion Parade of the year awaits you. If fashion is your thing, then this is the ‘IT’ place to be. We’re rolling out the red carpet for all of you talented designers and super-glam 
 models. So stop thinking and hurry up. Register now!",7-16,,"The team allowed should consist of :-
