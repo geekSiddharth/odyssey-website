@@ -18,7 +18,39 @@
             "placeholder": ""
         }
     },
-    "blind-date": {},
+    "blind-date": {
+        "Age" : {
+            "type": "string",
+            "maxlen": 10,
+            "hint": "",
+            "placeholder": ""
+        },
+        "Gender" : {
+            "type": "select",
+            "options": ["Male", "Female"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "Link to Facebook Profile": {
+            "type": "string",
+            "maxlen": 100,
+            "hint": "",
+            "placeholder": ""
+        },
+        "About Yourself": {
+            "type": "string",
+            "maxlen": 2000,
+            "hint": "Tell us something about yourself and your interests we would consider to match you with your perfect date",
+            "placeholder": ""
+        },
+        "Your Ideal Date": {
+            "type": "string",
+            "maxlen": 2000,
+            "hint": "Don't tell us you don't dream about \"that one perfect night\". Describe what your ideal date should be like. Just a few words is good enough",
+            "placeholder": ""
+        }
+
+    },
     "can-you-duet": {
         "Dance Style" : {
             "type": "string",
