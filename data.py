@@ -75,31 +75,6 @@ with open('event_forms.json', newline='') as file:
     event_form = {}
     event_form_raw = json.loads(file.read(),  object_pairs_hook=OrderedDict)
     for k in event_form_raw:
-        event = dict(event_data[k])
+        event = dict(event_data[k]) # shallow copy
         event["data"] = event_form_raw[k]
         event_form[k] = event
-
-
-sth = {
-	"a-cappella": {
-	    "captain": {
-	        "name": "Participant A",
-	        "email": "pa",
-	        "phone_number": "pam",
-	        "institute": "lel"
-	    },
-	    "other_participants": [
-	        {
-	            "name": "Participant B",
-	            "email": "pb",
-	            "phone_number": "pbm",
-	            "institute": "lel"
-	         },
-	    ],
-	    "team_name": "ha",
-	    "team_size": 2,
-	    "data": {
-	        "some": "json"
-	    }
-	}
-}

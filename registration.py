@@ -34,7 +34,7 @@ def process_post_request(form, event_id):
         data["team_size"] = form["team_size"] if isInt(form["team_size"]) else None
 
         if event_data[event_id]["onlyBatmanAndRobin"]:
-            teamSize = 1
+            teamSize = 1 # number of other participants
         else:
             teamSize = event_data[event_id]["teamSizeMax"] - 1
 
