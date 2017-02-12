@@ -1,7 +1,6 @@
 import psycopg2
 import json
 from data import config, event_data, event_form
-from sys import argv, stdout
 import csv
 
 def connect():
@@ -75,7 +74,9 @@ def prepare_csv(event_id):
 				row.append("")
 		rows.append(row)
 
-	writer = csv.writer(stdout, quoting=csv.QUOTE_ALL)
-	writer.writerows([csv_column_order] + rows)
+	with open("reg_csv_dump/%s.csv" % event_id, "w") as file:
+		writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+		writer.writerows([csv_column_order] + rows)
 
-prepare_csv(argv[1])
+for event_id in event_data:
+	prepare_csv(event_id)
