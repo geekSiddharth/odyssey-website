@@ -188,6 +188,12 @@
     },
     "pop-culture-quiz": {},
     "punchline": {
+        "How are you sending your video to complete the registration?": {
+            "type": "select",
+            "options": ["Link", "I'll e-mail it"],
+            "hint": "",
+            "placeholder": ""
+        },
         "Link To Short Video Clip": {
             "type": "string",
             "maxlen": 120,
