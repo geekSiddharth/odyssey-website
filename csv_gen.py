@@ -74,7 +74,7 @@ def prepare_csv(event_id):
 				row.append("")
 		rows.append(row)
 
-	with open("reg_csv_dump/%s.csv" % event_id, "w") as file:
+	with open("reg_csv_dump/%s.csv" % event_id, "w+") as file:
 		writer = csv.writer(file, quoting=csv.QUOTE_ALL)
 		writer.writerows([csv_column_order] + rows)
 
