@@ -44,7 +44,7 @@ def prepare_csv(event_id):
 	
 	# begin csv column order logic
 	if event_data[event_id]["onlyBatmanAndRobin"]:
-		teamSize = 1 # number of all participants
+		teamSize = 2 # number of all participants
 	else:
 		teamSize = event_data[event_id]["teamSizeMax"]
 
