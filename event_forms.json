@@ -1,5 +1,24 @@
 {
-    "mini-militia": {},
+    "mini-militia": {
+        "Select Battle" : {
+            "type": "select",
+            "options": ["Battle | Lone Wolf", "Battle | Team (5 members)"],
+            "hint": "",
+            "placeholder": ""
+        },
+        "Avatar Name": {
+            "type": "string",
+            "maxlen": 50,
+            "hint": "",
+            "placeholder": "(only for Lone Wolves)"
+        },
+        "Would you be open to form teams on the spot?": {
+            "type": "select",
+            "options": ["Doesn't Apply", "Yes", "No", "Maybe"],
+            "hint": "",
+            "placeholder": ""
+        }
+    },
     "vocal-jam": {},
     "art-attack": {},
     "battle-of-bands": {
