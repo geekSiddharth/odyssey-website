@@ -265,6 +265,12 @@
     "sumo-wrestling": {},
     "verbattle": {},
     "verve-solo": {
+        "Link to Video": {
+            "type": "string",
+            "maxlen": 500,
+            "hint": "",
+            "placeholder": ""
+        },
         "Queries (If any)": {
             "type": "string",
             "maxlen": 500,
