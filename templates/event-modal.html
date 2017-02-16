@@ -37,7 +37,9 @@
                         {{ event.name | safe}}
                     </h1>
                     <p class="tagline">
-                        Team Size: {{ event.teamSize }}
+                        {% if event.teamSize != "" and event.teamSize != "0" %}
+                            Team Size: {{ event.teamSize }}
+                        {% endif %}
                         {% if event.entryFee != "" and event.entryFee != "0" and event.entryFee != " " %}
                             <br>
                             Entry Fee: {{ event.entryFee | safe}}
@@ -52,6 +54,8 @@
                     <div class="col-md-12">
                         {% if event['event-id'] == "mini-militia"%}
                         <a class="btn btn-1f btn-1" href="https://goo.gl/forms/0X6SjE2FjonxzRwh1">Register</a>
+                        {% elif event['event-id'] == "pwned" %}
+                        <a class="btn btn-1f btn-1" href="https://goo.gl/forms/gkjb1Wfbbw5xmLMl1">Register</a>
                         {% else %}
                         <a class="btn btn-1f btn-1" href="/register/{{ event['event-id'] }}">Register</a>
                         {% endif %}
