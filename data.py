@@ -28,36 +28,50 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 	
 	#i'm sorry for this
 	for row in rows:
-		if (len(row) == 11):
-			event_data[row[0]] = {
-				"event-id":row[0],
-				"name": row[1], 
-				"description": markdown(gfm(row[2])), 
-				"teamSize": row[3], 
-				"teamSizeMax": row[4],
-				"rules": markdown(gfm(row[5])), 
-				"contact": markdown(gfm(row[6])), 
-				"entryFee": row[7], 
-				"fbEventLink": row[8],
-				"categories": row[9],
-				"formLink": row[10]
-			}
-		elif(len(row) == 10):
-			event_data[row[0]] = {
-				"event-id":row[0],
-				"name": row[1], 
-				"description": markdown(gfm(row[2])), 
-				"teamSize": row[3], 
-				"teamSizeMax": "",
-				"rules": markdown(gfm(row[4])), 
-				"contact": markdown(gfm(row[5])), 
-				"entryFee": row[6], 
-				"fbEventLink": row[7],
-				"categories": row[8],
-				"formLink": row[9]
-			}
-		else:
-			raise ValueError("Invalid CSV lol. Row Len: ", len(row));
+		event_data[row[0]] = {
+			"event-id":row[0],
+			"name": row[1], 
+			"description": markdown(gfm(row[2])), 
+			"teamSize": row[3], 
+			"teamSizeMax": row[4],
+			"rules": markdown(gfm(row[5])), 
+			"contact": markdown(gfm(row[6])), 
+			"entryFee": row[7], 
+			"fbEventLink": row[8],
+			"categories": row[9],
+			"formLink": row[10]
+		}
+		# if (len(row) == 11):
+		# 	event_data[row[0]] = {
+		# 		"event-id":row[0],
+		# 		"name": row[1], 
+		# 		"description": markdown(gfm(row[2])), 
+		# 		"teamSize": row[3], 
+		# 		"teamSizeMax": row[4],
+		# 		"rules": markdown(gfm(row[5])), 
+		# 		"contact": markdown(gfm(row[6])), 
+		# 		"entryFee": row[7], 
+		# 		"fbEventLink": row[8],
+		# 		"categories": row[9],
+		# 		"formLink": row[10]
+		# 	}
+		# 	# print(row[10])
+		# elif(len(row) == 10):
+		# 	event_data[row[0]] = {
+		# 		"event-id":row[0],
+		# 		"name": row[1], 
+		# 		"description": markdown(gfm(row[2])), 
+		# 		"teamSize": row[3], 
+		# 		"teamSizeMax": "",
+		# 		"rules": markdown(gfm(row[4])), 
+		# 		"contact": markdown(gfm(row[5])), 
+		# 		"entryFee": row[6], 
+		# 		"fbEventLink": row[7],
+		# 		"categories": row[8],
+		# 		"formLink": row[9]
+		# 	}
+		# else:
+		# 	raise ValueError("Invalid CSV lol. Row Len: ", len(row));
 
 		# try:
 		# 	try:

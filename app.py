@@ -2,9 +2,9 @@ from flask import Flask, render_template, abort, request, redirect
 import os
 import csv
 import requests
-import registration
+#import registration
 import json
-from data import config, event_data, event_form
+from data import config, event_data #, event_form
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
@@ -21,7 +21,7 @@ def events():
 def register(event_id):
 	if event_id in event_data:
 		data = event_data[event_id]
-		return redirect(data[formLink])
+		return redirect(data["formLink"])
 	else:
 		abort(404)
 # def register(event_id):
