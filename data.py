@@ -25,8 +25,10 @@ event_data = {}
 with open('event_data.csv', newline='', encoding='utf8') as file:
 	rows = csv.reader(file, dialect='excel')
 	next(rows) # skips the first entry which has headings
+	
+	#i'm sorry for this
 	for row in rows:
-		if (len(row) == 10):
+		if (len(row) == 11):
 			event_data[row[0]] = {
 				"event-id":row[0],
 				"name": row[1], 
@@ -37,9 +39,10 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 				"contact": markdown(gfm(row[6])), 
 				"entryFee": row[7], 
 				"fbEventLink": row[8],
-				"categories": row[9]
+				"categories": row[9],
+				"formLink": row[10]
 			}
-		elif(len(row) == 9):
+		elif(len(row) == 10):
 			event_data[row[0]] = {
 				"event-id":row[0],
 				"name": row[1], 
@@ -50,31 +53,32 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 				"contact": markdown(gfm(row[5])), 
 				"entryFee": row[6], 
 				"fbEventLink": row[7],
-				"categories": row[8]
+				"categories": row[8],
+				"formLink": row[9]
 			}
 		else:
 			raise ValueError("Invalid CSV lol. Row Len: ", len(row));
 
-		try:
-			try:
-				event_data[row[0]]["teamSizeMax"] = int(event_data[row[0]]["teamSizeMax"])
-			except:
-				event_data[row[0]]["teamSizeMin"] = int(row[3].split("-")[0]) 
-				event_data[row[0]]["teamSizeMax"] = int(row[3].split("-")[-1]) # max and min will be the same if there's no dash
+		# try:
+		# 	try:
+		# 		event_data[row[0]]["teamSizeMax"] = int(event_data[row[0]]["teamSizeMax"])
+		# 	except:
+		# 		event_data[row[0]]["teamSizeMin"] = int(row[3].split("-")[0]) 
+		# 		event_data[row[0]]["teamSizeMax"] = int(row[3].split("-")[-1]) # max and min will be the same if there's no dash
 
-			event_data[row[0]]["onlyBatmanAndRobin"] = event_data[row[0]]["teamSizeMax"] > 4
-		except:
-			event_data[row[0]]["onlyBatmanAndRobin"] = True
-			print("Warning, team size for %s is %s and alt team size is %s" % (row[0], row[3], row[4]))
+		# 	event_data[row[0]]["onlyBatmanAndRobin"] = event_data[row[0]]["teamSizeMax"] > 4
+		# except:
+		# 	event_data[row[0]]["onlyBatmanAndRobin"] = True
+		# 	print("Warning, team size for %s is %s and alt team size is %s" % (row[0], row[3], row[4]))
 
 	file.close()
 
 
-with open('event_forms.json', newline='') as file:
-    global event_form
-    event_form = {}
-    event_form_raw = json.loads(file.read(),  object_pairs_hook=OrderedDict)
-    for k in event_form_raw:
-        event = dict(event_data[k]) # shallow copy
-        event["data"] = event_form_raw[k]
-        event_form[k] = event
+# with open('event_forms.json', newline='') as file:
+#     global event_form
+#     event_form = {}
+#     event_form_raw = json.loads(file.read(),  object_pairs_hook=OrderedDict)
+#     for k in event_form_raw:
+#         event = dict(event_data[k]) # shallow copy
+#         event["data"] = event_form_raw[k]
+#         event_form[k] = event

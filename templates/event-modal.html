@@ -52,13 +52,7 @@
                         <a class="btn btn-1f btn-1" href="{{ event.fbEventLink }}">Facebook</a>
                     </div>
                     <div class="col-md-12">
-                        {% if event['event-id'] == "mini-militia"%}
-                        <a class="btn btn-1f btn-1" href="https://goo.gl/forms/0X6SjE2FjonxzRwh1">Register</a>
-                        {% elif event['event-id'] == "pwned" %}
-                        <a class="btn btn-1f btn-1" href="https://goo.gl/forms/gkjb1Wfbbw5xmLMl1">Register</a>
-                        {% else %}
                         <a class="btn btn-1f btn-1" href="/register/{{ event['event-id'] }}">Register</a>
-                        {% endif %}
                     </div>
                 </div>
             </div>
