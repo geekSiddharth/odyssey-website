@@ -38,9 +38,9 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 		event_data[row[0]] = {
 			"event-id":row[0],
 			"name": row[1], 
-			"textName": html2md(row[1]),
+			"textName": html2md(row[1]).replace('"', '&quot;'),
 			"description": markdown(gfm(row[2])), 
-			"textDescription": html2md(markdown(gfm(row[2]))),
+			"textDescription": html2md(markdown(gfm(row[2]))).replace('"', '&quot;'),
 			"teamSize": row[3], 
 			"teamSizeMax": row[4],
 			"rules": markdown(gfm(row[5])), 
