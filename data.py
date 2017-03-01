@@ -2,6 +2,13 @@ import json
 import csv
 from gfm import gfm, markdown
 from collections import OrderedDict
+import html2text
+
+h = html2text.HTML2Text()
+h.ignore_links = True
+
+def html2md(html):
+	return h.handle(html)
 
 with open('sensitive_data.json', newline='') as file:
     global config
@@ -31,7 +38,9 @@ with open('event_data.csv', newline='', encoding='utf8') as file:
 		event_data[row[0]] = {
 			"event-id":row[0],
 			"name": row[1], 
+			"textName": html2md(row[1]),
 			"description": markdown(gfm(row[2])), 
+			"textDescription": html2md(markdown(gfm(row[2]))),
 			"teamSize": row[3], 
 			"teamSizeMax": row[4],
 			"rules": markdown(gfm(row[5])), 

@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="@gureks, @geekSiddharth, @peey">
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="{{ event.name }} - Odyssey'17 | IIIT Delhi">
+    <meta name="twitter:card" content="{{ event.textName }} - Odyssey'17 | IIIT Delhi">
     <meta name="twitter:site" content="@IIITDOdyssey">
     <!--Open Graph-->
-    <meta property="og:title" content="{{ event.name }} - Odyssey'17 | IIIT Delhi"/>
+    <meta property="og:title" content="{{ event.textName }} - Odyssey'17 | IIIT Delhi"/>
     <meta property="og:url" content="http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:description" content="{{ event.description }}"/>
+    <meta property="og:description" content="{{ event.textDescription }}"/>
     <meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/events/{{ event['event-id'] }}.jpg"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="338"/>
@@ -116,7 +116,7 @@
 			{
 			"@context": "http://www.schema.org",
 					"@type": "Event",
-					"name": " {{ event.name }}",
+					"name": " {{ event.textName }}",
 					"@id": "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}",
 					"url": "http://odyssey.iiitd.edu.in/events/{{ event['event-id'] }}",
                     "image":"http://odyssey.iiitd.edu.in/static/img/events/{{ event['event-id'] }}.jpg",
@@ -147,7 +147,7 @@
             },
 			  "startDate": "2017-03-24T08:00",
 			"endDate": "2017-03-25T23:59",
-					"description": " {{ event.description | safe }}",
+					"description": " {{ event.textDescription }}",
 					"location": {
 				"@type": "Place",
 						"name": "IIIT D",
