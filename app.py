@@ -4,7 +4,7 @@ import csv
 import requests
 #import registration
 import json
-from data import config, event_data #, event_form
+# from data import config, event_data #, event_form
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
@@ -48,4 +48,4 @@ def event_particular(event_id):
 		abort(404)
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0',port=int(config["site-port"]),debug=True)
+	app.run(host='0.0.0.0',port=8000,debug=True)
