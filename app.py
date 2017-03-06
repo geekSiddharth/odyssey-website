@@ -17,6 +17,10 @@ def index():
 def events():
 	return render_template('events.html', events=event_data)
 
+@app.route('/contact')
+def contact():
+	return render_template('contact.html')
+
 @app.route('/register/<event_id>', methods=['GET', 'POST'])
 def register(event_id):
 	if event_id in event_data:
@@ -24,18 +28,6 @@ def register(event_id):
 		return redirect(data["formLink"])
 	else:
 		abort(404)
-# def register(event_id):
-# 	if event_id in event_data:
-# 		if request.method == 'POST':
-# 			if config["development"] or requests.post("https://www.google.com/recaptcha/api/siteverify", data={"secret":config["recaptcha-secret"], "response":request.form["g-recaptcha-response"], "remoteip": request.remote_addr}).json()["success"]:
-# 				processed_data = registration.process_post_request(request.form, event_id)
-# 				registration.insert_record(processed_data, event_id)
-# 				return render_template('registration-successful.html', name=request.form["captain_name"])
-# 			else:
-# 				abort(500)
-# 		return render_template('register.html', event=event_form[event_id])
-# 	else:
-# 		abort(404)
 
 @app.route('/events/<event_id>')
 def event_particular(event_id):

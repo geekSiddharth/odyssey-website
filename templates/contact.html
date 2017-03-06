@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="@gureks, @geekSiddharth, @peey">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="Odyssey'17 | Annual Cultural Fest of IIIT-Delhi">
+    <meta name="twitter:site" content="@IIITDOdyssey">
+    <!--Open Graph-->
+    <meta property="og:title" content="Odyssey'17 | Annual Cultural Fest of IIIT-Delhi"/>
+    <meta property="og:url" content="http://odyssey.iiitd.edu.in/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Odyssey is IIITD’s cultural festival that provides a platform for talent and competition in various fields. With a footfall of 3000+ students from Delhi-NCR region, we witnessed Euphoria perform on our campus. This year, with the theme of “Around the world in two days”, Odyssey will  will host several unique events in a wide array of categories, including Dance, Music, Theatre, and Digital Arts."/>
+    <meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-1.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-2.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-3.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image" content="http://odyssey.iiitd.edu.in/static/img/og-image-4.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="fb:app_id" content="361553010885437"/>
+
+    <meta name="google-site-verification" content="vDuy64gCsdqy5k_UQclTx1Jb86yi_KLN2EHWT7luW4Q"/>
+    <title>Odyssey | IIIT Delhi</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body{
+        background-color:#ffcf4b  !important;
+    }
+    </style>
+</head>
+<body id="bg">
+<div id="contactsModal">
+    <div class="close-contactsModal close" style="z-index: 999999999;">
+        <a href="/">
+            <img class="right" height="48px" width="48px" src="{{ url_for('static',filename='img/close.png') }}">
+        </a>
+    </div>
+    <div class="modal-content" style="width: 100%; padding-bottom: 10%; overflow-x: hidden; z-index: 200;">
+        <h1 class="titleM" style="width: 100%; text-align: center">CONTACT US</h1>
+        <div class="row">
+            <div class="col-md-12 tagline">
+                We'd love to hear from you.
+            </div>
+        </div>
+        <div class="row">
+            <form method="post" action="http://formspree.io/odyssey@iiitd.ac.in" class="center-block">
+                <input type="hidden" name="_next" value="http://odyssey.iiitd.edu.in/"/>
+                <div class="col-md-12 middle-parent" style="margin-bottom: 0; padding-bottom: 0;">
+                    <input type="email" placeholder="Your Email" name="email" id="mail1" class="middle"
+                           style=" background-color:transparent">
+                </div>
+                <div class="col-md-12 middle-parent" style="margin-bottom: 0; padding-bottom: 0;">
+                    <input type="text" name="message" placeholder="Your Query" id="mail1" class="middle"
+                           style="background-color:transparent">
+                </div>
+                <div class="col-md-12 middle-parent" style="margin-top: 0; padding-top: 0;">
+                    <input type="submit" value="Send Your Query" id="submit-button"
+                           class="btn btn-1 btn-1f text-center middle">
+                </div>
+            </form>
+        </div>
+        <!--        <div class="row">#}
+                    {#            <div class="col-md-12 middle-parent" style="margin-top: 2%; margin-bottom: 2%">#}
+                    {#                <a href="mailto:odyssey@iiitd.ac.in" class="btn btn-1 btn-1f center-block middle" role="button">Ask a#}
+                    {#                    query</a>#}
+                    {#            </div>#}
+                    {#        </div>#} -->
+        <ul class="grid cs-style-4" style="padding: 0;">
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/mor.jpg') }}"
+                              alt="Mor Organising Team Odyssey"></div>
+                    <figcaption>
+                        <h3>Prikankshit Singh Mor</h3>
+                        <span>Convener</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:prikankshit13073@iiitd.ac.in" title="prikankshit13073@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:7827803958" title="7827803958"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/taru.jpg') }}"
+                              alt="Taruvar Organising Team Odyssey"></div>
+                    <figcaption>
+                        <h3>Taruvar Aggarwal</h3>
+                        <span>Mentor</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:taruvar13166@iiitd.ac.in" title="taruvar13166@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <br>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/anjali.jpg') }}"
+                              alt="Anjali in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Anjali Ujjainia</h3>
+                        <span>Event Planning and Execution</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:anjali13016@iiitd.ac.in" title="anjali13016@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/gupta.jpg') }}"
+                              alt="Kartik Gupta in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Kartik Gupta</h3>
+                        <span>Event Planning and Execution</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:kartik13050@iiitd.ac.in" title="kartik13050@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:8826577099" title="8826577099"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/shagun.jpg') }}"
+                              alt="Shagun Kapur in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Shagun Kapur</h3>
+                        <span>Event Research and Ambience</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:shagun15175@iiitd.ac.in" title="shagun15175@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <br>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/siddhant.jpg') }}"
+                              alt="Siddhant Vermain Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Siddhant Verma</h3>
+                        <span>Publicity </span>
+                        <ul>
+                            <li>
+                                <a href="mailto:siddhant14102@iiitd.ac.in" title="siddhant14102@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:9711013103" title="9711013103"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/ekansh.jpg') }}"
+                              alt="Ekansh in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Ekansh Sareen</h3>
+                        <span>Publicity</span>
+                        <a href="">9711856422</a>
+                        <ul>
+                            <li>
+                                <a href="mailto:ekansh15139@iiitd.ac.in" title="ekansh15139@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:9711856422" title="9711856422"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/sinha.jpg') }}"
+                              alt="Shubhan Sinha in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Shubham Sinha</h3>
+                        <span>PR, Hospitality and Nirvana night</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:shubham13159@iiitd.ac.in" title="shubham13159@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:9953600441" title="9953600441"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <br>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/sharma.jpg') }}"
+                              alt="Mridul Sharma in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Mridul Sharma</h3>
+                        <span>Sponsorship</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:mridul15149@iiitd.ac.in" title="mridul15149@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:9958666289" title="9958666289"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/mathur.jpg') }}"
+                              alt="Kartik Mathur in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Kartik Mathur</h3>
+                        <span>Operations (Infrastructure and Security)</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:kartik15142@iiitd.ac.in " title="kartik15142@iiitd.ac.in "><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="telto:9818757395" title="9818757395"><i class="fa  fa-2x fa-phone"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/gurek.jpg') }}"
+                              alt="Gurek in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Gurek Singh</h3>
+                        <span>Creatives Lead</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:gurek15033.iiitd.ac.in" title="gurek15033@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+            <br>
+            <li>
+                <figure>
+                    <div><img src="{{ url_for('static',filename='img/contacts/puneet.jpg') }}"
+                              alt="Puneet in Organising Team of Odyssey"></div>
+                    <figcaption>
+                        <h3>Puneet Jain</h3>
+                        <span>Treasurer</span>
+                        <ul>
+                            <li>
+                                <a href="mailto:puneet13150@iiitd.ac.in" title="puneet13150@iiitd.ac.in"><i
+                                        class="fa fa-2x fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+<script src="{{ url_for('static',filename='js/modernizr.custom.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/toucheffects2.js') }}"></script>
+<script src="{{ url_for('static',filename='js/animatedModal.min.js') }}"></script>
+<script>window.addEventListener("keyup", function (e) {
+    if (e.keyCode == 27) window.location = "http://odyssey.iiitd.edu.in/";;
+}, false);</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-90355797-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+			"@type": "WebSite",
+			"name": "Odyssey",
+			"alternateName": "Odyssey IIIT D",
+			"url": "http://odyssey.iiitd.edu.in/",
+			 "keywords":"Odyssey, Odyssey IIIT D, Odyssey IIITD, Odyssey IIIT, Cultural fest of IIIT D, Cultral fest in Delhi"
+			}
+
+
+</script>
+<script type="application/ld+json">
+			{
+			"@context": "http://www.schema.org",
+					"@type": "Festival",
+					"name": "Odyssey",
+					"@id": "http://odyssey.iiitd.edu.in/",
+					"url": "http://odyssey.iiitd.edu.in/",
+					"sameAs": [
+				"https://www.facebook.com/odyssey.iiitd/",
+				"https://plus.google.com/104900525075222914073",
+				"https://twitter.com/IIITDOdyssey",
+				"https://www.instagram.com/iiitdodyssey/",
+				"https://www.youtube.com/channel/UCO-faubxbzjAqka5Po5IgmQ"
+			],
+			  "startDate": "2017-03-24T08:00",
+			"endDate": "2017-03-25T23:59",
+					"description": "Odyssey is IIITD’s cultural festival that provides a platform for talent and competition in various fields. This year, with the theme of “Around the world in two days”, Odyssey will  will host several unique events in a wide array of categories, including Dance, Music, Theatre, and Digital Arts.",
+					"location": {
+				"@type": "Place",
+						"name": "IIIT D",
+						"alternateName": "IIIT Delhi",
+						"sameAs": "https://www.iiitd.ac.in/",
+						"address": {
+					"@type": "PostalAddress",
+							"streetAddress": " Indraprastha Institute of Information Technology, Okhla Industrial Estate, Phase III, (Near Govindpuri Metro Station) New Delhi, India",
+							"addressLocality": "New Delhi",
+							"addressRegion": "Delhi",
+							"postalCode": "110020",
+							"addressCountry": "India"
+				}
+			},
+			"typicalAgeRange": "15-30",
+					"offers": {
+				"@type": "Offer",
+						"description": "Event Ticket",
+						"url": "https://goo.gl/forms/TnvdluxSpQm54LLw2",
+						"price": "0"
+			}
+			}	
+
+
+</script>
+</body>
+</html>
