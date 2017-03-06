@@ -1,3 +1,11 @@
+#about, #sponsors, #events, #contact {
+	transition: all 0.5s ease;
+}
+
+#about:hover, #sponsors:hover, #events:hover, #contact:hover {
+	transform: scale(1.1);
+}
+
 #bg {
 	background-color: #A8D2DE;
 }
