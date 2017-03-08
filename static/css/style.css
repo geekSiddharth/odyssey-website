@@ -16,6 +16,11 @@ nav ul, li {
 	line-height:7vh;
 }
 
+nav li a {
+	color: white !important;
+	text-decoration: none !important;
+}
+
 nav ul {
 	display:flex;
 	width: 50vw;
@@ -23,7 +28,6 @@ nav ul {
 }
 
 nav li {
-	color:white;
 	font-family: lato;
 	font-size:1.3vw;
     transition: 1s all ease;

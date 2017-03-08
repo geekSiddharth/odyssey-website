@@ -21,6 +21,18 @@ def events():
 def contact():
 	return render_template('contact.html')
 
+@app.route('/bobby')
+def bobby():
+	return render_template('bobby-workshop.html')
+
+@app.route('/college-trophy')
+def college_trophy():
+	return render_template('college-trophy.html')
+
+@app.route('/accomodation')
+def accomodation():
+	return render_template('accomodation.html')
+
 @app.route('/register/<event_id>', methods=['GET', 'POST'])
 def register(event_id):
 	if event_id in event_data:
