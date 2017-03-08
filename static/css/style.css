@@ -9,11 +9,12 @@ nav {
 	border-radius: 0 0 20px 20px;
 }
 
-nav ul, li {
+nav ul, nav li, nav ul a {
 	margin:auto;
 	padding:0;
 	height:7vh;
 	line-height:7vh;
+	display: inline-block;
 }
 
 nav li a {
@@ -32,6 +33,9 @@ nav li {
 	font-size:1.3vw;
     transition: 1s all ease;
     cursor: pointer;
+}
+
+nav li a {
     padding: 0 1.3vw;
 }
 
@@ -578,3 +582,83 @@ ul > li {
 	}
 }
 
+/*
+#passport {
+	max-width: 7.3vw;
+	position: fixed;
+	bottom: 3.2vh;
+	left:0.7vw;
+}
+
+#compass {
+	max-width: 5.8vw;
+	position: fixed;
+	left: 5.5vw;
+	bottom: 1vh;
+}
+
+#blue-bag {
+    max-width: 15vw;
+    position: fixed;
+    left: 4vw;
+    bottom: 1vh;
+}
+
+#phone {
+	max-width: 5.1vw;
+	position: fixed;
+	left: 20.1vw;
+	bottom: 0.5vh;
+}
+
+#card {
+	max-width: 7.3vw;
+	position: fixed;
+	left: 20.1vw;
+	bottom: 0px;
+}
+
+#red-bag {
+	max-width: 300px;
+	position: fixed;
+	left: 20vw;
+	bottom: 1vh;
+}
+
+#camera {
+	max-width: 9.1vw;
+	position: fixed;
+	left: 36.6vw;
+	bottom: 0.5vh;
+}
+
+
+#about {
+	max-width: 700px;
+	position: fixed;
+	top: 25px;
+	right:100px;
+}
+
+#sponsors {
+	max-width: 51.2vw;
+	position: fixed;
+	top: 20vh;
+	left: 11vw;
+}
+
+#events {
+	max-width: 58.5vw;
+	position: fixed;
+	top: 35vh;
+	left: 36.6vw;
+}
+
+#contact {
+	max-width: 51.2vw;
+	position: fixed;
+	bottom: 30vh;
+	right: 7.3vw;
+}
+
+*/
