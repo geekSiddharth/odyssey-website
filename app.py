@@ -17,19 +17,19 @@ def index():
 def events():
 	return render_template('events.html', events=event_data)
 
-@app.route('/contact')
+@app.route('/contact/')
 def contact():
 	return render_template('contact.html')
 
-@app.route('/bobby')
+@app.route('/bobby/')
 def bobby():
 	return render_template('bobby-workshop.html')
 
-@app.route('/college-trophy')
+@app.route('/college-trophy/')
 def college_trophy():
 	return render_template('college-trophy.html')
 
-@app.route('/accomodation')
+@app.route('/accomodation/')
 def accomodation():
 	return render_template('accomodation.html')
 
