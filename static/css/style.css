@@ -25,10 +25,10 @@ nav ul {
 nav li {
 	color:white;
 	font-family: lato;
-	font-size:20px;
+	font-size:1.3vw;
     transition: 1s all ease;
     cursor: pointer;
-    padding: 0 15px;
+    padding: 0 1.3vw;
 }
 
 nav li:hover {
@@ -37,8 +37,8 @@ nav li:hover {
 
 #about, #sponsors, #events, #contact {
 	transition: all 0.5s ease;
-	margin-top: 9vh;
-	margin-bottom: -9vh;
+	margin-top: 8vh;
+	margin-bottom: -8vh;
 }
 
 #about:hover, #sponsors:hover, #events:hover, #contact:hover {
@@ -136,6 +136,46 @@ ul > li {
 
 #mail {
 	color: rgb(22,134,176);
+}
+
+@media (min-width: 700px) {
+	.logo {
+		left: 10px;
+		top: 10px;
+	}
+}
+
+
+@media (max-width: 700px) {
+	.logo {
+	    padding: 10px;
+	    margin: auto;
+	    display: block;
+	}
+
+	nav {
+	    width: 100vw;
+	    left: 0;
+	    right: 0;
+	    top: 86.6px;
+	    border-radius: 0;
+	}
+
+	nav ul {
+	    display: flex;
+	    width: 100vw;
+	}
+
+	nav li {
+		font-size: 2vw;
+		padding: 0 2vw;
+	}
+}
+
+@media (max-width:480px) {
+	nav li {
+		font-size: 3vw;
+	}
 }
 
 @media (max-width:480px) {
