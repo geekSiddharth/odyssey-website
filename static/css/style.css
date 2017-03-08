@@ -152,21 +152,21 @@ ul > li {
 	#about {
 		max-width: 350px;
 		position: fixed;
-		top: 20%;
+        top: 23%;
 		right: 3%;
 	}
 
 	#sponsors {
 		max-width: 350px;
 		position: fixed;
-		top: 32%;
+        top: 35%;
 		left: 5%;
 	}
 
 	#events {
 		max-width: 350px;
 		position: fixed;
-		top: 45%;
+        top: 48%;
 		left: 1%;
 	}
 
