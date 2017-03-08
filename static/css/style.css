@@ -1,5 +1,44 @@
+nav {
+	width: 50vw;
+	position: absolute;
+	top: 0;
+	left: 45vw;
+	right:5vw;
+	height: 7vh;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 0 0 20px 20px;
+}
+
+nav ul, li {
+	margin:auto;
+	padding:0;
+	height:7vh;
+	line-height:7vh;
+}
+
+nav ul {
+	display:flex;
+	width: 50vw;
+	position: relative;
+}
+
+nav li {
+	color:white;
+	font-family: lato;
+	font-size:20px;
+    transition: 1s all ease;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+nav li:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
 #about, #sponsors, #events, #contact {
 	transition: all 0.5s ease;
+	margin-top: 9vh;
+	margin-bottom: -9vh;
 }
 
 #about:hover, #sponsors:hover, #events:hover, #contact:hover {
