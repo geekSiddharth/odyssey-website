@@ -29,8 +29,8 @@ def bobby():
 def college_trophy():
 	return render_template('college-trophy.html')
 
-@app.route('/accomodation/')
-def accomodation():
+@app.route('/accommodation/')
+def accommodation():
 	return render_template('accomodation.html')
 
 @app.route('/register/<event_id>', methods=['GET', 'POST'])
