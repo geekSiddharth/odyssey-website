@@ -2,9 +2,8 @@ from flask import Flask, render_template, abort, request, redirect
 import os
 import csv
 import requests
-#import registration
 import json
-from data import config, event_data #, event_form
+from data import config, event_data
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
