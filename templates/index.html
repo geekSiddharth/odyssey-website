@@ -38,7 +38,9 @@
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="bg">
-<div class="loader"></div>
+<div class="loader">
+    <i id="train-stop" class="fa fa-times-circle" aria-hidden="true" style="position: fixed;top: 2%;right: 2%;z-index:999999; color:white; font-size: 4em; cursor: pointer"></i>
+</div>
 <div class="container">
     <div>
         <img src="{{ url_for('static',filename='img/logo.png') }}" class="logo">
