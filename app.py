@@ -7,6 +7,7 @@ from data import config, event_data
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
+cancelled = ['mr-and-ms-odyssey']
 
 @app.route('/')
 def index():
@@ -46,6 +47,8 @@ def event_particular(event_id):
 		return render_template('design360.html')
 	if event_id in event_data:
 		data = event_data[event_id]
+		if event_id in cancelled:
+			return render_template('cancelled.html', event = data)
 		return render_template('event-modal.html', event = data)
 	else:
 		abort(404)
