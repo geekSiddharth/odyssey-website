@@ -1,4 +1,4 @@
-@import url("/static/design360/css/font-awesome.min.css");
+@import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Lato:300,700");
 
 /*
@@ -1016,6 +1016,14 @@
 			background: #13303E;
 			color: #d1f2f5;
 		}
+		.wrapper.style4{
+			background: #fff;
+			color: #000;	
+		}
+		.wrapper.style4 img{
+			height: 250px;
+			width: auto;
+		}
 
 			.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
 				color: #ffffff;
@@ -1380,5 +1388,5 @@
 
 @font-face{
 	font-family: Geometria;
-	src:url('/static/design360/fonts/Geometria.otf');
+	src:url('../fonts/Geometria.otf');
 }
