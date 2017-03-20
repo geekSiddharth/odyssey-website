@@ -7,7 +7,7 @@ from data import config, event_data
 
 app = Flask('__name__')
 app.config['SECRET_KEY']=os.urandom(20)
-cancelled = ["mr-and-ms-odyssey","chess"]
+cancelled = ["mr-and-ms-odyssey","chess","short-video-making"]
 
 @app.route('/')
 def index():
