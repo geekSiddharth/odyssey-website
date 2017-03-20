@@ -40,20 +40,21 @@
 <body id="bg">
 <div class="loader">
     <img src="/static/img/glance.png"/>
-    <i id="train-stop" class="fa fa-times-circle" aria-hidden="true" style="position: fixed;top: 2%;right: 2%;z-index:999999; color:white; font-size: 4em; cursor: pointer"></i>
+    <i id="train-stop" class="fa fa-times-circle" aria-hidden="true"
+       style="position: fixed;top: 2%;right: 2%;z-index:999999; color:white; font-size: 4em; cursor: pointer"></i>
 </div>
 <div class="container">
     <div>
         <img src="{{ url_for('static',filename='img/logo.png') }}" class="logo">
     </div>
     <nav>
-    <ul>
-    <li>&nbsp;</li>
-    <li><a href="/accommodation">Accommodation</a></li>
-<!--     <li><a href="/bobby">Workshop</a></li>
- -->    <li><a href="/college-trophy">College Trophy</a></li>
-        <li><a href="http://bit.ly/OdysseyNirvanaNight">Nirvana Night Pass</a></li>
-    <li>&nbsp;</li>
+        <ul>
+            <li>&nbsp;</li>
+            <li><a href="/accommodation">Accommodation</a></li>
+            <li><a href="{{ url_for('static',filename='schedule.pdf') }}" target="_blank">Schedule</a></li>
+            <li><a href="/college-trophy">College Trophy</a></li>
+            <li><a href="http://bit.ly/OdysseyNirvanaNight" target="_blank">Nirvana Night Pass</a></li>
+            <li>&nbsp;</li>
     </nav>
 
     <ul id="scene" class="scene">
@@ -212,7 +213,7 @@
                 <div class="row">
                     <div class="filler col col-sm-4 col-xs-4"></div>
                     <a href="http://codingblocks.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/coding blocks.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/coding blocks.png"/>
                     </a>
                     <div class="filler col col-sm-4 col-xs-4"></div>
                 </div>
@@ -224,7 +225,7 @@
                 <div class="row">
                     <div class="filler col col-sm-4 col-xs-4"></div>
                     <a href="http://www.zenithdancetroupe.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/zenith.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/zenith.png"/>
                     </a>
                     <div class="filler col col-sm-4 col-xs-4"></div>
                 </div>
@@ -250,12 +251,12 @@
                 </div>
                 <div class="row">
                     <a href="http://frapp.in">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/frapp.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/frapp.png"/>
                     </a><a href="http://aramex.com/home">
                     <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/aramex.png"/>
-                    </a><a href="http://xtracareit.com">
+                </a><a href="http://xtracareit.com">
                     <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/xtracare.png"/>
-                    </a>
+                </a>
                 </div>
                 <div class="row">
                     <div class="filler col col-sm-1 col-xs-1"></div>
@@ -270,7 +271,7 @@
                 <div class="row">
                     <div class="filler col col-sm-1 col-xs-1"></div>
                     <a href="http://atkt.in">
-                    <img class="col col-sm-5 col-xs-5" src="/static/img/sponsors/atkt.png"/>
+                        <img class="col col-sm-5 col-xs-5" src="/static/img/sponsors/atkt.png"/>
                     </a>
                     <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/indus.png"/>
                     <div class="filler col col-sm-3 col-xs-1"></div>
@@ -282,23 +283,23 @@
                 </div>
                 <div class="row">
                     <a href="http://furtadosonline.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/Furtado.jpg"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/Furtado.jpg"/>
                     </a><a href="http://muslate.com">
                     <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/muslate.png"/>
-                    </a>
+                </a>
                     <a href="http://academistic.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/academisitic.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/academisitic.png"/>
                     </a>
                 </div>
                 <div class="row">
                     <div class="filler col col-sm-1 col-xs-1"></div>
                     <a href="http://studentgiri.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/studentgiri.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/event/studentgiri.png"/>
                     </a>
                     <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/totegallore.png"/>
                     <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/kcloud.png"/>
                     <a href="http://valet2you.com">
-                    <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/valet2you.png"/>
+                        <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/valet2you.png"/>
                     </a>
                     <div class="filler col col-sm-1 col-xs-1"></div>
                 </div>
@@ -306,7 +307,7 @@
                     <div class="filler col col-sm-4 col-xs-4"></div>
                     <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/ntpc.png"/>
                     <a href="http://quantumsportscenter.com">
-                    <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/Quantum.png"/>
+                        <img class="col col-sm-2 col-xs-2" src="/static/img/sponsors/event/Quantum.png"/>
                     </a>
                     <div class="filler col col-sm-4 col-xs-4"></div>
                 </div>
@@ -317,38 +318,38 @@
                 </div>
                 <div class="row">
                     <a href="http://enetzerz.com">
-                    <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/eventzerz.png"/>
+                        <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/eventzerz.png"/>
                     </a>
                     <a href="http://duexpress.in">
-                    <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/DU_express.png"/>
+                        <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/DU_express.png"/>
                     </a>
                     <a href="http://campusdrift.com">
-                    <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/campusdrift.png"/>
+                        <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/campusdrift.png"/>
                     </a>
                     <a href="http://allevents.in">
-                    <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/All events.jpg"/>
+                        <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/All events.jpg"/>
                     </a>
                 </div>
                 <div class="row">
                     <a href="http://beingstudent.com">
-                    <img class="col col-sm-5 col-xs-5" src="/static/img/sponsors/OSM/beingstudent.png"/>
+                        <img class="col col-sm-5 col-xs-5" src="/static/img/sponsors/OSM/beingstudent.png"/>
                     </a>
                     <a href="http://trackampus.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/Trackampus.jpg"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/Trackampus.jpg"/>
                     </a>
                     <a href="http://festavesta.com">
-                    <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/festavesta.png"/>
+                        <img class="col col-sm-3 col-xs-3" src="/static/img/sponsors/OSM/festavesta.png"/>
                     </a>
                 </div>
                 <div class="row">
                     <a href="http://knowafest.com">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/knowafest.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/knowafest.png"/>
                     </a>
                     <a href="http://fuccha.in">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/fuccha.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/fuccha.png"/>
                     </a>
                     <a href="http://festpav.in">
-                    <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/festpav.png"/>
+                        <img class="col col-sm-4 col-xs-4" src="/static/img/sponsors/OSM/festpav.png"/>
                     </a>
                 </div>
                 <div class="row">
@@ -414,6 +415,7 @@
 			}
 
 
+
 </script>
 <script type="application/ld+json">
 			{
@@ -454,6 +456,7 @@
 						"price": "0"
 			}
 			}	
+
 
 
 </script>
