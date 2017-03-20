@@ -7,28 +7,28 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="/static/design360/js/jquery.min.js"></script>
-		<script src="/static/design360/js/jquery.dropotron.min.js"></script>
-		<script src="/static/design360/js/jquery.scrollgress.min.js"></script>
-		<script src="/static/design360/js/jquery.scrolly.min.js"></script>
-		<script src="/static/design360/js/jquery.slidertron.min.js"></script>
-		<script src="/static/design360/js/skel.min.js"></script>
-		<script src="/static/design360/js/skel-layers.min.js"></script>
-		<script src="/static/design360/js/init.js"></script>
-		<script type="text/javascript" src="/static/design360/js/smoothscroll.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script type="text/javascript" src="js/smoothscroll.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="/static/design360/css/skel.css" />
-			<link rel="stylesheet" href="/static/design360/css/style.css" />
-			<link rel="stylesheet" href="/static/design360/css/style-xlarge.css" />
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-		<!--[if lte IE 9]><link rel="stylesheet" href="/static/design360/css/ie/v9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="/static/design360/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="landing">
 
 		<!-- Header -->
 			<header id="header" class="alt skel-layers-fixed">
-				<h1><a href="http://odyssey.iiitd.edu.in/events/design-360"><img src="/static/design360/images/logo.png" style="height: 60px;width: auto;margin-top: 3%;"></a></h1>
+				<h1><a href="http://odyssey.iiitd.edu.in/events/design-360"><img src="./images/logo.png" style="height: 60px;width: auto;margin-top: 3%;"></a></h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="#about" class="smoothScroll">About</a></li>
@@ -45,7 +45,7 @@
 
 		<!-- Banner -->
 			<section id="banner">
-			<img src="/static/design360/images/odyssey_logo.png">
+			<img src="./images/odyssey_logo.png">
 				<div class="inner">
 					<h2 style="font-size: 80px;">Design 360</h2>
 					<p style="font-size: 30px;line-height: 40px;">Odyssey '17<br>24 - 25 March</p>
@@ -78,9 +78,90 @@
 		<!-- Schedule -->
 			<section id="schedule" class="wrapper style2">
 				<div class="container">
-				<header class="major">
-					<h2>Schedule</h2>
-					<p>Will be announced soon</p>
+				<header class="major" style="font-size: 25px;text-align: left;">
+					<h2 style="text-align: center;">Schedule</h2>
+					<div class="table-wrapper">
+						<table>	
+							<tbody>
+							<tr>
+								<td colspan="2" ><b>Day 1 - 24th March</b></td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>17:15</b></td>
+								<td style="font-family: 'Lato'">Registrations</td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>17:30</b></td>
+								<td style="font-family: 'Lato'">Team formations for solo participants</td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>18:00</b></td>
+								<td style="font-family: 'Lato'">Announcement of problem statement</td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>18:00</b></td>
+								<td style="font-family: 'Lato'">Designing begins. You'll be given multiple deadlines before the final presentations</td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>21:00</b></td>
+								<td style="font-family: 'Lato'">Dinner</td>
+							</tr>
+							<tr>
+								<td colspan="2"><b>Day 2 - 25th March</b></td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>08:00</b></td>
+								<td style="font-family: 'Lato'">Breakfast</td>
+							</tr>
+							<tr>
+								<td><i class="icon fa-clock-o" aria-hidden="true"></i> <b>10:00</b></td>
+								<td style="font-family: 'Lato'">Final presentations which will be followed by winners declaration</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--<p><center><h3 style="font-size: 32px;"><b>Day 1 - 24th March</b></h3></center>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>17:00 :</b> Reach Campus
+					<br>
+					<i class="icon fa-long-arrow-down"></i>
+					<br>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>17:15 :</b> Register your arrival 
+					<br>
+					<i class="icon fa-long-arrow-down"></i>
+					<br>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>17:30 :</b> We start making the teams, make sure all solo participants reach before this.
+					<br>
+					<i class="icon fa-long-arrow-down"></i>
+					<br>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>18:00 :</b> We give you the problem statement
+					<br>
+					<i class="icon fa-long-arrow-down"></i>
+					<br>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>18:00 :</b> Designing begins, you will have many deadlines before the presentation.
+					<br>
+					<i class="icon fa-long-arrow-down"></i>
+					<br>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>21:00 :</b> Dinner
+					<br><br>
+					<center><h3 style="font-size: 32px;"><b>Day 2 - 25th March</b></h3></center>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>08:00 :</b> Breakfast	
+					<br>
+					<i class="icon fa-long-arrow-down"></i>
+					<br>
+					<i class="icon fa-clock-o" aria-hidden="true"></i>  <b>10:00 :</b> Presentations begin which will be followed by prize distribution to all winners.									
+					</p>-->
+					<!--<p>Day 1 - 24th March
+Day 2 - 25th March
+
+17:00 -> Reach Campus
+17:15 -> Register your arrival 
+17:30 -> We start making the teams, make sure all solo participants reach before this.
+18:00 -> We give you the problem statement
+18:00 -> Designing begins, you will have many deadlines before the presentation.
+21:00 -> Dinner
+08:00 -> Breakfast
+10:00 -> Presentations begin which will be followed by prize distribution to all winners.
+</p>-->
 	           			<br>
 					</header>
 				</div>
@@ -192,7 +273,14 @@
 							</div>
 							<div class="4u$ 6u$(2) 12u$(3)" style="width: 100%;">
 								<section class="feature">
-									<h3>10. What if this faq didn't answer my question? </h3>
+									<h3>10. How is this designathon different from a hackathon?</h3>
+									<p style="font-family: 'Lato'">In hackathon, you are required to code your solution into a working application, whereas in a designathon you are required to ideate the solution and design (UI/UX) the prototype of the application such that it is easy to understand and use. <br>
+									You are judged on your final product in hackathons, whereas in a designathon you'll be given multiple deadlines related to product design which will be considered in the final results. The whole process of designing a better product matters here.</p>
+								</section>
+							</div>
+							<div class="4u$ 6u$(2) 12u$(3)" style="width: 100%;">
+								<section class="feature">
+									<h3>11. What if this faq didn't answer my question? </h3>
 									<p style="font-family: 'Lato'">Please email us at <b>design360event@gmail.com</b> if you have any queries at all. We'd love to help you out!</p>
 								</section>
 							</div>
@@ -240,8 +328,8 @@
 					<header class="major">
 						<h2 style="color:black;margin-bottom:-50px">Our Sponsors</h2>
 					</header>
-					<img src="/static/design360/images/huion_logo.jpg" style="padding:5em 0 0.5em 0">
-					<img src="/static/design360/images/invision_logo.png" style="width: 250px !important; height: auto;padding:1em 0 0.5em 0">
+					<img src="./images/huion_logo.jpg" style="padding:5em 0 0.5em 0">
+					<img src="./images/invision_logo.png" style="width: 250px !important; height: auto;padding:1em 0 0.5em 0">
 					<img src="./images/sketch_logo.png" style="width: 250px !important; height: auto;padding:1em 0 0.5em 0">
 				</div>
 			</section>
@@ -258,35 +346,35 @@
 						<div class="row">
 						<div class="4u 6u(1) 12u$(3)">
 							<article class="box post">
-								<a href="#" class="image fit"><img src="/static/design360/images/himanshu.jpg" alt="" /></a>
+								<a href="#" class="image fit"><img src="images/himanshu.jpg" alt="" /></a>
 								<h3>Himanshu Pahadia</h3>
 								<p>himanshu14045@iiitd.ac.in<br>+91-9654318790</p>
 							</article>
 						</div>
 						<div class="4u 6u$(1) 12u$(3)">
 							<article class="box post">
-								<a href="#" class="image fit"><img src="/static/design360/images/varnit.jpg" alt="" "></a>
+								<a href="#" class="image fit"><img src="images/varnit.jpg" alt="" "></a>
 								<h3>Varnit Jain</h3>
 								<p>varnit15112@iiitd.ac.in<br>+91-9650840462</p>
 							</article>
 						</div>
 						<div class="4u 6u$(2) 12u$(3)">
 							<article class="box post">
-								<a href="#" class="image fit"><img src="/static/design360/images/aman.jpg" alt="" /></a>
+								<a href="#" class="image fit"><img src="images/aman.jpg" alt="" /></a>
 								<h3>Aman Agarwal</h3>
 								<p>aman15012@iiitd.ac.in</p>
 							</article>
 						</div>
 						<div class="4u 6u(2) 12u$(3)">
 							<article class="box post">
-								<a href="#" class="image fit"><img src="/static/design360/images/saumya.jpg" alt="" /></a>
+								<a href="#" class="image fit"><img src="images/saumya.jpg" alt="" /></a>
 								<h3>Saumya Balodi</h3>
 								<p>saumya15172@iiitd.ac.in</p>
 							</article>
 						</div>
 						<div class="4u 6u$(2) 12u$(3)">
 							<article class="box post">
-								<a href="#" class="image fit"><img src="/static/design360/images/arnav.jpg" alt="" /></a>
+								<a href="#" class="image fit"><img src="images/arnav.jpg" alt="" /></a>
 								<h3>Arnav Kumar</h3>
 								<p>arnav16228@iiitd.ac.in</p>
 							</article>
