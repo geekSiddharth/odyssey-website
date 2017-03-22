@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort, request, redirect
+from flask import Flask, render_template, abort, request, redirect, url_for
 import os
 import csv
 import requests
@@ -20,6 +20,11 @@ def events():
 @app.route('/contact/')
 def contact():
 	return render_template('contact.html')
+
+@app.route('/schedule/')
+def schedule():
+	return redirect(url_for('static',filename='schedule.pdf'))
+
 
 # @app.route('/bobby/')
 # def bobby():
