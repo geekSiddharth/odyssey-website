@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("#train-stop").click(function() {
-    $(".loader").fadeOut(2000); 
+    $(".loader").fadeOut(700);
   });
 
   $(".loader img").click(function (e) {
@@ -8,6 +8,6 @@ $(document).ready(function(){
   })
   
   $(".loader").click(function () {
-    $(".loader").fadeOut(2000); 
+    $(".loader").fadeOut(700);
   })
 });
